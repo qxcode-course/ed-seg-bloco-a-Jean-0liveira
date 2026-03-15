@@ -2,8 +2,43 @@
     "patches": [
         {
             "label": "2026-03-15_17-47-26",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -10,36 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-%09%22math%22%0A)%0A%0A\n func\n@@ -37,147 +37,12 @@\n ) %7B%0A\n-%09var a, b, c float64%0A%0A%09fmt.Scan(a)%0A%09fmt.Scan(b)%0A%09fmt.Scan(c)%0A%0A%09p := (a + b + c) / 2%0A%0A%09area := math.Sqrt(p * (p - a) * (p - b) * (p - c))%0A%0A%09\n+    \n fmt.\n@@ -53,13 +53,16 @@\n tln(\n-area)%0A\n+%22qxcode%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-03-15_18-26-35",
+            "content": "@@ -203,14 +203,8 @@\n tln(\n-%22%25f%22, \n area\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_18-27-38",
+            "content": "@@ -196,17 +196,18 @@\n mt.Print\n-f\n+ln\n (%22%25f%22, a\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_18-28-01",
+            "content": "@@ -204,10 +204,8 @@\n f(%22%25\n-2.\n f%22, \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_18-28-26",
+            "content": "@@ -80,17 +80,16 @@\n mt.Scan(\n-&\n a)%0A%09fmt.\n@@ -93,17 +93,16 @@\n mt.Scan(\n-&\n b)%0A%09fmt.\n@@ -110,9 +110,8 @@\n can(\n-&\n c)%0A%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_18-28-58",
+            "content": "@@ -207,10 +207,10 @@\n f(%22%25\n-.\n 2\n+.\n f%22, \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_18-29-26",
+            "content": "@@ -210,10 +210,8 @@\n %25.2f\n-%5Cn\n %22, a\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-15_18-29-44",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar a, b, c float64\n\n\tfmt.Scan(&a)\n\tfmt.Scan(&b)\n\tfmt.Scan(&c)\n\n\tp := (a + b + c) / 2\n\n\tarea := math.Sqrt(p * (p - a) * (p - b) * (p - c))\n\n\tfmt.Printf(\"%.2f\\n\", area)\n\n}\n",
+            "lines": "21"
         }
     ]
 }

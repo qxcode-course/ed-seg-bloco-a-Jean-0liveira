@@ -2,3 +2,13 @@
 2026-03-15 17:47:10, MOVE, v:1, k:ed@pintando, mode:PICK
 2026-03-15 17:47:26, EXEC, v:1, k:ed@pintando, mode:FREE, size:5
 2026-03-15 18:05:50, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-15 18:11:49, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-15 18:26:35, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:21
+2026-03-15 18:27:38, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:21
+2026-03-15 18:28:01, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:21
+2026-03-15 18:28:26, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:21
+2026-03-15 18:28:58, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:21
+2026-03-15 18:29:00, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0
+2026-03-15 18:29:26, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:21
+2026-03-15 18:29:44, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:21
+2026-03-15 18:30:08, MOVE, v:1, k:ed@pintando, mode:BACK

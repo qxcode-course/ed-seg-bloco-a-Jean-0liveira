@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-15_19-11-28",
+            "content": "@@ -123,70 +123,7 @@\n )%0A%0A%09\n-if d == -1 %7B%0A%09%09fmt.Println(%22S%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-15_19-28-31",
+            "content": "@@ -133,140 +133,31 @@\n = -1\n-%7B%0A%09%09for i := f; i %3C 15; i++ %7B%0A%09%09%09if i == h %7B%0A%09%09%09%09fmt.Println(%22S%22)%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09// if d == -1 %7B%0A%09// %09fmt.Println(%22S%22)%0A%09// \n+ %7B%0A%09%09fmt.Println(%22S%22)%0A%09\n %7D el\n@@ -162,19 +162,16 @@\n else %7B%0A%09\n-// \n %09fmt.Pri\n@@ -185,11 +185,8 @@\n %22)%0A%09\n-// \n %7D%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-15_19-36-34",
+            "content": "@@ -35,16 +35,20 @@\n ain() %7B%0A\n+    \n %0A%09var h,\n@@ -123,53 +123,63 @@\n )%0A%0A%09\n-for %7B%0A%09%09f = (f + d * 16) %25 16%0A%0A\n+if d == -1%7B%0A%09%09for i := f; i %3C 15; i++ %7B%0A%09\n %09%09if \n-f\n+i\n  == h %7B%0A\n %09%09%09f\n@@ -174,16 +174,17 @@\n  == h %7B%0A\n+%09\n %09%09%09fmt.P\n@@ -201,14 +201,107 @@\n )%0A%09%09\n+%09%09break\n %0A%09%09\n+%09\n %7D%0A%09\n+%09%7D%0A%09%7D%0A%0A%09// if d == -1 %7B%0A%09// %09fmt.Println(%22S%22)%0A%09// %7D else %7B%0A%09// %09fmt.Println(%22N%22)%0A%09// \n %7D%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-15_19-50-37",
+            "content": "@@ -186,14 +186,8 @@\n )%0A%09%09\n-%09break\n %0A%09%09%7D\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_19-50-58",
+            "content": "@@ -134,13 +134,13 @@\n  (f \n-- d +\n++ d *\n  16)\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_19-51-27",
+            "content": "@@ -193,39 +193,8 @@\n eak%0A\n-%09%09%7D else %7B%0A%09%09%09fmt.Println(%22N%22)%0A\n %09%09%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-15_19-52-41",
+            "content": "@@ -220,25 +220,16 @@\n ln(%22N%22)%0A\n-%09%09%09break%0A\n %09%09%7D%0A%09%7D%0A%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-15_19-52-54",
+            "content": "@@ -130,17 +130,17 @@\n %09f = (f \n-+\n+-\n  d + 16)\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_19-55-04",
+            "content": "@@ -202,18 +202,8 @@\n lse \n-if f == p \n %7B%0A%09%09\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-15_19-55-43",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\n\tvar h, p, f, d int\n\n\tfmt.Scan(&h)\n\tfmt.Scan(&p)\n\tfmt.Scan(&f)\n\tfmt.Scan(&d)\n\n\tfor {\n\t\tf = (f + d + 16) % 16\n\n\t\tif f == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t} else if f == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\t}\n}\n",
+            "lines": "25"
+        }
+    ]
+}

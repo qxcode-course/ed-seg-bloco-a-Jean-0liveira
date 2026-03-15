@@ -37,3 +37,25 @@
 2026-03-15 19:00:50, MOVE, v:1, k:ed@fuga, mode:DOWN
 2026-03-15 19:01:00, MOVE, v:1, k:ed@fuga, mode:PICK
 2026-03-15 19:01:40, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-15 19:06:47, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-15 19:11:28, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:15
+2026-03-15 19:13:41, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-15 19:28:31, EXEC, v:1, k:ed@fuga, mode:FULL, rate:60, size:19
+2026-03-15 19:36:34, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:28
+2026-03-15 19:41:20, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-15 19:41:57, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-15 19:48:12, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-15 19:49:46, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-15 19:50:37, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:22
+2026-03-15 19:50:40, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-15 19:50:42, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-15 19:50:44, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-15 19:50:47, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0
+2026-03-15 19:50:58, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:22
+2026-03-15 19:51:27, EXEC, v:1, k:ed@fuga, mode:FULL, rate:80, size:22
+2026-03-15 19:52:41, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:24
+2026-03-15 19:52:54, EXEC, v:1, k:ed@fuga, mode:FULL, rate:10, size:25
+2026-03-15 19:55:04, EXEC, v:1, k:ed@fuga, mode:FULL, rate:30, size:25
+2026-03-15 19:55:43, EXEC, v:1, k:ed@fuga, mode:FULL, rate:100, size:25
+2026-03-15 19:56:23, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-15 20:00:15, SELF, v:1, k:ed@fuga, self:1, rate:100, study:50, friend:Nao

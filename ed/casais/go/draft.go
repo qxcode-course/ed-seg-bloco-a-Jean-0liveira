@@ -1,5 +1,16 @@
 package main
-import "fmt"
+
+import (
+	"fmt"
+)
+
 func main() {
-    fmt.Println("qxcode")
+    
+    var n int 
+
+    fmt.Scan(&n)
+
+    
+
+    fmt.Println(n)
 }

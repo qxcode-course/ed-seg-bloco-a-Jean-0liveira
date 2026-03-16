@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_22-05-32",
+            "content": "@@ -82,21 +82,7 @@\n     \n-fmt.Println(n)\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-16_22-06-29",
+            "content": "@@ -18,32 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A%09%22image/jpeg%22%0A)\n %0A%0Afu\n@@ -78,14 +78,8 @@\n n)%0A%0A\n-    %0A%0A\n     \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-16_22-07-23",
+            "content": "@@ -23,16 +23,30 @@\n %0A%09%22fmt%22%0A\n+%09%22image/jpeg%22%0A\n )%0A%0Afunc \n@@ -93,16 +93,20 @@\n an(&n)%0A%0A\n+    \n %0A%0A    fm\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-16_22-07-37",
+            "content": "@@ -79,20 +79,16 @@\n an(&n)%0A%0A\n-    \n %0A%0A    fm\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-16_22-07-43",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    \n    var n int \n\n    fmt.Scan(&n)\n\n    \n\n    fmt.Println(n)\n}\n",
+            "lines": "16"
+        }
+    ]
+}

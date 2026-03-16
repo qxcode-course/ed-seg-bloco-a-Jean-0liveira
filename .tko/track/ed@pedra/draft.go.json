@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_17-54-16",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    \n    var a, b string\n\n    fmt.Scan(&a)\n    fmt.Scan(&b)\n\n    \n}\n",
+            "lines": "13"
+        }
+    ]
+}

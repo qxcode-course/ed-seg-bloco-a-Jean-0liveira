@@ -42,8 +42,38 @@
         },
         {
             "label": "2026-03-16_19-43-31",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    \n    var n int\n\n    fmt.Scan(&n)\n\n    a := make([] int, n)\n    b := make([] int, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&a[i], &b[i])\n    }\n}\n",
+            "content": "@@ -194,134 +194,6 @@\n   %7D%0A\n-%0A    menorValor := 101%0A    vencedor := -1%0A%0A    for i := 0; i %3C n; i++ %7B%0A        a := a%5Bi%5D%0A        b := b%5Bi%5D%0A%0A        if %0A    %7D%0A%0A\n %7D%0A\n",
             "lines": "17"
+        },
+        {
+            "label": "2026-03-16_21-39-56",
+            "content": "@@ -23,22 +23,8 @@\n fmt%22\n-%0Aimport %22math%22\n %0A%0Afu\n@@ -77,17 +77,16 @@\n n)%0A%0A    \n-p\n a := mak\n@@ -102,17 +102,16 @@\n  n)%0A    \n-p\n b := mak\n@@ -175,17 +175,15 @@\n an(&\n-p\n a%5Bi%5D, &\n-p\n b%5Bi%5D\n@@ -275,17 +275,16 @@\n    a := \n-p\n a%5Bi%5D%0A   \n@@ -293,17 +293,16 @@\n    b := \n-p\n b%5Bi%5D%0A%0A  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_21-44-02",
+            "content": "@@ -280,25 +280,16 @@\n ; i++ %7B%0A\n-        %0A\n         \n@@ -334,111 +334,8 @@\n  if \n-a %3C 10 %7C%7C b %3C 10%7B%0A            continue%0A        %7D%0A%0A        dif := int(math.Abs(float64(a -b)))%0A%0A        \n %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_21-47-32",
+            "content": "@@ -428,17 +428,16 @@\n at64(a -\n- \n b)))%0A%0A  \n@@ -446,163 +446,14 @@\n     \n-if dif %3C menorValor %7B%0A            menorValor = dif%0A            vencedor = i%0A        %7D%0A    %7D%0A    if vencedor == -1 %7B%0A        fmt.Printf(%22sem ganhador%22)\n %0A    %7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-16_21-52-08",
+            "content": "@@ -580,10 +580,9 @@\n rint\n-ln\n+f\n (%22se\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-16_21-52-38",
+            "content": "@@ -599,51 +599,8 @@\n r%22)%0A\n-    %7D else %7B%0A        fmt.Println(vencedor)%0A\n     \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-16_21-53-33",
+            "content": "package main\n\nimport \"fmt\"\nimport \"math\"\n\nfunc main() {\n    \n    var n int\n\n    fmt.Scan(&n)\n\n    pa := make([] int, n)\n    pb := make([] int, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&pa[i], &pb[i])\n    }\n\n    menorValor := 101\n    vencedor := -1\n\n    for i := 0; i < n; i++ {\n        \n        a := pa[i]\n        b := pb[i]\n\n        if a < 10 || b < 10{\n            continue\n        }\n\n        dif := int(math.Abs(float64(a - b)))\n\n        if dif < menorValor {\n            menorValor = dif\n            vencedor = i\n        }\n    }\n    if vencedor == -1 {\n        fmt.Println(\"sem ganhador\")\n    } else {\n        fmt.Println(vencedor)\n    }\n}\n",
+            "lines": "43"
         }
     ]
 }

@@ -2,8 +2,48 @@
     "patches": [
         {
             "label": "2026-03-16_17-54-16",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    \n    var a, b string\n\n    fmt.Scan(&a)\n    fmt.Scan(&b)\n\n    \n}\n",
+            "content": "@@ -52,13 +52,19 @@\n var \n-n int\n+a, b string\n %0A%0A  \n@@ -79,45 +79,11 @@\n an(&\n-n)%0A%0A    for i := 0; i %3C n; i++ %7B%0A    \n+a)%0A\n     \n@@ -96,38 +96,15 @@\n an(&\n-i\n+b\n )%0A\n-        fmt.Println(i)\n %0A    \n-%7D\n %0A%7D%0A\n",
             "lines": "13"
+        },
+        {
+            "label": "2026-03-16_19-04-36",
+            "content": "@@ -57,42 +57,8 @@\n  int\n-%0A    a := %5Bn%5D int%0A    b := %5Bn%5D int\n %0A%0A  \n@@ -120,17 +120,17 @@\n t.Scan(&\n-a\n+i\n )%0A      \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-16_19-14-02",
+            "content": "@@ -62,21 +62,20 @@\n     \n-var a\n+a :=\n  %5Bn%5D int\n  %0A  \n@@ -74,27 +74,25 @@\n  int\n- \n %0A    \n-var b\n+b :=\n  %5Bn%5D int\n  %0A%0A \n@@ -87,17 +87,16 @@\n  %5Bn%5D int\n- \n %0A%0A    fm\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-16_19-20-27",
+            "content": "@@ -58,74 +58,61 @@\n int%0A\n-%0A\n     \n-fmt.Scan(&n)%0A%0A    a := make(%5B\n+var a %5Bn%5D int %0A    var b %5Bn\n %5D int\n-, n)\n+ %0A\n %0A    \n-b := make(%5B%5D int, \n+fmt.Scan(&\n n)%0A%0A\n@@ -165,29 +165,8 @@\n &a)%0A\n-        fmt.Scan(&b)%0A\n     \n@@ -181,17 +181,17 @@\n Println(\n-a\n+i\n )%0A    %7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-16_19-33-28",
+            "content": "@@ -172,19 +172,16 @@\n .Scan(&a\n-%5Bi%5D\n )%0A      \n@@ -197,11 +197,8 @@\n n(&b\n-%5Bi%5D\n )%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_19-34-47",
+            "content": "@@ -226,37 +226,8 @@\n ln(a\n-%5Bi%5D)%0A        fmt.Println(b%5Bi%5D\n )%0A  \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_19-39-48",
+            "content": "@@ -175,18 +175,35 @@\n an(&a%5Bi%5D\n-, \n+)%0A        fmt.Scan(\n &b%5Bi%5D)%0A \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-16_19-43-05",
+            "content": "@@ -184,16 +184,68 @@\n  &b%5Bi%5D)%0A\n+        fmt.Println(a%5Bi%5D)%0A        fmt.Println(b%5Bi%5D)%0A\n     %7D%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-16_19-43-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    \n    var n int\n\n    fmt.Scan(&n)\n\n    a := make([] int, n)\n    b := make([] int, n)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&a[i], &b[i])\n    }\n}\n",
+            "lines": "17"
         }
     ]
 }

@@ -1,0 +1,34 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-20_20-12-43",
+            "content": "@@ -110,22 +110,8 @@\n     \n-fmt,println(Q)\n %0A   \n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-20_20-13-10",
+            "content": "@@ -63,49 +63,12 @@\n r D \n-string%0A%0A    fmt.Scan(&Q)%0A    fmt.Scan(&D)\n+char\n %0A   \n@@ -106,21 +106,17 @@\n     \n-%7D %0A%0A\n     fmt\n-.P\n+,p\n rint\n@@ -129,21 +129,9 @@\n     \n-fmt.Println(D)\n+%7D \n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-20_20-18-10",
+            "content": "@@ -139,135 +139,8 @@\n + %7B%0A\n-        var x int%0A        var y int %0A%0A        fmt.Scan(&x)%0A        fmt.Scan(&y)%0A%0A        fmt.Println(x)%0A        fmt.Println(y)%0A\n     \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-20_20-22-44",
+            "content": "@@ -267,11 +267,51 @@\n y)%0A    %7D\n+ %0A%0A    fmt.Println(Q)%0A    fmt.Println(D)\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-20_20-24-01",
+            "content": "@@ -241,10 +241,30 @@\n ln(x\n-, \n+)%0A        fmt.Println(\n y)%0A \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-03-20_20-28-12",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var Q int\n    var D string\n\n    fmt.Scan(&Q)\n    fmt.Scan(&D)\n    \n    for i := 0; i < Q; i++ {\n        var x int\n        var y int \n\n        fmt.Scan(&x)\n        fmt.Scan(&y)\n\n        fmt.Println(x, y)\n    }\n}\n",
+            "lines": "21"
+        }
+    ]
+}

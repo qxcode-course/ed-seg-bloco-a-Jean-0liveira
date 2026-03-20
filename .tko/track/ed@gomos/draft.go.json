@@ -27,8 +27,63 @@
         },
         {
             "label": "2026-03-20_20-28-12",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var Q int\n    var D string\n\n    fmt.Scan(&Q)\n    fmt.Scan(&D)\n    \n    for i := 0; i < Q; i++ {\n        var x int\n        var y int \n\n        fmt.Scan(&x)\n        fmt.Scan(&y)\n\n        fmt.Println(x, y)\n    }\n}\n",
+            "content": "@@ -220,56 +220,8 @@\n y)%0A%0A\n-        if D == %22L%22%7B%0A            x--%0A        %7D%0A%0A\n     \n",
             "lines": "21"
+        },
+        {
+            "label": "2026-03-20_21-43-25",
+            "content": "@@ -266,41 +266,8 @@\n    %7D\n- else %7B%0A            y--%0A        %7D\n %0A%0A  \n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-20_21-44-11",
+            "content": "@@ -271,20 +271,8 @@\n else\n- if D == %22R%22\n  %7B%0A \n@@ -286,11 +286,11 @@\n     \n-x++\n+y--\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_21-47-48",
+            "content": "@@ -311,53 +311,8 @@\n    %7D\n- else if D == %22D%22 %7B%0A            y++%0A        %7D\n %0A%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-20_21-49-14",
+            "content": "@@ -356,53 +356,8 @@\n    %7D\n- else if D == %22U%22 %7B%0A            y--%0A        %7D\n %0A%0A  \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-20_21-51-08",
+            "content": "@@ -241,66 +241,8 @@\n L%22%7B%0A\n-            if x == y %7B%0A                y--%0A            %7D%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-20_21-53-03",
+            "content": "@@ -237,16 +237,74 @@\n == %22L%22%7B%0A\n+            if x == y %7B%0A                y--%0A            %7D%0A\n         \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_21-53-41",
+            "content": "@@ -241,76 +241,8 @@\n L%22%7B%0A\n-            if x == 6 && y == 6 %7B%0A                y--%0A            %7D%0A\n     \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-20_21-55-06",
+            "content": "@@ -308,20 +308,9 @@\n    %7D\n- else %7B%0A    \n+%0A\n     \n@@ -321,30 +321,16 @@\n     x--%0A\n-            %7D%0A\n         \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-20_21-55-37",
+            "content": "@@ -469,75 +469,8 @@\n %22 %7B%0A\n-            if x == 6 && y == 5%7B%0A                x--%0A            %7D%0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_21-58-04",
+            "content": "@@ -527,36 +527,25 @@\n            %7D\n- else %7B%0A    \n+%0A\n             \n@@ -548,30 +548,16 @@\n     y--%0A\n-            %7D%0A\n         \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-20_21-58-24",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var Q int\n    var D string\n\n    fmt.Scan(&Q)\n    fmt.Scan(&D)\n    \n    for i := 0; i < Q; i++ {\n        var x int\n        var y int \n\n        fmt.Scan(&x)\n        fmt.Scan(&y)\n\n        if D == \"L\"{\n            if x == 6 && y == 6 {\n                y--\n            } else {\n                x--\n            }\n        } else if D == \"R\" {\n            x++\n        } else if D == \"D\" {\n            y++\n        } else if D == \"U\" {\n            if x == 6 && y == 5{\n                x--\n            } else {\n                y--\n            }\n        }\n\n        fmt.Println(x, y)\n    }\n}\n",
+            "lines": "39"
         }
     ]
 }

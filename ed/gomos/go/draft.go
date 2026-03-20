@@ -16,8 +16,6 @@ func main() {
         fmt.Scan(&x)
         fmt.Scan(&y)
 
-        
-
         fmt.Println(x, y)
     }
 }

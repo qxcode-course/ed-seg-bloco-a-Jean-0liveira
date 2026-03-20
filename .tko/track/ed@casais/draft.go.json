@@ -32,8 +32,33 @@
         },
         {
             "label": "2026-03-17_19-54-19",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    \n    var n int\n\n    fmt.Scan(&n)\n\n    macho := make([]int, 0)\n    femea := make([] int, 0)\n\n    for i := 0; i < n; i++ {\n        fmt.Scan(&n)\n\n        if n > 0 {\n            macho = append(macho, n)\n        } else {\n            femea = append(femea, n)\n        }\n    }\n\n    fmt.Println(n)\n}\n",
+            "content": "@@ -94,33 +94,32 @@\n o := make(%5B%5D\n- \n int, 0)%0A\n     femea :=\n@@ -102,24 +102,24 @@\n e(%5B%5Dint, 0)%0A\n+\n     femea :=\n@@ -139,26 +139,9 @@\n  0)%0A\n-    casais := 0%0A \n %0A\n+\n     \n@@ -260,16 +260,16 @@\n  else %7B%0A\n+\n         \n@@ -310,148 +310,8 @@\n    %7D\n-%0A%0A        if len(macho) %3E= 1 && len(femea) %3E= 1%7B%0A            casais++%0A%0A            macho = macho%5B1:%5D%0A            femea = femea%5B1:%5D%0A        %7D\n %0A   \n",
             "lines": "27"
+        },
+        {
+            "label": "2026-03-20_19-37-06",
+            "content": "@@ -488,18 +488,13 @@\n Println(\n-casais\n+n\n )%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_19-38-21",
+            "content": "@@ -201,17 +201,17 @@\n t.Scan(&\n-i\n+n\n )%0A%0A     \n@@ -216,17 +216,17 @@\n      if \n-i\n+n\n  %3E 0 %7B%0A \n@@ -258,17 +258,17 @@\n (macho, \n-i\n+n\n )%0A      \n@@ -312,17 +312,17 @@\n (femea, \n-i\n+n\n )%0A      \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_19-42-14",
+            "content": "@@ -187,26 +187,8 @@\n + %7B%0A\n-        var j int%0A\n     \n@@ -201,17 +201,17 @@\n t.Scan(&\n-j\n+i\n )%0A%0A     \n@@ -258,17 +258,17 @@\n (macho, \n-j\n+i\n )%0A      \n@@ -316,9 +316,9 @@\n ea, \n-j\n+i\n )%0A  \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-20_19-45-19",
+            "content": "@@ -234,17 +234,17 @@\n      if \n-j\n+i\n  %3E 0 %7B%0A \n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-20_19-47-39",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    \n    var n int\n\n    fmt.Scan(&n)\n\n    macho := make([] int, 0)\n    femea := make([] int, 0)\n    casais := 0\n \n    for i := 0; i < n; i++ {\n        var j int\n        fmt.Scan(&j)\n\n        if j > 0 {\n            macho = append(macho, j)\n        } else {\n            femea = append(femea, j)\n        }\n\n        if len(macho) >= 1 && len(femea) >= 1{\n            casais++\n\n            macho = macho[1:]\n            femea = femea[1:]\n        }\n    }\n\n    fmt.Println(casais)\n}\n",
+            "lines": "36"
         }
     ]
 }

@@ -10,18 +10,27 @@ func main() {
 
     fmt.Scan(&n)
 
-    macho := make([]int, 0)
+    macho := make([] int, 0)
     femea := make([] int, 0)
-
+    casais := 0
+ 
     for i := 0; i < n; i++ {
-        fmt.Scan(&n)
+        var j int
+        fmt.Scan(&j)
 
-        if n > 0 {
-            macho = append(macho, n)
+        if j > 0 {
+            macho = append(macho, j)
         } else {
-            femea = append(femea, n)
+            femea = append(femea, j)
+        }
+
+        if len(macho) >= 1 && len(femea) >= 1{
+            casais++
+
+            macho = macho[1:]
+            femea = femea[1:]
         }
     }
 
-    fmt.Println(n)
+    fmt.Println(casais)
 }

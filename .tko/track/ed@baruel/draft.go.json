@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-21_02-10-44",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,86 +41,35 @@\n     \n-var qtd_fig_album int%0A    var qtd_fig_baruel int %0A    var sequencia int %0A%0A    %0A\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-21_02-18-14",
+            "content": "@@ -121,93 +121,8 @@\n     \n-fmt.Println(qtd_fig_album)%0A    fmt.Println(qtd_fig_baruel)%0A    fmt.Println(sequencia)\n %0A%0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-21_02-19-32",
+            "content": "@@ -117,93 +117,8 @@\n t %0A%0A\n-    fmt.Scan(&qtd_fig_album)%0A    fmt.Scan(&qtd_fig_baruel)%0A    fmt.Scan(&sequencia)%0A%0A\n     \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-21_02-20-41",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n    var sequencia int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n    fmt.Scan(&sequencia)\n\n    fmt.Println(qtd_fig_album)\n    fmt.Println(qtd_fig_baruel)\n    fmt.Println(sequencia)\n\n}\n",
+            "lines": "18"
+        }
+    ]
+}

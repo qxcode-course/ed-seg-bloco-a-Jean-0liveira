@@ -14,5 +14,24 @@ func main() {
     for i := 0; i < qtd_fig_baruel; i++ {
         fmt.Scan(&fig[i])
     }
-    fmt.Println(fig)
+
+    cont := make(map[int]int)
+
+    for _, f := range fig{
+        cont[f]++
+    }
+
+    repetiu := false
+
+    for _, f := range fig{
+        if cont[f] > 1 {
+            fmt.Print(f, " ")
+            cont[f]--
+            repetiu = true
+        }
+    }
+
+    if repetiu{
+        fmt.Println()
+    }
 }

@@ -57,8 +57,143 @@
         },
         {
             "label": "2026-03-21_20-20-24",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n\n    fig := make([] int, qtd_fig_baruel)\n    \n    for i := 0; i < qtd_fig_baruel; i++ {\n        fmt.Scan(&fig[i])\n    }\n    fmt.Println(fig)\n}\n",
+            "content": "@@ -269,10 +269,31 @@\n )%0A    %7D%0A\n+    fmt.Println(fig)%0A\n %7D%0A\n",
             "lines": "18"
+        },
+        {
+            "label": "2026-03-21_21-18-31",
+            "content": "@@ -272,64 +272,7 @@\n    %7D\n-%0A%0A    for _, f := range fig%7B%0A        fmt.Println(f)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-21_21-35-48",
+            "content": "@@ -274,39 +274,8 @@\n  %7D%0A%0A\n-    cont := make(map%5Bint%5Dint)%0A%0A\n     \n@@ -305,29 +305,8 @@\n     \n-    cont%5Bf%5D++%0A    %7D%0A%0A\n     \n@@ -321,12 +321,15 @@\n tln(\n-cont)\n+f)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-21_21-38-17",
+            "content": "@@ -362,96 +362,23 @@\n    f\n-or _, f := range fig%7B%0A        if cont%5Bf%5D %3E 1 %7B%0A            fmt.Println(f)%0A        %7D%0A    %7D\n+mt.Println(cont)\n %0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-03-21_21-45-01",
+            "content": "@@ -409,30 +409,8 @@\n 1 %7B%0A\n-            cont%5Bf%5D--%0A\n     \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-21_21-47-06",
+            "content": "@@ -421,44 +421,44 @@\n     \n-fmt.Println(f)%0A            cont%5Bf%5D--\n+cont%5Bf%5D--%0A            fmt.Println(f)\n %0A   \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-47-21",
+            "content": "@@ -434,12 +434,8 @@\n ln(f\n-, %22%22\n )%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-48-10",
+            "content": "@@ -433,17 +433,16 @@\n tln(f, %22\n- \n %22)%0A     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-48-15",
+            "content": "@@ -430,16 +430,21 @@\n rintln(f\n+, %22 %22\n )%0A      \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-48-44",
+            "content": "@@ -426,17 +426,18 @@\n mt.Print\n-f\n+ln\n (f)%0A    \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-48-59",
+            "content": "@@ -426,16 +426,17 @@\n mt.Print\n+f\n (f)%0A    \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-49-04",
+            "content": "@@ -432,12 +432,8 @@\n nt(f\n-, %22%22\n )%0A  \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-49-13",
+            "content": "@@ -431,17 +431,16 @@\n int(f, %22\n- \n %22)%0A     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-49-20",
+            "content": "@@ -436,10 +436,8 @@\n , %22 \n-%5Cn\n %22)%0A \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-50-20",
+            "content": "@@ -432,16 +432,18 @@\n nt(f, %22 \n+%5Cn\n %22)%0A     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-50-30",
+            "content": "@@ -357,26 +357,8 @@\n  %7D%0A%0A\n-    repetiu := 0%0A%0A\n     \n@@ -461,30 +461,8 @@\n %5D--%0A\n-            repetiu++%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-21_21-51-52",
+            "content": "@@ -516,64 +516,7 @@\n    %7D\n-%0A%0A    if repetiu %3E 0 %7B%0A        fmt.Println(repetiu)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-21_21-52-46",
+            "content": "@@ -427,147 +427,8 @@\n 1 %7B%0A\n-            if cont%5Bf%5D == len(cont) - 1 %7B%0A                fmt.Println(f)%0A                cont%5Bf%5D--%0A                repetiu++%0A            %7D%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-21_21-57-36",
+            "content": "@@ -458,16 +458,21 @@\n en(cont)\n+ - 1 \n %7B%0A      \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-21_21-58-07",
+            "content": "@@ -462,12 +462,8 @@\n ont)\n- - 2\n %7B%0A  \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-21_21-58-22",
+            "content": "@@ -423,16 +423,154 @@\n %5D %3E 1 %7B%0A\n+            if cont%5Bf%5D == len(cont) - 2%7B%0A                fmt.Println(f)%0A                cont%5Bf%5D--%0A                repetiu++%0A            %7D%0A\n         \n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-21_21-59-37",
+            "content": "@@ -555,16 +555,23 @@\n Println(\n+repetiu\n )%0A    %7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-21_21-59-48",
+            "content": "@@ -561,35 +561,8 @@\n n()%0A\n-        fmt.Print(repetiu)%0A\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-21_22-00-09",
+            "content": "@@ -449,16 +449,17 @@\n int(f, %22\n+ \n %22)%0A     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-21_22-00-59",
+            "content": "@@ -449,17 +449,16 @@\n int(f, %22\n- \n %22)%0A     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-21_22-01-11",
+            "content": "@@ -372,13 +372,9 @@\n  := \n-false\n+0\n %0A%0A  \n@@ -498,16 +498,10 @@\n etiu\n- := true\n+++\n %0A   \n@@ -528,16 +528,21 @@\n  repetiu\n+ %3E 0 \n %7B%0A      \n@@ -557,16 +557,43 @@\n intln()%0A\n+        fmt.Print(repetiu)%0A\n     %7D%0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-21_22-05-46",
+            "content": "@@ -499,16 +499,17 @@\n repetiu \n+:\n = true%0A \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-21_22-06-28",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n\n    fig := make([] int, qtd_fig_baruel)\n    \n    for i := 0; i < qtd_fig_baruel; i++ {\n        fmt.Scan(&fig[i])\n    }\n\n    cont := make(map[int]int)\n\n    for _, f := range fig{\n        cont[f]++\n    }\n\n    repetiu := false\n\n    for _, f := range fig{\n        if cont[f] > 1 {\n            fmt.Print(f, \" \")\n            cont[f]--\n            repetiu = true\n        }\n    }\n\n    if repetiu{\n        fmt.Println()\n    }\n}\n",
+            "lines": "37"
         }
     ]
 }

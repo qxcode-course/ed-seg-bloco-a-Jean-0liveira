@@ -32,8 +32,33 @@
         },
         {
             "label": "2026-03-21_02-30-39",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n\n    sequencia := make([] int, 0)\n    \n    for i := 0; i < qtd_fig_baruel; i++ {\n        var x int\n        fmt.Scan(&x)\n\n        sequencia = append(sequencia, x)\n\n        fmt.Println(sequencia)\n\n    }\n\n}\n",
+            "content": "@@ -92,31 +92,8 @@\n int \n-%0A    qtd_repetidas := 0\n %0A%0A  \n@@ -154,25 +154,25 @@\n l)%0A%0A    \n-repetidas\n+sequencia\n  := make\n@@ -282,34 +282,17 @@\n     \n-if x == %0A        repetidas\n+sequencia\n  = a\n@@ -301,17 +301,17 @@\n end(\n-repetidas\n+sequencia\n , x)\n@@ -320,16 +320,38 @@\n         \n+fmt.Println(sequencia)\n %0A%0A    %7D%0A\n",
             "lines": "24"
+        },
+        {
+            "label": "2026-03-21_13-28-50",
+            "content": "@@ -350,16 +350,25 @@\n idas, x)\n+%0A%0A       \n  %0A%0A    %7D\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-21_13-38-56",
+            "content": "@@ -88,16 +88,39 @@\n uel int \n+%0A    qtd_repetidas := 0\n %0A%0A    fm\n@@ -177,19 +177,25 @@\n l)%0A%0A    \n-fig\n+repetidas\n  := make\n@@ -203,30 +203,17 @@\n %5B%5D int, \n-qtd_fig_baruel\n+0\n )%0A    %0A \n@@ -305,55 +305,59 @@\n     \n-fig = append(fig, x) %0A%0A        fmt.Println(fig)\n+if x == %0A        repetidas = append(repetidas, x) %0A\n %0A   \n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-21_20-19-11",
+            "content": "@@ -249,25 +249,69 @@\n     \n-fmt.Scan(&fig%5Bi%5D)\n+var x int%0A        fmt.Scan(&x)%0A%0A        fig = append(fig, x) \n %0A%0A  \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-21_20-20-06",
+            "content": "@@ -267,14 +267,13 @@\n i%5D)%0A\n+%0A\n     \n-%7D%0A\n     \n@@ -289,10 +289,17 @@\n ln(fig)%0A\n+    %7D%0A%0A\n %7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-21_20-20-24",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n\n    fig := make([] int, qtd_fig_baruel)\n    \n    for i := 0; i < qtd_fig_baruel; i++ {\n        fmt.Scan(&fig[i])\n    }\n    fmt.Println(fig)\n}\n",
+            "lines": "18"
         }
     ]
 }

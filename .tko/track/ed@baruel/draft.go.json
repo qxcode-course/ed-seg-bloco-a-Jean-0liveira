@@ -17,8 +17,23 @@
         },
         {
             "label": "2026-03-21_02-20-41",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n    var sequencia int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n    fmt.Scan(&sequencia)\n\n    fmt.Println(qtd_fig_album)\n    fmt.Println(qtd_fig_baruel)\n    fmt.Println(sequencia)\n\n}\n",
+            "content": "@@ -88,16 +88,39 @@\n uel int \n+%0A    var sequencia int \n %0A%0A    fm\n@@ -176,134 +176,97 @@\n el)%0A\n-%0A\n     \n-sequencia := make(%5B%5D int, 0)%0A    %0A    for i := 0; i %3C qtd_fig_baruel; i++ %7B%0A        var x int%0A%0A        fmt.Scan(&x)%0A%0A    \n+fmt.Scan(&sequencia)%0A%0A    fmt.Println(qtd_fig_album)%0A    fmt.Println(qtd_fig_baruel)%0A\n     \n@@ -281,17 +281,18 @@\n tln(\n-x)%0A%0A    %7D\n+sequencia)\n %0A%0A%7D%0A\n",
             "lines": "18"
+        },
+        {
+            "label": "2026-03-21_02-29-38",
+            "content": "@@ -244,24 +244,25 @@\n   var x int%0A\n+%0A\n         fmt.\n@@ -275,50 +275,8 @@\n x)%0A%0A\n-        sequencia = append(sequencia, x)%0A%0A\n     \n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-21_02-30-24",
+            "content": "@@ -332,25 +332,17 @@\n Println(\n-sequencia\n+x\n )%0A%0A    %7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-21_02-30-39",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_fig_album int\n    var qtd_fig_baruel int \n\n    fmt.Scan(&qtd_fig_album)\n    fmt.Scan(&qtd_fig_baruel)\n\n    sequencia := make([] int, 0)\n    \n    for i := 0; i < qtd_fig_baruel; i++ {\n        var x int\n        fmt.Scan(&x)\n\n        sequencia = append(sequencia, x)\n\n        fmt.Println(sequencia)\n\n    }\n\n}\n",
+            "lines": "24"
         }
     ]
 }

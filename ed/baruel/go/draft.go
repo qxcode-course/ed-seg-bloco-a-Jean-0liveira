@@ -5,14 +5,22 @@ import "fmt"
 func main() {
     var qtd_fig_album int
     var qtd_fig_baruel int 
-    var sequencia int 
+    qtd_repetidas := 0
 
     fmt.Scan(&qtd_fig_album)
     fmt.Scan(&qtd_fig_baruel)
-    fmt.Scan(&sequencia)
 
-    fmt.Println(qtd_fig_album)
-    fmt.Println(qtd_fig_baruel)
-    fmt.Println(sequencia)
+    repetidas := make([] int, 0)
+    
+    for i := 0; i < qtd_fig_baruel; i++ {
+        var x int
+        fmt.Scan(&x)
+
+        if x == 
+        repetidas = append(repetidas, x)
+
+        
+
+    }
 
 }

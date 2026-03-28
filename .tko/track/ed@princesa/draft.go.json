@@ -1,0 +1,154 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-28_21-12-39",
+            "content": "@@ -54,21 +54,14 @@\n ln(%22\n-Hello, World!\n+qxcode\n %22)%0A%7D\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-28_21-17-39",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,190 +41,35 @@\n     \n-var n, e int%0A%0A    fmt.Scan(&n)%0A%0A    fila := make(%5B%5D int, n)%0A    %0A    fmt.Scan(&e)%0A%0A    for _, p := range fila %7B%0A        if fila%5Bp%5D == e %7B%0A            fmt.Print(p, %22%3E%22)%0A        %7D%0A    %7D\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-28_21-35-39",
+            "content": "@@ -74,29 +74,8 @@\n &n)%0A\n-    fmt.Scan(&e)%0A    \n %0A   \n@@ -98,16 +98,38 @@\n  int, n)\n+%0A    %0A    fmt.Scan(&e)\n %0A%0A    fo\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-28_21-36-19",
+            "content": "@@ -87,16 +87,20 @@\n can(&e)%0A\n+    \n %0A    fil\n@@ -199,16 +199,21 @@\n .Print(p\n+, %22%3E%22\n )%0A      \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-28_21-38-37",
+            "content": "@@ -172,9 +172,9 @@\n  == \n-1\n+e\n  %7B%0A \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-28_21-39-22",
+            "content": "@@ -120,24 +120,103 @@\n  n)%0A\n-    fmt.Print(n, e)\n+%0A    for _, p := range fila %7B%0A        if fila%5Bp%5D == 1 %7B%0A            fmt.Print(p)%0A        %7D%0A    %7D%0A%7D\n %0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-28_21-39-52",
+            "content": "@@ -88,16 +88,44 @@\n an(&e)%0A%0A\n+    fila := make(%5B%5D int, n)%0A\n     fmt.\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-28_21-40-14",
+            "content": "@@ -103,10 +103,13 @@\n .Print(n\n+, e\n )%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-28_21-40-21",
+            "content": "@@ -92,5 +92,21 @@\n e)%0A%0A\n-%7D\n+    fmt.Print(n)%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-28_21-41-34",
+            "content": "@@ -92,23 +92,5 @@\n e)%0A%0A\n-    fmt.Print(n)%0A%0A\n %7D\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-03-28_21-42-04",
+            "content": "@@ -103,15 +103,12 @@\n .Print(n\n-, e\n )%0A%0A%7D\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-28_21-42-15",
+            "content": "@@ -92,99 +92,8 @@\n e)%0A%0A\n-    fila := make(%5B%5D int, n)%0A%0A    for _, p := range fila%7B%0A        if fila%5Bp%5D == e %7B%0A        \n     \n@@ -106,30 +106,12 @@\n int(\n-p, %22%3E%22)%0A        %7D%0A    %7D\n+n, e)\n %0A%0A%7D\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-28_21-45-34",
+            "content": "@@ -149,35 +149,8 @@\n la%7B%0A\n-        fmt.Scan(&fila%5Bp%5D)%0A\n     \n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-28_21-49-12",
+            "content": "@@ -157,12 +157,45 @@\n     \n-if p\n+fmt.Scan(&fila%5Bp%5D)%0A        if fila%5Bp%5D\n  == \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-28_21-51-32",
+            "content": "@@ -126,21 +126,95 @@\n    f\n-mt.Print(fila)\n+or _, p := range fila%7B%0A        if p == e %7B%0A            fmt.Print(p, %22%3E%22)%0A        %7D%0A    %7D\n %0A%0A%7D\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-28_21-52-31",
+            "content": "@@ -121,77 +121,8 @@\n n)%0A%0A\n-    for i := 0; i %3C n; i++%7B%0A        fila = append(fila, i + 1)%0A    %7D%0A\n     \n@@ -137,9 +137,10 @@\n t(fila)%0A\n+%0A\n %7D\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-28_21-55-56",
+            "content": "@@ -161,19 +161,30 @@\n fila\n-%5Bi%5D =\n+ = append(fila,\n  i + 1\n+)\n %0A   \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-28_21-56-44",
+            "content": "@@ -178,102 +178,8 @@\n    %7D\n-%0A%0A    for _, p := range fila%7B%0A        if p == e%7B%0A            fmt.Print(p, %22%3E%22)%0A        %7D%0A    %7D\n %0A   \n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-28_21-58-59",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Afu\n@@ -176,16 +176,109 @@\n %0A    %7D%0A%0A\n+    for _, p := range fila%7B%0A        if p == e%7B%0A            fmt.Print(p, %22%3E%22)%0A        %7D%0A    %7D%0A\n     fmt.\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-28_22-15-30",
+            "content": "@@ -199,29 +199,11 @@\n int(\n-%22%5B%22)%0A    fmt.Print(%22%5D%22\n+fila\n )%0A%7D\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-28_22-16-30",
+            "content": "@@ -204,96 +204,8 @@\n %5B%22)%0A\n-    for _, p := fila%7B%0A        if p == e %7B%0A            fmt.Print(p, %22%3E%22)%0A        %7D%0A    %7D%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-03-28_22-24-10",
+            "content": "@@ -219,20 +219,13 @@\n p :=\n- range\n  fila\n- \n %7B%0A  \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-28_22-24-21",
+            "content": "@@ -283,50 +283,8 @@\n %3E%22)%0A\n-        %7D else %7B%0A            fmt.Print(p)%0A\n     \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-28_22-25-30",
+            "content": "@@ -276,17 +276,16 @@\n nt(p, %22%3E\n- \n %22)%0A     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_22-25-40",
+            "content": "@@ -324,13 +324,8 @@\n nt(p\n-, %22 %22\n )%0A  \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_22-25-47",
+            "content": "@@ -276,16 +276,17 @@\n nt(p, %22%3E\n+ \n %22)%0A     \n@@ -323,16 +323,17 @@\n int(p, %22\n+ \n %22)%0A     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_22-26-13",
+            "content": "@@ -197,17 +197,16 @@\n Print(%22%5B\n- \n %22)%0A    f\n@@ -356,14 +356,13 @@\n .Print(%22\n- \n %5D%22)%0A%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_22-26-21",
+            "content": "@@ -277,17 +277,16 @@\n nt(p, %22%3E\n- \n %22)%0A     \n@@ -323,17 +323,16 @@\n int(p, %22\n- \n %22)%0A     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_22-26-33",
+            "content": "@@ -359,13 +359,14 @@\n .Print(%22\n+ \n %5D%22)%0A%7D\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-28_22-26-46",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    var n, e int\n\n    fmt.Scan(&n)\n    fmt.Scan(&e)\n\n    fila := make([] int, n)\n\n    for i := 0; i < n; i++{\n        fila[i] = i + 1\n    }\n\n    fmt.Print(\"[ \")\n    for _, p := range fila {\n        if p == e {\n            fmt.Print(p, \"> \")\n        } else {\n            fmt.Print(p, \" \")\n        }\n    }\n    fmt.Print(\"]\")\n}",
+            "lines": "28"
+        }
+    ]
+}

@@ -13,10 +13,7 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@analise-map_set-map_set-basic
-- '@ed@recursao-recursion-rec-basic_sem_quest'
-- '@ed@revisao-basic-basic_sem_quest'
-- '@ed@analise-map_set-map_set-basic_sem_quest'
+- ed@map_set
 tasks:
   ed@pintando: '{self:1, rate:100, study:30, friend:Nao, concept:1}'
   ed@mumia: '{self:1, rate:100, study:20, friend:Nao, concept:1}'
@@ -27,11 +24,10 @@ tasks:
   ed@gomos: '{self:1, rate:100, study:50}'
   ed@apagando: '{self:1, rate:100, study:75}'
 flags:
-  painel: 1
-  quests: 0
-  tracks: 0
-  tasks: 0
+  panel: 1
+  inbox: 0
+  show_panel: 1
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@buscas
+selected: ed@princesa

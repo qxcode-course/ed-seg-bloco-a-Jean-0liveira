@@ -15,13 +15,18 @@ func main() {
 
 	fmt.Scan(&m)
 
-	saiu := make([] int, m)
+	saiu := make(map[int]bool)
 
 	for i := 0; i < m; i++ {
-		fmt.Scan(&saiu[i])
+		var x int
+		fmt.Scan(&x)
+		saiu[x] = true
 	}
-	fmt.Println(n)
-	fmt.Println(fila)
-	fmt.Println(m)
-	fmt.Println(saiu)
+
+	for _, p := range fila{
+		if !saiu[p]{
+			fmt.Print(p, " ")
+		}
+	}
+	fmt.Println()
 }

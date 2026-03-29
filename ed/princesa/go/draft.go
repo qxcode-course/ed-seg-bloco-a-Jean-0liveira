@@ -20,6 +20,7 @@ func main() {
     num_vivos := n
 
     for {
+
         fmt.Print("[ ")
 
         for i := 0; i < len(vivos); i++{
@@ -42,7 +43,7 @@ func main() {
         matar := pos
 
         for {
-            matar := (matar + 1) % num_vivos
+            matar = (matar + 1) % n
 
             if vivos[matar]{
                 break
@@ -51,5 +52,15 @@ func main() {
     
         vivos[matar] = false
         num_vivos--
+
+        pos = matar
+
+        for {
+            pos = (pos + 1) % n
+
+            if vivos[pos]{
+                break
+            }
+        }
     }
 }

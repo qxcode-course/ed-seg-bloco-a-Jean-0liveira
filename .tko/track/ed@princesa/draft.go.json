@@ -147,8 +147,208 @@
         },
         {
             "label": "2026-03-28_22-26-46",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    var n, e int\n\n    fmt.Scan(&n)\n    fmt.Scan(&e)\n\n    fila := make([] int, n)\n\n    for i := 0; i < n; i++{\n        fila[i] = i + 1\n    }\n\n    fmt.Print(\"[ \")\n    for _, p := range fila {\n        if p == e {\n            fmt.Print(p, \"> \")\n        } else {\n            fmt.Print(p, \" \")\n        }\n    }\n    fmt.Print(\"]\")\n}",
+            "content": "@@ -348,26 +348,8 @@\n   %7D%0A\n-    fmt.Println()%0A\n     \n",
             "lines": "28"
+        },
+        {
+            "label": "2026-03-29_14-46-46",
+            "content": "@@ -360,14 +360,30 @@\n Println(\n+)%0A    fmt.Print(\n %22%5D%22)%0A%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-29_14-47-05",
+            "content": "@@ -185,99 +185,8 @@\n  %7D%0A%0A\n-    vivos := make(%5B%5D bool, n)%0A%0A    for _, v := range fila%7B%0A        vivos%5Bv%5D = true%0A    %7D%0A%0A%0A\n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-29_14-55-43",
+            "content": "@@ -295,33 +295,33 @@\n %5B %22)%0A    for _, \n-v\n+p\n  := range fila %7B\n@@ -332,17 +332,17 @@\n      if \n-v\n+p\n  == e %7B%0A\n@@ -363,17 +363,17 @@\n t.Print(\n-v\n+p\n , %22%3E %22)%0A\n@@ -411,17 +411,17 @@\n t.Print(\n-v\n+p\n , %22 %22)%0A \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_14-56-24",
+            "content": "@@ -96,19 +96,16 @@\n &e)%0A%0A   \n- //\n  fila :=\n@@ -121,27 +121,24 @@\n int, n)%0A%0A   \n- //\n  for i := 0;\n@@ -149,27 +149,24 @@\n  n; i++%7B%0A   \n- //\n      fila%5Bi%5D\n@@ -177,19 +177,16 @@\n  + 1%0A   \n- //\n  %7D%0A%0A    \n@@ -234,21 +234,20 @@\n = range \n-vivos\n+fila\n %7B%0A      \n@@ -299,19 +299,16 @@\n %0A   \n- //\n  for _, \n p :=\n@@ -303,17 +303,17 @@\n  for _, \n-p\n+v\n  := rang\n@@ -328,19 +328,16 @@\n %0A   \n- //\n      if \n p ==\n@@ -332,17 +332,17 @@\n      if \n-p\n+v\n  == e %7B%0A\n@@ -340,27 +340,24 @@\n v == e %7B%0A   \n- //\n          fmt\n@@ -363,17 +363,17 @@\n t.Print(\n-p\n+v\n , %22%3E %22)%0A\n@@ -371,27 +371,24 @@\n v, %22%3E %22)%0A   \n- //\n      %7D else \n@@ -388,27 +388,24 @@\n %7D else %7B%0A   \n- //\n          fmt\n@@ -411,17 +411,17 @@\n t.Print(\n-p\n+v\n , %22 %22)%0A \n@@ -422,19 +422,16 @@\n %22 %22)%0A   \n- //\n      %7D%0A \n@@ -436,11 +436,8 @@\n %0A   \n- //\n  %7D%0A \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_14-58-10",
+            "content": "@@ -231,16 +231,19 @@\n %0A    for\n+ _,\n  v := ra\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_14-58-34",
+            "content": "@@ -305,65 +305,8 @@\n %5B %22)\n-%0A%0A    for v := range vivos%7B%0A        vivos%5Bv%5D = true%0A    %7D\n %0A   \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-29_14-58-49",
+            "content": "@@ -93,16 +93,116 @@\n an(&e)%0A%0A\n+    // fila := make(%5B%5D int, n)%0A%0A    // for i := 0; i %3C n; i++%7B%0A    //     fila%5Bi%5D = i + 1%0A    // %7D%0A%0A\n     vivo\n@@ -219,24 +219,24 @@\n %5B%5D bool, n)%0A\n-\n %0A    for v :\n@@ -312,23 +312,58 @@\n    f\n-mt.Print(vivos)\n+or v := range vivos%7B%0A        vivos%5Bv%5D = true%0A    %7D\n %0A   \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-03-29_15-00-43",
+            "content": "@@ -212,55 +212,187 @@\n    f\n-or i := 0; i %3C len(vivos); i++%7B%0A        %0A    %7D%0A\n+mt.Print(vivos)%0A    // for _, p := range fila %7B%0A    //     if p == e %7B%0A    //         fmt.Print(p, %22%3E %22)%0A    //     %7D else %7B%0A    //         fmt.Print(p, %22 %22)%0A    //     %7D%0A    // %7D\n %0A   \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-29_15-03-48",
+            "content": "@@ -252,20 +252,8 @@\n     \n-fmt.Print(i)\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_15-04-04",
+            "content": "@@ -263,12 +263,8 @@\n nt(i\n- + 1\n )%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_15-04-28",
+            "content": "@@ -173,32 +173,33 @@\n %5D = true%0A    %7D%0A%0A\n+%0A\n     fmt.Print(%22%5B\n@@ -244,29 +244,8 @@\n ++%7B%0A\n-        pos := i + 1%0A\n     \n@@ -262,11 +262,13 @@\n int(\n-pos\n+i + 1\n )%0A  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_15-05-57",
+            "content": "@@ -264,35 +264,8 @@\n + 1%0A\n-%0A        if pos == e %7B%0A    \n     \n@@ -285,25 +285,9 @@\n (pos\n-, %22 %3E%22)%0A        %7D\n+)\n %0A   \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-29_15-07-05",
+            "content": "@@ -311,16 +311,17 @@\n t(pos, %22\n+ \n %3E%22)%0A    \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-29_15-07-14",
+            "content": "@@ -319,57 +319,8 @@\n %3E%22)%0A\n-        %7D else %7B%0A            fmt.Print(pos, %22 %22)%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-29_15-07-43",
+            "content": "@@ -312,17 +312,16 @@\n (pos, %22%3E\n- \n %22)%0A     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_15-07-55",
+            "content": "@@ -265,34 +265,8 @@\n  1%0A%0A\n-        if vivos%5Bi%5D %7B%0A    \n     \n@@ -287,36 +287,32 @@\n e %7B%0A            \n-    \n fmt.Print(pos, %22\n@@ -324,20 +324,16 @@\n         \n-   \n- \n %7D else %7B\n@@ -329,28 +329,24 @@\n    %7D else %7B%0A\n-    \n             \n@@ -369,22 +369,8 @@\n  %22)%0A\n-            %7D%0A\n     \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-29_15-11-56",
+            "content": "@@ -238,16 +238,37 @@\n s); i++%7B\n+%0A        pos := i + 1\n %0A%0A      \n@@ -298,17 +298,19 @@\n      if \n-i\n+pos\n  == e %7B%0A\n@@ -339,22 +339,17 @@\n int(\n-i\n+pos\n , %22%3E %22\n-, i + 1\n )%0A  \n@@ -397,21 +397,16 @@\n int(\n-i\n+pos\n , %22 %22\n-, i + 1\n )%0A  \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-29_15-12-56",
+            "content": "@@ -242,29 +242,8 @@\n i++%7B\n-%0A        num := i + 1\n %0A%0A  \n@@ -277,19 +277,17 @@\n      if \n-num\n+i\n  == e %7B%0A\n@@ -316,17 +316,22 @@\n int(\n-num\n+i\n , %22%3E %22\n+, i + 1\n )%0A  \n@@ -379,16 +379,21 @@\n int(\n-num\n+i\n , %22 %22\n+, i + 1\n )%0A  \n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-29_15-15-44",
+            "content": "@@ -434,17 +434,16 @@\n %0A    %7D%0A%0A\n-%0A\n     fmt.\n@@ -458,55 +458,6 @@\n %22%5D%22)\n-%0A%0A    num_vivos := vivos%0A    fmt.Print(num_vivos)\n %0A%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-29_15-28-13",
+            "content": "@@ -474,26 +474,21 @@\n ivos := \n-len(\n vivos\n-)\n %0A    fmt\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-29_15-28-32",
+            "content": "@@ -461,26 +461,8 @@\n %22)%0A%0A\n-    pos := e - 1%0A%0A\n     \n@@ -489,120 +489,30 @@\n os)%0A\n-%0A\n     f\n-or %7B%0A        pos = (pos + 1) %25 num_vivos%0A%0A        if vivos%5Bpos%5D%7B%0A            return pos%0A        %7D%0A    %7D%0A    \n+mt.Print(num_vivos)\n %0A%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-29_15-40-04",
+            "content": "@@ -590,22 +590,18 @@\n     \n-fmt.Print(\n+return \n pos\n-)\n %0A   \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-29_15-42-18",
+            "content": "@@ -526,15 +526,12 @@\n     \n-matar :\n+pos \n = (p\n@@ -572,13 +572,11 @@\n vos%5B\n-matar\n+pos\n %5D%7B%0A \n@@ -590,13 +590,22 @@\n     \n-break\n+fmt.Print(pos)\n %0A   \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-29_15-46-09",
+            "content": "@@ -611,37 +611,8 @@\n   %7D%0A\n-        fmt.Print(num_vivos)%0A\n     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-29_15-47-32",
+            "content": "@@ -607,26 +607,24 @@\n       %7D%0A    \n-%7D%0A\n     fmt.Prin\n@@ -636,9 +636,20 @@\n _vivos)%0A\n+    %7D%0A    %0A\n %7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-29_15-47-50",
+            "content": "@@ -506,25 +506,8 @@\n vos)\n-%0A    matar := pos\n %0A%0A  \n@@ -621,31 +621,26 @@\n     \n-vivos%5Bmatar%5D = false%0A    \n+fmt.Print(num_vivos)\n %0A%7D\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-03-29_15-49-13",
+            "content": "@@ -658,34 +658,8 @@\n alse\n-%0A%0A    fmt.Print(num_vivos)\n %0A   \n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-29_15-49-24",
+            "content": "@@ -658,24 +658,8 @@\n alse\n-%0A    num_vivos--\n %0A%0A  \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_15-50-03",
+            "content": "@@ -423,29 +423,32 @@\n %7D%0A        %7D%0A\n-%0A\n     \n+%7D%0A%0A%0A\n     fmt.Prin\n@@ -461,20 +461,16 @@\n %22)%0A%0A    \n-    \n pos := e\n@@ -471,28 +471,24 @@\n s := e - 1%0A%0A\n-    \n     num_vivo\n@@ -503,28 +503,24 @@\n (vivos)%0A    \n-    \n matar := pos\n@@ -517,28 +517,24 @@\n tar := pos%0A%0A\n-    \n     for %7B%0A  \n@@ -531,20 +531,16 @@\n   for %7B%0A\n-    \n         \n@@ -575,28 +575,24 @@\n os%0A%0A        \n-    \n if vivos%5Bmat\n@@ -608,20 +608,16 @@\n         \n-    \n break%0A  \n@@ -626,29 +626,16 @@\n     \n-    %7D%0A        %7D%0A%0A    \n+%7D%0A    %7D%0A\n     \n@@ -659,20 +659,16 @@\n lse%0A    \n-    \n num_vivo\n@@ -672,20 +672,16 @@\n ivos--%0A%0A\n-    \n     fmt.\n@@ -701,11 +701,10 @@\n os)%0A    \n-%7D\n %0A%7D\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-29_15-52-26",
+            "content": "@@ -566,21 +566,19 @@\n tar := (\n-matar\n+pos\n  + 1) %25 \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_15-52-59",
+            "content": "@@ -431,16 +431,13 @@\n   %7D%0A\n+%0A\n     \n-%7D%0A%0A%0A\n     \n@@ -458,16 +458,20 @@\n %22)%0A%0A    \n+   \n+ \n pos := e\n@@ -472,24 +472,28 @@\n s := e - 1%0A%0A\n+    \n     num_vivo\n@@ -508,24 +508,28 @@\n (vivos)%0A    \n+  \n+  \n matar := pos\n@@ -526,24 +526,28 @@\n tar := pos%0A%0A\n+    \n     for %7B%0A  \n@@ -544,32 +544,36 @@\n   for %7B%0A        \n+  \n+  \n matar := (pos + \n@@ -566,19 +566,21 @@\n tar := (\n-pos\n+matar\n  + 1) %25 \n@@ -590,32 +590,36 @@\n _vivos%0A%0A        \n+    \n if vivos%5Bmatar%5D%7B\n@@ -635,14 +635,22 @@\n     \n+ \n+   \n break%0A\n+    \n     \n@@ -663,15 +663,19 @@\n     \n-%7D\n+    %7D%0A\n %0A    \n-%0A\n     \n@@ -695,24 +695,28 @@\n = false%0A    \n+  \n+  \n num_vivos--%0A\n@@ -716,16 +716,20 @@\n ivos--%0A%0A\n+    \n     fmt.\n@@ -749,10 +749,11 @@\n os)%0A    \n+%7D\n %0A%7D\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-29_15-53-38",
+            "content": "@@ -181,30 +181,16 @@\n %0A    %7D%0A%0A\n-    for %7B%0A    \n     fmt.\n@@ -198,28 +198,24 @@\n rint(%22%5B %22)%0A%0A\n-    \n     for i :=\n@@ -247,20 +247,16 @@\n         \n-   \n- \n num := i\n@@ -257,28 +257,24 @@\n m := i + 1%0A%0A\n-    \n         if v\n@@ -295,20 +295,16 @@\n         \n- \n-   \n if num =\n@@ -305,28 +305,24 @@\n  num == e %7B%0A\n-    \n             \n@@ -358,20 +358,16 @@\n         \n-    \n %7D else %7B\n@@ -375,36 +375,32 @@\n                 \n-   \n- \n fmt.Print(num, %22\n@@ -419,43 +419,28 @@\n     \n-    %7D%0A            \n %7D%0A    \n+    %7D%0A\n     %7D%0A%0A\n-    \n+%0A\n     \n@@ -461,20 +461,16 @@\n %22)%0A%0A    \n-  \n-  \n pos := e\n@@ -471,28 +471,24 @@\n s := e - 1%0A%0A\n-    \n     num_vivo\n@@ -503,28 +503,24 @@\n (vivos)%0A    \n- \n-   \n matar := pos\n@@ -517,28 +517,24 @@\n tar := pos%0A%0A\n-    \n     for %7B%0A  \n@@ -531,20 +531,16 @@\n   for %7B%0A\n-    \n         \n@@ -575,28 +575,24 @@\n os%0A%0A        \n-  \n-  \n if vivos%5Bmat\n@@ -608,20 +608,16 @@\n         \n-    \n break%0A  \n@@ -618,34 +618,26 @@\n eak%0A        \n- \n-   %7D%0A    \n+%7D%0A\n     %7D%0A    %0A \n@@ -635,20 +635,16 @@\n  %7D%0A    %0A\n-    \n     vivo\n@@ -664,20 +664,16 @@\n lse%0A    \n-   \n- \n num_vivo\n@@ -677,20 +677,16 @@\n ivos--%0A%0A\n-    \n     fmt.\n@@ -706,11 +706,10 @@\n os)%0A    \n-%7D\n %0A%7D\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-29_15-55-04",
+            "content": "@@ -185,26 +185,8 @@\n  %7D%0A%0A\n-    pos := e - 1%0A%0A\n     \n@@ -510,24 +510,46 @@\n intln(%22%5D%22)%0A%0A\n+        pos := e - 1%0A%0A\n         num_\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-29_15-55-44",
+            "content": "@@ -353,19 +353,17 @@\n  num == \n-pos\n+e\n  %7B%0A     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-29_15-59-07",
+            "content": "@@ -274,16 +274,41 @@\n s); i++%7B\n+%0A            num := i + 1\n %0A%0A      \n@@ -346,17 +346,19 @@\n      if \n-i\n+num\n  == pos \n@@ -389,19 +389,19 @@\n t.Print(\n-i+1\n+num\n , %22%3E %22)%0A\n@@ -459,11 +459,11 @@\n int(\n-i+1\n+num\n , %22 \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-03-29_15-59-36",
+            "content": "@@ -201,27 +201,8 @@\n  - 1\n-%0A    num_vivos := n\n %0A%0A  \n@@ -503,24 +503,56 @@\n intln(%22%5D%22)%0A%0A\n+        num_vivos := len(vivos)%0A\n         mata\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-29_16-03-20",
+            "content": "@@ -530,64 +530,8 @@\n %22)%0A%0A\n-        if num_vivos == 1%7B%0A            break%0A        %7D%0A%0A\n     \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-03-29_16-04-28",
+            "content": "@@ -790,16 +790,46 @@\n _vivos--\n+%0A%0A        fmt.Print(num_vivos)\n %0A    %7D%0A%7D\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-29_16-05-27",
+            "content": "@@ -640,21 +640,19 @@\n tar := (\n-matar\n+pos\n  + 1) %25 \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-29_16-06-20",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    var n, e int\n\n    fmt.Scan(&n)\n    fmt.Scan(&e)\n\n    vivos := make([] bool, n)\n\n    for v := range vivos{\n        vivos[v] = true\n    }\n\n    pos := e - 1\n    num_vivos := n\n\n    for {\n        fmt.Print(\"[ \")\n\n        for i := 0; i < len(vivos); i++{\n\n            if vivos[i] {\n                if i == pos {\n                    fmt.Print(i+1, \"> \")\n                } else {\n                    fmt.Print(i+1, \" \")\n                }\n            }\n        }\n\n        fmt.Println(\"]\")\n\n        if num_vivos == 1{\n            break\n        }\n\n        matar := pos\n\n        for {\n            matar := (matar + 1) % num_vivos\n\n            if vivos[matar]{\n                break\n            }\n        }\n    \n        vivos[matar] = false\n        num_vivos--\n    }\n}",
+            "lines": "55"
         }
     ]
 }

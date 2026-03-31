@@ -62,3 +62,10 @@
 2026-03-31 14:32:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:169, fail:COMP
 2026-03-31 14:35:41, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:169
 2026-03-31 14:38:43, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-31 15:06:47, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-31 15:06:48, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:168
+2026-03-31 15:08:32, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-31 15:18:33, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-31 15:18:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100, size:169
+2026-03-31 15:18:47, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-31 15:20:53, SELF, v:1, k:ed@manipulacao, self:1, rate:100, study:275, concept:1

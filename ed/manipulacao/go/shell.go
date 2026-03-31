@@ -93,13 +93,13 @@ func unique(vet []int) []int {
 
 func repeated(vet []int) []int {
 	vistos := make(map[int] bool)
-	jaMap := make(map[int] bool)
 	var repetidos [] int
 
 	for _, v := range vet {
-		if !vistos[v]{
-			vistos[v] = false
+		if vistos[v]{
 			repetidos = append(repetidos, v)
+		} else {
+			vistos[v] = true 
 		}
 	}
 

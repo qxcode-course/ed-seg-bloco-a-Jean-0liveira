@@ -2,8 +2,148 @@
     "patches": [
         {
             "label": "2026-03-29_21-49-33",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc getCalmWomen(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc sortVet(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc sortStress(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc reverse(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc unique(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc repeated(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "content": "@@ -99,104 +99,27 @@\n  %7B%0A%09\n-var man %5B%5D int%0A%09 for _, v := range\n+_ =\n  vet\n-%7B\n %0A%09\n-%09if v %3E 0%7B%0A%09%09%09man = append(man, v)%0A%09%09%7D%0A%09 %7D%0A%09 \n return \n-man\n+nil\n %0A%7D%0A%0A\n",
             "lines": "106"
+        },
+        {
+            "label": "2026-03-30_23-42-58",
+            "content": "@@ -237,100 +237,15 @@\n  %7B%0A%09\n-var stress %5B%5D int%0A%09for _, s := range vet%7B%0A%09%09if s %3C 10 %7B%0A%09%09%09stress = append(stress, s)%0A%09%09%7D%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -249,22 +249,19 @@\n %09return \n-stress\n+nil\n %0A%7D%0A%0Afunc\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-03-31_00-03-39",
+            "content": "@@ -64,16 +64,8 @@\n gs%22%0A\n-%09%22math%22%0A\n )%0A%0Af\n@@ -284,33 +284,9 @@\n %09if \n-math.Abs(float64(vet%5Bs%5D))\n+s\n  %3C 1\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-03-31_00-05-12",
+            "content": "@@ -283,16 +283,54 @@\n ge vet%7B%0A\n+%09%09if math.Abs(float64(vet%5Bs%5D)) %3C 10 %7B%0A\n %09%09%09stres\n@@ -351,16 +351,20 @@\n ess, s)%0A\n+%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "117"
+        },
+        {
+            "label": "2026-03-31_00-08-42",
+            "content": "@@ -285,16 +285,17 @@\n  vet%7B%0A%09%09\n+%09\n stress =\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-03-31_00-08-55",
+            "content": "@@ -60,16 +60,24 @@\n trings%22%0A\n+%09%22math%22%0A\n )%0A%0Afunc \n@@ -287,65 +287,8 @@\n et%7B%0A\n-%09%09abs := s%0A%0A%09%09if s %3C 0 %7B%0A%09%09%09abs = -s%0A%09%09%7D%0A%09%09if abs %3C 10%7B%0A%09\n %09%09st\n@@ -312,20 +312,16 @@\n ess, s)%0A\n-%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-03-31_00-14-25",
+            "content": "@@ -294,17 +294,17 @@\n %0A%09%09if s \n-%3E\n+%3C\n  0 %7B%0A%09%09%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-31_00-19-41",
+            "content": "@@ -294,17 +294,17 @@\n %0A%09%09if s \n-%3C\n+%3E\n  0 %7B%0A%09%09%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-31_00-19-51",
+            "content": "@@ -310,18 +310,16 @@\n %09abs = -\n-ab\n s%0A%09%09%7D%0A%09%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-31_00-21-36",
+            "content": "@@ -360,18 +360,16 @@\n stress, \n-ab\n s)%0A%09%09%7D%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-31_00-21-50",
+            "content": "@@ -360,16 +360,18 @@\n stress, \n+ab\n s)%0A%09%09%7D%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-31_00-22-03",
+            "content": "@@ -279,23 +279,8 @@\n et%7B%0A\n-%0A%09%09if s %3C 0 %7B%0A%09\n %09%09ab\n@@ -293,22 +293,19 @@\n %0A%0A%09%09\n-%09\n if \n-ab\n s %3C 0 %7B%0A\n %09%09%09%09\n@@ -300,17 +300,16 @@\n s %3C 0 %7B%0A\n-%09\n %09%09%09abs =\n@@ -318,18 +318,12 @@\n abs%0A\n-%09\n %09%09%7D%0A\n-%09%09%09%0A%09\n %09%09if\n@@ -335,15 +335,13 @@\n %3C 10\n- \n %7B%0A%09%09%09\n-%09\n stre\n@@ -364,17 +364,10 @@\n ss, \n-abs)%0A%09%09%09%7D\n+s)\n %0A%09%09%7D\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-03-31_00-40-29",
+            "content": "@@ -387,16 +387,18 @@\n stress, \n+ab\n s)%0A%09%09%09%7D%0A\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-03-31_00-40-38",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22sort%22%0A\n %09%22st\n@@ -457,22 +457,15 @@\n  %7B%0A%09\n-sort.Ints(\n+_ = \n vet\n-)\n %0A%09re\n@@ -465,27 +465,27 @@\n vet%0A%09return \n-vet\n+nil\n %0A%7D%0A%0Afunc sor\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-03-31_01-27-34",
+            "content": "@@ -523,38 +523,31 @@\n t) %5B%5Dint %7B%0A%09\n-sort.Ints(\n+_ = \n vet\n-)\n %0A%09return vet\n@@ -535,35 +535,35 @@\n _ = vet%0A%09return \n-vet\n+nil\n %0A%7D%0A%0Afunc reverse\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-03-31_01-28-22",
+            "content": "@@ -530,178 +530,8 @@\n t %7B%0A\n-%09var stress %5B%5D int%0A%09for _, s := range vet%7B%0A%0A%09%09if s %3C 0 %7B%0A%09%09%09abs := s%0A%0A%09%09%09if abs %3C 0 %7B%0A%09%09%09%09abs = -abs%0A%09%09%09%7D%0A%09%09%09%0A%09%09%09if abs %3C 10 %7B%0A%09%09%09%09stress = append(stress, s)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n %09sor\n@@ -537,22 +537,19 @@\n rt.Ints(\n-stress\n+vet\n )%0A%09retur\n@@ -554,17 +554,13 @@\n urn \n-stress\n+vet\n %0A%7D\n-%09\n %0A%0Afu\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-03-31_01-32-43",
+            "content": "@@ -632,16 +632,37 @@\n bs%0A%09%09%09%7D%0A\n+%09%09%09%0A%09%09%09if abs %3C 10 %7B%0A\n %09%09%09%09stre\n@@ -684,16 +684,21 @@\n ess, s)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-31_01-33-21",
+            "content": "@@ -636,30 +636,8 @@\n %09%09%7D%0A\n-%09%09%09%0A%09%09%09if abs %3C 100 %7B%0A\n %09%09%09%09\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-03-31_01-33-41",
+            "content": "@@ -642,32 +642,33 @@\n %09%0A%09%09%09if abs %3C 10\n+0\n  %7B%0A%09%09%09%09stress = \n@@ -685,17 +685,16 @@\n ess, s)%0A\n-%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "140"
+        },
+        {
+            "label": "2026-03-31_01-33-59",
+            "content": "@@ -650,17 +650,16 @@\n abs %3C 10\n-0\n  %7B%0A%09%09%09%09s\n@@ -676,36 +676,32 @@\n pend(stress, s)%0A\n-%09%09%09%7D\n %0A%09%09%7D%0A%09%7D%0A%09sort.In\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-31_01-34-15",
+            "content": "@@ -642,32 +642,33 @@\n %09%0A%09%09%09if abs %3C 10\n+0\n  %7B%0A%09%09%09%09stress = \n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-31_01-34-54",
+            "content": "@@ -653,9 +653,9 @@\n  %3C 1\n-5\n+0\n  %7B%0A%09\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-31_01-35-00",
+            "content": "@@ -350,16 +350,34 @@\n %09%09%7D%0A%09%09%09%0A\n+%09%09%09if abs %3C 10 %7B%0A%09\n %09%09%09stres\n@@ -398,16 +398,21 @@\n ess, s)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-31_01-37-50",
+            "content": "@@ -348,19 +348,19 @@\n %0A%09%09%09%7D%0A%09%09\n-%7D%0A%0A\n+%09%0A%09\n %09%09stress\n@@ -380,16 +380,20 @@\n ess, s)%0A\n+%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-03-31_01-40-55",
+            "content": "@@ -348,19 +348,19 @@\n %0A%09%09%09%7D%0A%09%09\n-%09%0A%09\n+%7D%0A%0A\n %09%09stress\n@@ -380,20 +380,16 @@\n ess, s)%0A\n-%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-03-31_01-41-32",
+            "content": "@@ -350,34 +350,16 @@\n %09%09%7D%0A%09%09%09%0A\n-%09%09%09if abs %3C 10 %7B%0A%09\n %09%09%09stres\n@@ -372,37 +372,32 @@\n pend(stress, s)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09return s\n@@ -626,17 +626,17 @@\n  abs %3C 1\n-0\n+5\n  %7B%0A%09%09%09%09s\n",
+            "lines": "139"
+        },
+        {
+            "label": "2026-03-31_01-41-54",
+            "content": "@@ -634,18 +634,37 @@\n %0A%09%09%09%7D%0A%09%09\n-%7D%0A\n+%09%0A%09%09%09if abs %3C 10 %7B%0A%09%09\n %09%09stress\n@@ -684,16 +684,25 @@\n ess, s)%0A\n+%09%09%09%7D%0A%09%09%7D%0A\n %09%7D%0A%09sort\n",
+            "lines": "141"
+        },
+        {
+            "label": "2026-03-31_01-42-29",
+            "content": "@@ -633,16 +633,19 @@\n s%0A%09%09%09%7D%0A%09\n+%09%7D%0A\n %09%09stress\n@@ -665,20 +665,16 @@\n ess, s)%0A\n-%09%09%7D%0A\n %09%7D%0A%09sort\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-03-31_01-43-01",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tvar man [] int\n\t for _, v := range vet{\n\t\tif v > 0{\n\t\t\tman = append(man, v)\n\t\t}\n\t }\n\t return man\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tvar stress [] int\n\tfor _, s := range vet{\n\n\t\tif s < 0 {\n\t\t\tabs := s\n\n\t\t\tif abs < 0 {\n\t\t\t\tabs = -abs\n\t\t\t}\n\t\t\t\n\t\t\tif abs < 10 {\n\t\t\t\tstress = append(stress, s)\n\t\t\t}\n\t\t}\n\t}\n\treturn stress\n}\n\nfunc sortVet(vet []int) []int {\n\tsort.Ints(vet)\n\treturn vet\n}\n\nfunc sortStress(vet []int) []int {\n\tvar stress [] int\n\tfor _, s := range vet{\n\n\t\tif s < 0 {\n\t\t\tabs := s\n\n\t\t\tif abs < 0 {\n\t\t\t\tabs = -abs\n\t\t\t}\n\t\t\tstress = append(stress, s)\n\t\t}\n\t}\n\tsort.Ints(stress)\n\treturn stress\n}\t\n\nfunc reverse(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc unique(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc repeated(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n\n",
+            "lines": "138"
         }
     ]
 }

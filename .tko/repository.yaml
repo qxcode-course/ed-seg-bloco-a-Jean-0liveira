@@ -14,6 +14,8 @@ sources:
   tasks: null
 expanded:
 - ed@rec
+- ed@map_set
+- ed@vector
 tasks:
   ed@pintando: '{self:1, rate:100, study:30, friend:Nao, concept:1}'
   ed@mumia: '{self:1, rate:100, study:20, friend:Nao, concept:1}'
@@ -25,6 +27,7 @@ tasks:
   ed@princesa: '{self:1, rate:100, study:210, concept:1, debug:1}'
   ed@apagando: '{self:1, rate:100, study:75}'
   ed@manipulacao: '{self:1, rate:100, study:275, concept:1}'
+  ed@eh_primo: '{self:1, rate:100, study:25}'
 flags:
   panel: 1
   inbox: 0
@@ -32,4 +35,4 @@ flags:
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: ed@fractais_png
+selected: ed@resto

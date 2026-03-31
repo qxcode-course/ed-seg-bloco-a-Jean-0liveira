@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-31_16-50-45",
+            "content": "@@ -138,85 +138,36 @@\n  %7B%0A%09\n-for i := 1; i %3C= x; i++%7B%0A%09%09if x %25 i != 0%7B%0A%09%09%09return false%0A%09%09%7D%0A%09%7D%0A%09return true\n+_, _ = x, div%0A%09return false;\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-31_16-59-06",
+            "content": "@@ -168,19 +168,17 @@\n %09if x %25 \n-div\n+i\n  != 0%7B%0A%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-31_17-00-11",
+            "content": "@@ -168,17 +168,19 @@\n %09if x %25 \n-2\n+div\n  != 0%7B%0A%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-31_17-00-18",
+            "content": "@@ -168,17 +168,17 @@\n %09if x %25 \n-i\n+2\n  != 0%7B%0A%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-31_17-00-26",
+            "content": "@@ -168,19 +168,17 @@\n %09if x %25 \n-div\n+i\n  != 0%7B%0A%09\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-31_17-01-15",
+            "content": "@@ -147,37 +147,24 @@\n  := \n-0\n+1\n ; i %3C\n+=\n  x; i++\n- \n %7B%0A\n-%09%09cont := 1%0A%0A\n %09%09if\n@@ -172,18 +172,16 @@\n x %25 \n-cont\n+div\n  != 0\n- \n %7B%0A%09%09\n@@ -198,29 +198,8 @@\n lse%0A\n-%09%09%7D else %7B%0A%09%09%09cont++%0A\n %09%09%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-03-31_17-06-05",
+            "content": "@@ -192,24 +192,8 @@\n t !=\n- 0 %7C%7C x %25 cont %3C\n  0 %7B\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-31_17-07-00",
+            "content": "@@ -137,37 +137,8 @@\n l %7B%0A\n-%09if x %3C 2 %7B%0A%09%09return true%0A%09%7D%0A\n %09for\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-31_17-10-16",
+            "content": "@@ -154,20 +154,19 @@\n %09return \n-fals\n+tru\n e%0A%09%7D%0A%09fo\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_17-10-48",
+            "content": "@@ -173,17 +173,17 @@\n or i := \n-2\n+0\n ; i %3C x;\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_17-11-54",
+            "content": "@@ -112,16 +112,25 @@\n primo(x \n+int, div \n int) boo\n@@ -352,16 +352,19 @@\n _primo(x\n+, 2\n ) %7B%0A%09%09fm\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_17-12-19",
+            "content": "@@ -172,13 +172,10 @@\n 2; i\n-*i\n  %3C\n-=\n  x; \n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_17-13-12",
+            "content": "@@ -189,39 +189,92 @@\n %7B%0A%09%09\n-if x %25 i == 0 %7B%0A%09%09%09return false\n+cont := 1%0A%0A%09%09if x %25 cont != 0 %7C%7C x %25 cont %3C 0 %7B%0A%09%09%09return false%0A%09%09%7D else %7B%0A%09%09%09cont++\n %0A%09%09%7D\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_17-14-43",
+            "content": "package main\n\nimport \"fmt\"\n\n// x: n\u00famero que est\u00e1 sendo testado\n// div: divisor que est\u00e1 sendo testado\nfunc eh_primo(x int) bool {\n\tif x < 2 {\n\t\treturn false\n\t}\n\tfor i := 2; i*i <= x; i++ {\n\t\tif x % i == 0 {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tvar x int\n\tfmt.Scan(&x)\n\tif eh_primo(x) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "27"
+        }
+    ]
+}

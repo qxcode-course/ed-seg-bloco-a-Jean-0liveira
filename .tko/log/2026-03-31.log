@@ -35,3 +35,30 @@
 2026-03-31 01:42:29, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:138
 2026-03-31 01:43:01, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:138
 2026-03-31 01:45:24, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-31 13:18:47, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-31 13:18:50, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42
+2026-03-31 13:19:15, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-31 13:29:19, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-31 13:37:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:136
+2026-03-31 13:38:46, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:137
+2026-03-31 13:39:12, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:137
+2026-03-31 13:39:31, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:137
+2026-03-31 13:39:38, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:137
+2026-03-31 13:39:53, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:137
+2026-03-31 13:47:14, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:146
+2026-03-31 13:48:09, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:148
+2026-03-31 13:54:13, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:148
+2026-03-31 13:54:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:148
+2026-03-31 13:54:55, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:137
+2026-03-31 14:01:58, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:42, size:142
+2026-03-31 14:04:04, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:57, size:144
+2026-03-31 14:05:36, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-03-31 14:08:56, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-03-31 14:10:54, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:71, size:150
+2026-03-31 14:20:02, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:159
+2026-03-31 14:31:01, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:168
+2026-03-31 14:31:20, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:168
+2026-03-31 14:31:52, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:168
+2026-03-31 14:32:34, EXEC, v:1, k:ed@manipulacao, mode:FULL, size:169, fail:COMP
+2026-03-31 14:35:41, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:85, size:169
+2026-03-31 14:38:43, MOVE, v:1, k:ed@manipulacao, mode:BACK

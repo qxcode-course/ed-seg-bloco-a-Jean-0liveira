@@ -7,6 +7,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"slices"
 )
 
 func getMen(vet []int) []int {
@@ -44,35 +45,65 @@ func sortVet(vet []int) []int {
 }
 
 func sortStress(vet []int) []int {
-	var stress [] int
-	for _, s := range vet{
+	stress := make([] int, len(vet))
 
-		if s < 0 {
-			abs := s
+	copy(stress, vet)
 
-			if abs < 0 {
-				abs = -abs
-			}
-			stress = append(stress, s)
+	slices.SortFunc(stress, func(a, b int) int {
+		absA := a
+		absB := b
+
+		if a < 0 {
+			absA = -a
 		}
-	}
-	sort.Ints(stress)
+		if b < 0 {
+			absB = -b
+		}
+
+		return absA - absB
+	})
+
 	return stress
 }	
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	inverter := make([] int, len(vet))
+
+	tam := len(vet)
+
+	for i, v := range vet{
+		inverter[tam - 1 - i] = v
+	}
+	return inverter
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	vistos := make(map[int] bool)
+	var unico [] int
+	
+	for _, v := range vet{
+		if !vistos[v]{
+			vistos[v] = true
+			unico = append(unico, v)
+		}
+	}
+
+	return unico
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	vistos := make(map[int] bool)
+	jaMap := make(map[int] bool)
+	var repetidos [] int
+
+	for _, v := range vet {
+		if !vistos[v]{
+			vistos[v] = false
+			repetidos = append(repetidos, v)
+		}
+	}
+
+	return repetidos
 }
 
 func main() {

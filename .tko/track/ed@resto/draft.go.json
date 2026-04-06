@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-06_17-41-41",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,25 +37,8 @@\n ) %7B%0A\n-    var num int%0A%0A\n     \n@@ -53,11 +53,23 @@\n tln(\n-num\n+%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-06_17-46-33",
+            "content": "@@ -56,28 +56,8 @@\n nt%0A%0A\n-    fmt.Scan(&num)%0A%0A\n     \n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-04-06_17-46-54",
+            "content": "@@ -80,79 +80,23 @@\n     \n-divisao := num / 2%0A    resto := num %25 2%0A%0A    fmt.Println(divisao, resto\n+fmt.Println(num\n )%0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-06_17-48-37",
+            "content": "@@ -76,18 +76,8 @@\n m)%0A%0A\n-    for %0A%0A\n     \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-04-06_17-54-59",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var num int\n\n    fmt.Scan(&num)\n\n    for \n\n    divisao := num / 2\n    resto := num % 2\n\n    fmt.Println(divisao, resto)\n}\n",
+            "lines": "16"
+        }
+    ]
+}

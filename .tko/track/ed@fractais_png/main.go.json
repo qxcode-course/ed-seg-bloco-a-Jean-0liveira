@@ -62,8 +62,28 @@
         },
         {
             "label": "2026-04-07_19-44-24",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(0, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(200)             // anda 100 pixels\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -446,52 +446,8 @@\n els%0A\n-%09pen.Left(30)%0A%09pen.Right(30)%0A%09pen.Walk(100)%0A\n %09for\n",
             "lines": "27"
+        },
+        {
+            "label": "2026-04-07_19-54-11",
+            "content": "@@ -481,17 +481,17 @@\n en.Walk(\n-5\n+1\n 00)%0A%09for\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-07_19-54-49",
+            "content": "@@ -456,16 +456,31 @@\n eft(30)%0A\n+%09pen.Right(30)%0A\n %09pen.Wal\n@@ -481,17 +481,17 @@\n en.Walk(\n-1\n+5\n 00)%0A%09for\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-07_19-55-55",
+            "content": "@@ -475,75 +475,8 @@\n 00)%0A\n-%09pen.Down()%0A%09pen.Walk(100)%0A%09pen.Up()%0A%09pen.Right(30)%0A%09pen.Walk(100)%0A\n %09for\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-07_19-57-20",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(0, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(200)             // anda 100 pixels\n\tpen.Left(30)\n\tpen.Walk(100)\n\tpen.Down()\n\tpen.Walk(100)\n\tpen.Up()\n\tpen.Right(30)\n\tpen.Walk(100)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "34"
         }
     ]
 }

@@ -23,3 +23,30 @@
 2026-04-07 18:11:02, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
 2026-04-07 18:11:05, MOVE, v:1, k:ed@resto, mode:BACK
 2026-04-07 18:11:38, SELF, v:1, k:ed@resto, self:1, rate:100, study:40, concept:1
+2026-04-07 18:51:51, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-07 18:51:54, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:136
+2026-04-07 18:52:40, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:136
+2026-04-07 18:52:53, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:136
+2026-04-07 18:53:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:136
+2026-04-07 18:53:10, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:136
+2026-04-07 18:53:10, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 18:53:10, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 18:53:09, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:27:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:136
+2026-04-07 19:27:54, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:27:58, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:27:58, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:36:36, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:37:40, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:129
+2026-04-07 19:40:35, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:127
+2026-04-07 19:40:46, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:126
+2026-04-07 19:41:02, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:125
+2026-04-07 19:41:16, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-07 19:41:14, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:41:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:41:16, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:44:07, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-07 19:44:24, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0, size:124
+2026-04-07 19:44:39, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:44:24, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-07 19:44:24, MOVE, v:1, k:ed@fractais_png, mode:EDIT

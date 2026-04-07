@@ -1,0 +1,69 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_18-51-54",
+            "content": "@@ -719,17 +719,17 @@\n en.Walk(\n-5\n+3\n 0) // an\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_18-52-40",
+            "content": "@@ -723,9 +723,9 @@\n alk(\n-7\n+5\n 0) /\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_18-52-53",
+            "content": "@@ -723,9 +723,9 @@\n alk(\n-4\n+7\n 0) /\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_18-53-02",
+            "content": "@@ -719,17 +719,17 @@\n en.Walk(\n-3\n+4\n 0) // an\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_18-53-10",
+            "content": "@@ -217,17 +217,19 @@\n .SetRGB(\n-0\n+255\n , 0, 0) \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_19-27-58",
+            "content": "@@ -754,16 +754,151 @@\n Down()%0A%0A\n+%09%09pen.DrawCircle(10) //desenha um circulo pequeno%0A%0A%09%09pen.Up()%0A%09%09pen.Walk(-30) // volta sem riscar%0A%09%09pen.Down()%0A%0A%09%09pen.Left(36) // gira%0A\n %09%7D%0A%0A%09pen\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-07_19-37-40",
+            "content": "@@ -543,24 +543,141 @@\n  100 pixels%0A\n+%09pen.DrawCircle(50)        // desenha um c%C3%ADrculo de raio 50%0A%09pen.Right(60)             // gira para direita 60 graus%0A\n %09pen.Walk(15\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-07_19-40-35",
+            "content": "@@ -547,16 +547,31 @@\n  pixels%0A\n+%09pen.Walk(150)%0A\n %09for ran\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-07_19-40-46",
+            "content": "@@ -501,16 +501,62 @@\n squerda%0A\n+%09pen.Walk(100)             // anda 100 pixels%0A\n %09for ran\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-07_19-41-02",
+            "content": "@@ -442,16 +442,75 @@\n  pixels%0A\n+%09pen.Left(30)              // dobra 30 graus para esquerda%0A\n %09for ran\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-07_19-41-16",
+            "content": "@@ -407,17 +407,17 @@\n n.Walk(1\n-5\n+0\n 0)      \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_19-44-07",
+            "content": "@@ -410,10 +410,10 @@\n alk(\n-20\n+15\n 0)  \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-07_19-44-24",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(0, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(200)             // anda 100 pixels\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "27"
+        }
+    ]
+}

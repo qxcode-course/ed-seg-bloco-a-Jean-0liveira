@@ -2,8 +2,133 @@
     "patches": [
         {
             "label": "2026-04-07_18-51-54",
-            "content": "package main\n\nimport (\n\t\"math\"\n\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(1, 1, 1)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(2)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n",
+            "content": "@@ -1710,89 +1710,4 @@\n )%0A%7D%0A\n-%0Afunc arvore (pen *Pen, size float64)%7B%0A%09if size %3C 5 %7B%0A%09%09return%0A%09%7D%0A%0A%09pen.Walk(size)%0A%7D%0A\n",
             "lines": "97"
+        },
+        {
+            "label": "2026-04-13_13-07-45",
+            "content": "@@ -1792,68 +1792,7 @@\n ize)\n-%0A%0A%09x := pen.x%0A%09y := pen.y%0A%09angulo := pen.angle%0A%0A%09pen.Left(30)\n %0A%7D%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-04-13_13-09-45",
+            "content": "@@ -1854,31 +1854,6 @@\n 30)%0A\n-%09arvore(pen, size * 0.7)%0A\n %7D%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-04-13_13-11-07",
+            "content": "@@ -1878,55 +1878,7 @@\n 0.7)\n-%0A%0A%09pen.SetPosition(x, y)%0A%09pen.SetHeading(angulo)\n %0A%7D%0A\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-04-13_13-12-00",
+            "content": "@@ -225,31 +225,31 @@\n %0A%09dc.SetRGB(\n-0, 0, 0\n+1, 1, 1\n )%0A%09dc.Clear(\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_13-15-29",
+            "content": "@@ -1756,17 +1756,17 @@\n  size %3C \n-4\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_13-24-31",
+            "content": "@@ -1756,17 +1756,17 @@\n  size %3C \n-3\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_13-24-39",
+            "content": "@@ -1756,17 +1756,17 @@\n  size %3C \n-2\n+3\n  %7B%0A%09%09ret\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_13-24-49",
+            "content": "@@ -1873,17 +1873,16 @@\n ze * 0.7\n-5\n )%0A%0A%09pen.\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_13-25-25",
+            "content": "@@ -1846,17 +1846,17 @@\n en.Left(\n-2\n+3\n 0)%0A%09arvo\n@@ -1927,49 +1927,7 @@\n ulo)\n-%0A%0A%09pen.Right(20)%0A%09arvore(pen, size * 0.75)\n %0A%7D%0A\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-04-13_13-27-53",
+            "content": "@@ -1969,55 +1969,7 @@\n .75)\n-%0A%0A%09pen.SetPosition(x, y)%0A%09pen.SetHeading(angulo)\n %0A%7D%0A\n",
+            "lines": "118"
+        },
+        {
+            "label": "2026-04-13_13-28-52",
+            "content": "@@ -287,17 +287,17 @@\n neWidth(\n-1\n+2\n )%0A%09retur\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-29-39",
+            "content": "@@ -1846,17 +1846,17 @@\n en.Left(\n-3\n+2\n 0)%0A%09arvo\n@@ -1940,9 +1940,9 @@\n ght(\n-3\n+2\n 0)%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-30-05",
+            "content": "@@ -1864,32 +1864,33 @@\n e(pen, size * 0.\n+7\n 5)%0A%0A%09pen.SetPosi\n@@ -1962,16 +1962,17 @@\n ize * 0.\n+7\n 5)%0A%0A%09pen\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-32-25",
+            "content": "@@ -1864,33 +1864,33 @@\n e(pen, size * 0.\n-7\n+5\n )%0A%0A%09pen.SetPosit\n@@ -1965,9 +1965,9 @@\n * 0.\n-7\n+5\n )%0A%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-32-41",
+            "content": "@@ -1846,17 +1846,17 @@\n en.Left(\n-2\n+3\n 0)%0A%09arvo\n@@ -1935,17 +1935,17 @@\n n.Right(\n-2\n+3\n 0)%0A%09arvo\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-33-23",
+            "content": "@@ -1847,17 +1847,17 @@\n n.Left(2\n-5\n+0\n )%0A%09arvor\n@@ -1936,17 +1936,17 @@\n .Right(2\n-5\n+0\n )%0A%09arvor\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-33-37",
+            "content": "@@ -1846,18 +1846,18 @@\n en.Left(\n-30\n+25\n )%0A%09arvor\n@@ -1865,33 +1865,32 @@\n (pen, size * 0.7\n-5\n )%0A%0A%09pen.SetPosit\n@@ -1939,10 +1939,10 @@\n ght(\n-30\n+25\n )%0A%09a\n@@ -1962,17 +1962,16 @@\n ze * 0.7\n-5\n )%0A%0A%09pen.\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-39-49",
+            "content": "@@ -1846,17 +1846,17 @@\n en.Left(\n-2\n+3\n 0)%0A%09arvo\n@@ -1936,17 +1936,17 @@\n n.Right(\n-2\n+3\n 0)%0A%09arvo\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-40-23",
+            "content": "@@ -1846,17 +1846,17 @@\n en.Left(\n-3\n+2\n 0)%0A%09arvo\n@@ -1940,9 +1940,9 @@\n ght(\n-3\n+2\n 0)%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-40-51",
+            "content": "@@ -1864,33 +1864,33 @@\n e(pen, size * 0.\n-6\n+7\n 5)%0A%0A%09pen.SetPosi\n@@ -1962,17 +1962,17 @@\n ize * 0.\n-6\n+7\n 5)%0A%0A%09pen\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-41-26",
+            "content": "@@ -1846,17 +1846,17 @@\n en.Left(\n-4\n+3\n 0)%0A%09arvo\n@@ -1936,17 +1936,17 @@\n n.Right(\n-4\n+3\n 0)%0A%09arvo\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-43-11",
+            "content": "@@ -1846,18 +1846,18 @@\n en.Left(\n-35\n+40\n )%0A%09arvor\n@@ -1940,10 +1940,10 @@\n ght(\n-35\n+40\n )%0A%09a\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-43-37",
+            "content": "@@ -1864,33 +1864,34 @@\n e(pen, size * 0.\n-7\n+65\n )%0A%0A%09pen.SetPosit\n@@ -1966,9 +1966,10 @@\n * 0.\n-7\n+65\n )%0A%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-44-12",
+            "content": "@@ -1864,34 +1864,33 @@\n e(pen, size * 0.\n-65\n+7\n )%0A%0A%09pen.SetPosit\n@@ -1965,10 +1965,9 @@\n * 0.\n-65\n+7\n )%0A%0A%09\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_13-44-44",
+            "content": "package main\n\nimport (\n\t\"math\"\n\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(0, 0, 0)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(1)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n\nfunc arvore (pen *Pen, size float64){\n\tif size < 2 {\n\t\treturn\n\t}\n\n\tpen.Walk(size)\n\n\tx := pen.x\n\ty := pen.y\n\tangulo := pen.angle\n\n\tpen.Left(35)\n\tarvore(pen, size * 0.65)\n\n\tpen.SetPosition(x, y)\n\tpen.SetHeading(angulo)\n\n\tpen.Right(35)\n\tarvore(pen, size * 0.65)\n\n\tpen.SetPosition(x, y)\n\tpen.SetHeading(angulo)\n}\n",
+            "lines": "121"
         }
     ]
 }

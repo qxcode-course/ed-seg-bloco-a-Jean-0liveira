@@ -82,8 +82,73 @@
         },
         {
             "label": "2026-04-07_19-57-20",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(500, 500)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(0, 0, 0)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(250, 500) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\tpen.Walk(200)             // anda 100 pixels\n\tpen.Left(30)\n\tpen.Walk(100)\n\tpen.Down()\n\tpen.Walk(100)\n\tpen.Up()\n\tpen.Right(30)\n\tpen.Walk(100)\n\tfor range 10 {\n\t\tpen.Up()\n\t\tpen.Walk(30) // anda sem riscar\n\t\tpen.Down()\n\n\t}\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -400,26 +400,227 @@\n ima%0A\n-%0A%09arvore(pen, 100)\n+%09pen.Walk(200)             // anda 100 pixels%0A%09pen.Left(30)%0A%09pen.Walk(100)%0A%09pen.Down()%0A%09pen.Walk(100)%0A%09pen.Up()%0A%09pen.Right(30)%0A%09pen.Walk(100)%0A%09for range 10 %7B%0A%09%09pen.Up()%0A%09%09pen.Walk(30) // anda sem riscar%0A%09%09pen.Down()%0A%0A%09%7D\n %0A%0A%09p\n",
             "lines": "34"
+        },
+        {
+            "label": "2026-04-13_13-07-45",
+            "content": "@@ -221,21 +221,15 @@\n RGB(\n-255, 255, 255\n+0, 0, 0\n )   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-15-29",
+            "content": "@@ -143,15 +143,14 @@\n Pen(\n-10\n+5\n 00, \n-8\n+5\n 00) \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-26-09",
+            "content": "@@ -296,14 +296,14 @@\n ion(\n+2\n 5\n-0\n 0, \n-8\n+5\n 00) \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-26-44",
+            "content": "@@ -417,17 +417,17 @@\n re(pen, \n-2\n+1\n 00)%0A%0A%09pe\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-30-29",
+            "content": "@@ -421,10 +421,10 @@\n en, \n-15\n+20\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-31-32",
+            "content": "@@ -418,17 +418,17 @@\n e(pen, 1\n-0\n+5\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-31-46",
+            "content": "@@ -417,17 +417,17 @@\n re(pen, \n-2\n+1\n 00)%0A%0A%09pe\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-33-00",
+            "content": "@@ -421,9 +421,9 @@\n en, \n-3\n+2\n 00)%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-41-53",
+            "content": "@@ -417,17 +417,17 @@\n re(pen, \n-2\n+3\n 00)%0A%0A%09pe\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-44-30",
+            "content": "@@ -418,17 +418,17 @@\n e(pen, 2\n-5\n+0\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-44-58",
+            "content": "@@ -418,17 +418,17 @@\n e(pen, 2\n-8\n+5\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-45-10",
+            "content": "@@ -418,17 +418,17 @@\n e(pen, 2\n-9\n+8\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_13-45-26",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 800)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 255, 255)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 800) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\n\tarvore(pen, 290)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "lines": "22"
         }
     ]
 }

@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_19-19-33",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,54 +41,35 @@\n     \n-var n int%0A%0A    fmt.Scan(&n)%0A%0A    fmt.Println(n\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-13_19-21-00",
+            "content": "@@ -72,83 +72,8 @@\n n)%0A%0A\n-    macho := make(%5B%5D int, 0)%0A    femea := make(%5B%5D int, 0)%0A    casais := 0%0A%0A\n     \n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-13_19-24-47",
+            "content": "@@ -147,62 +147,8 @@\n  0%0A%0A\n-    for  i := 0; i %3C n; i++%7B%0A        fmt.Scan(&n)%0A    \n     \n@@ -166,12 +166,6 @@\n (n)%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-13_19-27-27",
+            "content": "@@ -71,19 +71,16 @@\n &n)%0A%0A   \n- //\n  macho :\n@@ -100,19 +100,16 @@\n , 0)%0A   \n- //\n  femea :\n@@ -133,11 +133,8 @@\n %0A   \n- //\n  cas\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-13_19-27-37",
+            "content": "@@ -185,26 +185,8 @@\n ++%7B%0A\n-        var x int%0A\n     \n@@ -199,17 +199,17 @@\n t.Scan(&\n-x\n+n\n )%0A      \n@@ -226,9 +226,9 @@\n tln(\n-x\n+n\n )%0A  \n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-13_19-28-23",
+            "content": "@@ -71,16 +71,19 @@\n &n)%0A%0A   \n+ //\n  macho :\n@@ -103,16 +103,19 @@\n , 0)%0A   \n+ //\n  femea :\n@@ -232,175 +232,27 @@\n     \n-%0A        if x %3E 0 %7B%0A            macho = append(macho, x)%0A        %7D else %7B%0A            femea = append(femea, x)%0A        %7D%0A    %7D%0A    fmt.Print(macho)%0A    fmt.Print(femea)\n+fmt.Println(x)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_19-32-17",
+            "content": "@@ -346,83 +346,8 @@\n    %7D\n-%0A%0A        if len(macho) %3E= 1 && femea %3E= 1%7B%0A            macho%5B1:%5D%0A        %7D\n %0A   \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-13_19-36-03",
+            "content": "@@ -129,16 +129,19 @@\n , 0)%0A   \n+ //\n  casais \n@@ -378,18 +378,13 @@\n  && \n-len(\n femea\n-)\n  %3E= \n@@ -402,16 +402,17 @@\n     \n-casais++\n+macho%5B1:%5D\n %0A   \n@@ -441,17 +441,35 @@\n rint\n-ln(casais\n+(macho)%0A    fmt.Print(femea\n )%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-13_19-37-10",
+            "content": "@@ -412,61 +412,8 @@\n is++\n-%0A%0A            macho := %5B1:%5D%0A            femea := %5B1:%5D\n %0A   \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-13_19-38-47",
+            "content": "@@ -428,26 +428,26 @@\n   macho := %5B\n-:\n 1\n+:\n %5D%0A          \n@@ -462,10 +462,10 @@\n := %5B\n-:\n 1\n+:\n %5D%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_19-39-02",
+            "content": "@@ -427,16 +427,20 @@\n    macho\n+ := \n %5B:1%5D%0A   \n@@ -453,16 +453,20 @@\n    femea\n+ := \n %5B:1%5D%0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_19-39-16",
+            "content": "@@ -425,17 +425,8 @@\n     \n- macho  =\n  mac\n@@ -443,24 +443,16 @@\n         \n- femea =\n  femea%5B:\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_19-41-33",
+            "content": "@@ -437,18 +437,18 @@\n = macho%5B\n-1\n :\n+1\n %5D%0A      \n@@ -471,10 +471,10 @@\n mea%5B\n-1\n :\n+1\n %5D%0A  \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-04-13_19-41-47",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var n int\n\n    fmt.Scan(&n)\n\n    macho := make([] int, 0)\n    femea := make([] int, 0)\n    casais := 0\n\n    for  i := 0; i < n; i++{\n        var x int\n        fmt.Scan(&x)\n        \n        if x > 0 {\n            macho = append(macho, x)\n        } else {\n            femea = append(femea, x)\n        }\n\n        if len(macho) >= 1 && len(femea) >= 1{\n            casais++\n\n            macho  = macho[1:]\n            femea = femea[1:]\n        }\n    }\n    fmt.Println(casais)\n}\n",
+            "lines": "32"
+        }
+    ]
+}

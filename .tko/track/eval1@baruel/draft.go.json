@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-13_20-04-22",
+            "content": "@@ -43,217 +43,7 @@\n     \n-var qtd_total_fig int%0A    var qtd_baruel_fig int%0A    %0A    fmt.Scan(&qtd_total_fig)%0A    fmt.Scan(&qtd_baruel_fig)%0A%0A    figs := make(%5B%5D int, qtd_baruel_fig)%0A%0A    for i:= 0; i %3C qtd_baruel_fig; i++%7B%0A        %0A    %7D\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-04-13_20-11-00",
+            "content": "@@ -247,56 +247,13 @@\n     \n-fmt.Scan(&figs%5Bi%5D)%0A    %7D%0A    fmt.Print(figs%0A    )\n+%0A    %7D\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-13_20-12-46",
+            "content": "@@ -286,12 +286,17 @@\n int(figs\n+%0A    \n )%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-13_20-13-02",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_total_fig int\n    var qtd_baruel_fig int\n    \n    fmt.Scan(&qtd_total_fig)\n    fmt.Scan(&qtd_baruel_fig)\n\n    figs := make([] int, qtd_baruel_fig)\n\n    for i:= 0; i < qtd_baruel_fig; i++{\n        fmt.Scan(&figs[i])\n    }\n    fmt.Print(figs)\n}\n",
+            "lines": "18"
+        }
+    ]
+}

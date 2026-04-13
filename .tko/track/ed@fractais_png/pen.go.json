@@ -127,8 +127,33 @@
         },
         {
             "label": "2026-04-13_13-44-44",
-            "content": "package main\n\nimport (\n\t\"math\"\n\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(0, 0, 0)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(1)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n\nfunc arvore (pen *Pen, size float64){\n\tif size < 2 {\n\t\treturn\n\t}\n\n\tpen.Walk(size)\n\n\tx := pen.x\n\ty := pen.y\n\tangulo := pen.angle\n\n\tpen.Left(35)\n\tarvore(pen, size * 0.65)\n\n\tpen.SetPosition(x, y)\n\tpen.SetHeading(angulo)\n\n\tpen.Right(35)\n\tarvore(pen, size * 0.65)\n\n\tpen.SetPosition(x, y)\n\tpen.SetHeading(angulo)\n}\n",
+            "content": "@@ -1795,52 +1795,8 @@\n )%0A%0A%09\n-subDiv := 5.0%0A%09tamSubDiv := size / subDiv%0A%0A%09\n x :=\n@@ -1837,11 +1837,187 @@\n angle%0A%0A%09\n+pen.Left(35)%0A%09arvore(pen, size * 0.65)%0A%0A%09pen.SetPosition(x, y)%0A%09pen.SetHeading(angulo)%0A%0A%09pen.Right(35)%0A%09arvore(pen, size * 0.65)%0A%0A%09pen.SetPosition(x, y)%0A%09pen.SetHeading(angulo)\n %0A%7D%0A\n",
             "lines": "121"
+        },
+        {
+            "label": "2026-04-13_14-03-37",
+            "content": "@@ -1884,30 +1884,8 @@\n le%0A%0A\n-%09pen.Walk(tamSubDiv)%0A%0A\n %09%0A%7D%0A\n",
+            "lines": "114"
+        },
+        {
+            "label": "2026-04-13_14-06-51",
+            "content": "@@ -1884,56 +1884,8 @@\n le%0A%0A\n-%09pen.SetPosition(x, y)%0A%09pen.SetHeading(angulo)%0A%0A\n %09pen\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-04-13_14-07-56",
+            "content": "@@ -1932,44 +1932,8 @@\n o)%0A%0A\n-%09for i := 0; i %3C int(subDiv); i++%7B%0A%09\n %09pen\n@@ -1948,17 +1948,14 @@\n mSubDiv)\n-%0A%09%7D\n %0A%0A%09%0A%7D%0A\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-04-13_14-32-02",
+            "content": "@@ -1712,20 +1712,22 @@\n %7D%0A%0Afunc \n-ramo\n+arvore\n  (pen *P\n@@ -1988,48 +1988,8 @@\n Div)\n-%0A%0A%09%09pen.Left(30)%0A%09%09ramo(pen, size * 0.2)\n %0A%09%7D%0A\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-04-13_14-33-50",
+            "content": "package main\n\nimport (\n\t\"math\"\n\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(0, 0, 0)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(1)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n\nfunc ramo (pen *Pen, size float64){\n\tif size < 2 {\n\t\treturn\n\t}\n\n\tpen.Walk(size)\n\n\tsubDiv := 5.0\n\ttamSubDiv := size / subDiv\n\n\tx := pen.x\n\ty := pen.y\n\tangulo := pen.angle\n\n\tpen.SetPosition(x, y)\n\tpen.SetHeading(angulo)\n\n\tfor i := 0; i < int(subDiv); i++{\n\t\tpen.Walk(tamSubDiv)\n\n\t\tpen.Left(30)\n\t\tramo(pen, size * 0.2)\n\t}\n\n\t\n}\n",
+            "lines": "124"
         }
     ]
 }

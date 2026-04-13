@@ -96,26 +96,29 @@ func (t *Pen) SavePNG(path string) {
 	t.dc.SavePNG(path)
 }
 
-func arvore (pen *Pen, size float64){
+func ramo (pen *Pen, size float64){
 	if size < 2 {
 		return
 	}
 
 	pen.Walk(size)
 
+	subDiv := 5.0
+	tamSubDiv := size / subDiv
+
 	x := pen.x
 	y := pen.y
 	angulo := pen.angle
 
-	pen.Left(35)
-	arvore(pen, size * 0.65)
-
 	pen.SetPosition(x, y)
 	pen.SetHeading(angulo)
 
-	pen.Right(35)
-	arvore(pen, size * 0.65)
+	for i := 0; i < int(subDiv); i++{
+		pen.Walk(tamSubDiv)
 
-	pen.SetPosition(x, y)
-	pen.SetHeading(angulo)
+		pen.Left(30)
+		ramo(pen, size * 0.2)
+	}
+
+	
 }

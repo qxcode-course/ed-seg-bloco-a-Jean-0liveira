@@ -15,8 +15,8 @@ func main() {
 	pen.SetPosition(500, 800) // move o pincel para x 250, y 500
 	pen.SetHeading(90)        // coloca o pincel apontando para cima
 
-	arvore(pen, 290)
+	ramo(pen, 290)
 
-	pen.SavePNG("tree.png")
+	pen.SavePNG("ramo.png")
 	fmt.Println("PNG file created successfully.")
 }

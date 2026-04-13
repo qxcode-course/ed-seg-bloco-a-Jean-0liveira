@@ -147,7 +147,17 @@
         },
         {
             "label": "2026-04-13_13-45-26",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 800)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 255, 255)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 800) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\n\tarvore(pen, 290)\n\n\tpen.SavePNG(\"tree.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -441,12 +441,12 @@\n NG(%22\n-ramo\n+tree\n .png\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_14-03-37",
+            "content": "@@ -405,20 +405,22 @@\n  cima%0A%0A%09\n-ramo\n+arvore\n (pen, 29\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-13_14-34-04",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 800)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 255, 255)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 800) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\n\tramo(pen, 290)\n\n\tpen.SavePNG(\"ramo.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
             "lines": "22"
         }
     ]

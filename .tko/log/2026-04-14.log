@@ -1,0 +1,34 @@
+2026-04-14 00:00:59, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 00:02:10, MOVE, v:1, k:eval1@baruel, mode:PICK
+2026-04-14 00:02:12, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0
+2026-04-14 00:03:42, EXEC, v:1, k:eval1@baruel, mode:FULL, size:39, fail:COMP
+2026-04-14 00:02:12, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:06:18, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:06:28, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:45
+2026-04-14 00:06:47, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:45
+2026-04-14 00:11:14, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:06:47, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:13:05, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:54
+2026-04-14 00:13:55, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:55
+2026-04-14 00:14:18, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:56
+2026-04-14 00:14:32, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:56
+2026-04-14 00:15:05, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:56
+2026-04-14 00:15:16, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:25, size:56
+2026-04-14 00:15:40, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:75, size:57
+2026-04-14 00:15:38, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:15:40, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:17:15, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:75, size:61
+2026-04-14 00:17:46, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:75, size:63
+2026-04-14 00:17:59, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:63
+2026-04-14 00:18:11, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:0, size:63
+2026-04-14 00:19:35, EXEC, v:1, k:eval1@baruel, mode:FULL, rate:100, size:63
+2026-04-14 00:19:38, MOVE, v:1, k:eval1@baruel, mode:BACK
+2026-04-14 00:20:34, SELF, v:1, k:eval1@baruel, self:1, rate:100, study:80
+2026-04-14 00:20:52, MOVE, v:1, k:eval1@apagando, mode:PICK
+2026-04-14 00:20:53, EXEC, v:1, k:eval1@apagando, mode:FULL, rate:100
+2026-04-14 00:20:55, MOVE, v:1, k:eval1@apagando, mode:BACK
+2026-04-14 00:21:09, SELF, v:1, k:eval1@apagando, self:1, rate:100, study:20
+2026-04-14 00:19:34, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:19:35, MOVE, v:1, k:eval1@baruel, mode:EDIT
+2026-04-14 00:20:53, MOVE, v:1, k:eval1@apagando, mode:EDIT
+2026-04-14 00:21:20, SELF, v:1, k:eval1@casais, self:1, rate:100, study:25

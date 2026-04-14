@@ -17,8 +17,108 @@
         },
         {
             "label": "2026-04-13_20-13-02",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_total_fig int\n    var qtd_baruel_fig int\n    \n    fmt.Scan(&qtd_total_fig)\n    fmt.Scan(&qtd_baruel_fig)\n\n    figs := make([] int, qtd_baruel_fig)\n\n    for i:= 0; i < qtd_baruel_fig; i++{\n        fmt.Scan(&figs[i])\n    }\n    fmt.Print(figs)\n}\n",
+            "content": "@@ -268,17 +268,16 @@\n )%0A    %7D%0A\n-%0A\n     fmt.\n@@ -291,91 +291,7 @@\n igs)\n-%0A%0A    reps := make(map%5Bint%5Dint)%0A%0A    for _, f := range figs%7B%0A        reps%5Bf%5D++%0A    %7D\n %0A%7D%0A\n",
             "lines": "18"
+        },
+        {
+            "label": "2026-04-13_23-36-54",
+            "content": "@@ -377,178 +377,6 @@\n   %7D%0A\n-     %0A    pri_rep := true%0A%0A    for _, f := range figs%7B%0A        if reps%5Bf%5D %3E 1%7B%0A            if !pri_rep%7B%0A                fmt.Println(%22 %22)%0A            %7D%0A        %7D%0A    %7D%0A    %0A\n %7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-13_23-56-24",
+            "content": "@@ -269,16 +269,37 @@\n %0A    %7D%0A%0A\n+    fmt.Print(figs)%0A%0A\n     reps\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-13_23-56-43",
+            "content": "@@ -507,35 +507,8 @@\n   %7D%0A\n-            fmt.Println(f)%0A\n     \n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-04-13_23-57-24",
+            "content": "@@ -524,16 +524,18 @@\n mt.Print\n+ln\n (f)%0A    \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-13_23-57-38",
+            "content": "@@ -381,29 +381,8 @@\n true\n-%0A    repetiu := false\n %0A%0A  \n@@ -532,85 +532,8 @@\n (f)%0A\n-            repetiu = true%0A            pri_rep = false%0A            reps%5Bf%5D--%0A\n     \n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-04-14_00-03-42",
+            "content": "@@ -645,93 +645,8 @@\n    %7D\n-%0A%0A    if !repetiu %7B%0A        fmt.Println(%22N%22)%0A    %7D else %7B%0A        fmt.Println()%0A    %7D\n %0A   \n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-14_00-06-28",
+            "content": "@@ -502,16 +502,18 @@\n mt.Print\n+ln\n (%22 %22)%0A  \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_00-06-47",
+            "content": "@@ -729,180 +729,8 @@\n   %7D%0A\n-%0A    pri_fal := true%0A%0A    for i := 1; i %3C= qtd_total_fig; i++%7B%0A        if reps%5Bi%5D == 0%7B%0A            if !pri_fal%7B%0A                fmt.Print(%22%22)%0A            %7D%0A        %7D%0A    %7D\n     \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-04-14_00-13-05",
+            "content": "@@ -886,33 +886,8 @@\n   %7D%0A\n-            fmt.Print(i)%0A\n     \n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-14_00-13-55",
+            "content": "@@ -926,25 +926,11 @@\n    %7D\n-%0A\n     \n-fmt.Println()\n %0A%7D%0A\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-04-14_00-14-18",
+            "content": "@@ -857,33 +857,32 @@\n      fmt.Print(%22\n- \n %22)%0A            %7D\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-14_00-14-32",
+            "content": "@@ -910,13 +910,8 @@\n nt(i\n-, %22 %22\n )%0A  \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-14_00-15-05",
+            "content": "@@ -906,16 +906,21 @@\n .Print(i\n+, %22 %22\n )%0A      \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-14_00-15-16",
+            "content": "@@ -912,36 +912,8 @@\n (i)%0A\n-            pri_fal = false%0A\n     \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-14_00-15-40",
+            "content": "@@ -749,28 +749,8 @@\n true\n-%0A    faltou := false\n %0A%0A  \n@@ -932,25 +932,24 @@\n fal = false%0A\n-%0A\n         %7D%0A  \n@@ -956,28 +956,8 @@\n   %7D%0A\n-    if !faltou%7B%0A    \n     \n@@ -970,16 +970,10 @@\n intln()%0A\n-    %7D%0A\n %7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-04-14_00-17-15",
+            "content": "@@ -1015,44 +1015,8 @@\n n()%0A\n-    %7D else %7B%0A        fmt.Print(%22N%22)%0A\n     \n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-04-14_00-17-46",
+            "content": "@@ -960,33 +960,8 @@\n lse%0A\n-            faltou = true\n %0A   \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-04-14_00-17-59",
+            "content": "@@ -1058,32 +1058,30 @@\n        fmt.Print\n-ln\n (%22N%22)%0A    %7D%0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-04-14_00-18-11",
+            "content": "@@ -1005,16 +1005,17 @@\n %0A    if \n+!\n faltou%7B%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-04-14_00-19-35",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n    var qtd_total_fig int\n    var qtd_baruel_fig int\n    \n    fmt.Scan(&qtd_total_fig)\n    fmt.Scan(&qtd_baruel_fig)\n\n    figs := make([] int, qtd_baruel_fig)\n\n    for i:= 0; i < qtd_baruel_fig; i++{\n        fmt.Scan(&figs[i])\n    }\n\n    reps := make(map[int]int)\n\n    for _, f := range figs{\n        reps[f]++\n    }\n     \n    pri_rep := true\n    repetiu := false\n\n    for _, f := range figs{\n        if reps[f] > 1{\n            if !pri_rep{\n                fmt.Print(\" \")\n            }\n            fmt.Print(f)\n            repetiu = true\n            pri_rep = false\n            reps[f]--\n        }\n    }\n\n    if !repetiu {\n        fmt.Println(\"N\")\n    } else {\n        fmt.Println()\n    }\n\n    pri_fal := true\n    faltou := false\n\n    for i := 1; i <= qtd_total_fig; i++{\n        if reps[i] == 0{\n            if !pri_fal{\n                fmt.Print(\" \")\n            }\n            fmt.Print(i)\n            pri_fal = false\n            faltou = true\n        }\n    }\n    if faltou{\n        fmt.Println()\n    } else {\n        fmt.Println(\"N\")\n    }\n}\n",
+            "lines": "63"
         }
     ]
 }

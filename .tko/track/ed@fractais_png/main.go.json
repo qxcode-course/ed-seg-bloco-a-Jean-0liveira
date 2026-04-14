@@ -157,6 +157,21 @@
         },
         {
             "label": "2026-04-13_14-34-04",
+            "content": "@@ -419,10 +419,10 @@\n en, \n-15\n+29\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-14_14-03-45",
+            "content": "@@ -139,17 +139,18 @@\n  NewPen(\n-8\n+10\n 00, 800)\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-14_14-04-00",
+            "content": "@@ -143,10 +143,9 @@\n Pen(\n-10\n+8\n 00, \n@@ -418,10 +418,10 @@\n en, \n-29\n+15\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-14_14-05-03",
             "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 800)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 255, 255)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 800) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\n\tramo(pen, 290)\n\n\tpen.SavePNG(\"ramo.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
             "lines": "22"
         }

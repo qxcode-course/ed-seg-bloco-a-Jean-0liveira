@@ -116,8 +116,21 @@ func ramo (pen *Pen, size float64){
 	for i := 0; i < int(subDiv); i++{
 		pen.Walk(tamSubDiv)
 
-		pen.Left(30)
-		ramo(pen, size * 0.2)
+		rx := x
+		ry := y
+		rang := angulo
+
+		pen.Left(25)
+		ramo(pen, size * 0.4)
+
+		pen.SetPosition(rx, ry)
+		pen.SetHeading(rang)
+
+		pen.Right(25)
+		ramo(pen, size * 0.4)
+
+		pen.SetPosition(rx, ry)
+		pen.SetHeading(rang)
 	}
 
 	

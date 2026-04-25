@@ -23,14 +23,16 @@ sources:
   tasks: null
 expanded:
 - ed@basic
-- ed@backtrack
 - ed@map_set
+- ed@backtrack
 - ed@rec
+- ed@vector
 flags:
-  inbox: inbox
+  inbox: all
   panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
 selected: ed@mdc
+selected_index: 22

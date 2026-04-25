@@ -7,8 +7,63 @@
         },
         {
             "label": "2026-04-14_14-20-30",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tfmt.Println(mdc(a, b))\n}\n",
+            "content": "@@ -56,88 +56,10 @@\n  %7B%0A%09\n-maior := a%0A%0A%09if maior %3C b %7B%0A%09%09maior := b%0A%09%7D%0A%0A%09for i := 0; i %3C count; i++ %7B%0A%09%09%0A%09%7D\n+if\n %0A%7D%0A%0A\n",
             "lines": "15"
+        },
+        {
+            "label": "2026-04-14_17-47-44",
+            "content": "@@ -111,30 +111,25 @@\n  := \n-maior; i %3C= maior; i--\n+0; i %3C count; i++\n  %7B%0A%09\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-14_17-51-12",
+            "content": "@@ -134,19 +134,16 @@\n i-- %7B%0A%09%09\n-if \n %0A%09%7D%0A%7D%0A%0Af\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-25_15-01-10",
+            "content": "@@ -56,54 +56,93 @@\n  %7B%0A%09\n-if b == 0%7B%0A%09%09return a\n+maior := a%0A%0A%09if maior %3C b %7B%0A%09%09maior := b\n %0A%09%7D%0A\n-%09return mdc(a, b)\n+%0A%09for i := maior; i %3C= maior; i-- \n %7B%0A%09%09\n+if \n %0A%09%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-04-25_15-10-54",
+            "content": "@@ -97,13 +97,16 @@\n a, b\n- %25 a)\n+)%7B%0A%09%09%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-25_15-11-25",
+            "content": "@@ -152,26 +152,8 @@\n &b)%0A\n-%09res := mdc(a, b)%0A\n %09fmt\n@@ -165,11 +165,17 @@\n tln(\n-res\n+mdc(a, b)\n )%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-25_15-12-21",
+            "content": "@@ -89,17 +89,17 @@\n urn mdc(\n-b\n+a\n , b %25 a)\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-25_15-16-00",
+            "content": "@@ -92,17 +92,17 @@\n  mdc(b, \n-a\n+b\n  %25 a)%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-25_15-16-27",
+            "content": "@@ -92,17 +92,17 @@\n  mdc(b, \n-b\n+a\n  %25 a)%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-25_15-16-37",
+            "content": "@@ -92,17 +92,17 @@\n  mdc(b, \n-a\n+b\n  %25 a)%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-25_15-17-01",
+            "content": "@@ -96,17 +96,17 @@\n (b, a %25 \n-b\n+a\n )%0A%7D%0A%0Afun\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-04-25_15-17-09",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc mdc(a, b int) int {\n\tif b == 0{\n\t\treturn a\n\t}\n\treturn mdc(b, a % b)\n}\n\nfunc main() {\n\tvar a, b int\n\tfmt.Scan(&a, &b)\n\tres := mdc(a, b)\n\tfmt.Println(res)\n}\n",
+            "lines": "19"
         }
     ]
 }

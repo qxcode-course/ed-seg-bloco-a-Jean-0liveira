@@ -5,11 +5,15 @@ import (
 )
 
 func mdc(a, b int) int {
-	if 
+	if b == 0{
+		return a
+	}
+	return mdc(b, a % b)
 }
 
 func main() {
 	var a, b int
 	fmt.Scan(&a, &b)
-	fmt.Println(mdc(a, b))
+	res := mdc(a, b)
+	fmt.Println(res)
 }

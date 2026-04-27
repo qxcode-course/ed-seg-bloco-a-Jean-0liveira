@@ -15,3 +15,5 @@
 2026-04-27 08:03:40, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
 2026-04-27 08:04:45, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
 2026-04-27 08:10:22, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-04-27 12:07:51, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-04-27 12:07:53, MOVE, v:1, k:ed@vetbuild, mode:BACK

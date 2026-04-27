@@ -22,10 +22,6 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@basic
-- ed@map_set
-- ed@rec
-- ed@backtrack
 - ed@vector
 flags:
   inbox: inbox
@@ -35,4 +31,4 @@ flags:
   show_time: 'true'
 lang: go
 selected: ed@vetbuild
-selected_index: 19
+selected_index: 3

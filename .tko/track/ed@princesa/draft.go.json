@@ -492,7 +492,12 @@
         },
         {
             "label": "2026-03-29_21-11-54",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    var n, e int\n\n    fmt.Scan(&n)\n    fmt.Scan(&e)\n\n    vivos := make([] bool, n)\n\n    for v := range vivos{\n        vivos[v] = true\n    }\n\n    pos := e - 1\n    num_vivos := n\n\n    for {\n\n        fmt.Print(\"[ \")\n\n        for i := 0; i < len(vivos); i++{\n\n            if vivos[i] {\n                if i == pos {\n                    fmt.Print(i+1, \"> \")\n                } else {\n                    fmt.Print(i+1, \" \")\n                }\n            }\n        }\n\n        fmt.Println(\"]\")\n\n        if num_vivos == 1{\n            break\n        }\n\n        matar := pos\n\n        for {\n            matar = (matar + 1) % n\n\n            if vivos[matar]{\n                break\n            }\n        }\n    \n        vivos[matar] = false\n        num_vivos--\n\n        pos = matar\n\n        for {\n            pos = (pos + 1) % n\n\n            if vivos[pos]{\n                break\n            }\n        }\n    }\n}",
+            "content": "@@ -934,9 +934,8 @@\n %0A    %7D%0A%7D\n-%0A\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-05-01_16-37-09",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n    var n, e int\n\n    fmt.Scan(&n)\n    fmt.Scan(&e)\n\n    vivos := make([] bool, n)\n\n    for v := range vivos{\n        vivos[v] = true\n    }\n\n    pos := e - 1\n    num_vivos := n\n\n    for {\n\n        fmt.Print(\"[ \")\n\n        for i := 0; i < len(vivos); i++{\n\n            if vivos[i] {\n                if i == pos {\n                    fmt.Print(i+1, \"> \")\n                } else {\n                    fmt.Print(i+1, \" \")\n                }\n            }\n        }\n\n        fmt.Println(\"]\")\n\n        if num_vivos == 1{\n            break\n        }\n\n        matar := pos\n\n        for {\n            matar = (matar + 1) % n\n\n            if vivos[matar]{\n                break\n            }\n        }\n    \n        vivos[matar] = false\n        num_vivos--\n\n        pos = matar\n\n        for {\n            pos = (pos + 1) % n\n\n            if vivos[pos]{\n                break\n            }\n        }\n    }\n}\n",
             "lines": "66"
         }
     ]

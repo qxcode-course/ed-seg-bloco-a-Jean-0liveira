@@ -1,0 +1,97 @@
+2026-05-01 11:18:41, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 11:18:53, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 11:19:32, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 11:19:34, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 15:51:09, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 15:52:20, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 15:59:24, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 15:59:38, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:00:32, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:00:52, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:00:53, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:00:53, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:00:54, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:00:55, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:01:29, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:03:16, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:07:02, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:07:29, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:07:43, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:08:20, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:08:24, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:08:27, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:08:28, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:08:29, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:08:30, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:08:31, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:08:31, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:08:34, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:14:05, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:14:10, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:14:59, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:17:12, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:17:37, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:17:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:17:56, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:25:44, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:25:45, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:30:30, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:31:18, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:31:19, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:31:30, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:32:13, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:32:18, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:33:14, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:36:53, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-05-01 16:36:54, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100
+2026-05-01 16:36:57, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-05-01 16:37:00, MOVE, v:1, k:ed@pedra, mode:PICK
+2026-05-01 16:37:01, EXEC, v:1, k:ed@pedra, mode:FULL, rate:100
+2026-05-01 16:37:01, MOVE, v:1, k:ed@pedra, mode:BACK
+2026-05-01 16:37:05, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-05-01 16:37:09, EXEC, v:1, k:ed@princesa, mode:FULL, rate:100, size:66
+2026-05-01 16:37:10, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-05-01 16:37:11, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-05-01 16:37:12, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100
+2026-05-01 16:37:12, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-05-01 16:37:14, MOVE, v:1, k:ed@manipulacao, mode:PICK
+2026-05-01 16:37:14, EXEC, v:1, k:ed@manipulacao, mode:FULL, rate:100
+2026-05-01 16:37:15, MOVE, v:1, k:ed@manipulacao, mode:BACK
+2026-05-01 16:37:21, MOVE, v:1, k:ed@resto, mode:PICK
+2026-05-01 16:37:22, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-05-01 16:37:22, MOVE, v:1, k:ed@resto, mode:BACK
+2026-05-01 16:37:23, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-05-01 16:37:24, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
+2026-05-01 16:37:24, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-05-01 16:37:26, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-05-01 16:37:27, EXEC, v:1, k:ed@eh_primo, mode:FULL, rate:100
+2026-05-01 16:37:27, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-05-01 16:37:33, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:37:34, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:39:01, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:39:05, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:39:06, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:43:35, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:43:36, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:44:28, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 16:46:11, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:46:12, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:46:27, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:46:33, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:46:34, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:47:38, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:47:39, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 16:47:48, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 16:47:48, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:13:34, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:13:34, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:13:35, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:14:26, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-01 17:17:34, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-01 17:17:35, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:17:36, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:17:36, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:17:36, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:17:36, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:17:37, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-01 17:18:03, MOVE, v:1, k:ed@vetbuild, mode:BACK

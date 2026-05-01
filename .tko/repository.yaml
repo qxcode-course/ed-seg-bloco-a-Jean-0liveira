@@ -22,8 +22,8 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@map_set
 - ed@vector
+- ed@map_set
 - ed@basic
 - ed@rec
 flags:
@@ -33,5 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@map_set
-selected_index: 0
+selected: ed@triangulo
+selected_index: 9

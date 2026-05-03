@@ -22,10 +22,18 @@ sources:
   quests: null
   tasks: null
 expanded:
+- eval1@eval1
 - ed@vector
-- ed@map_set
-- ed@basic
+- ed@linear
 - ed@rec
+- ed@map_set
+- ed@dfs
+- ed@basic
+- ed@tree
+- ed@backtrack
+- ed@sandbox
+- ed@list
+- ed@bfs
 flags:
   inbox: inbox
   panel: graph
@@ -33,5 +41,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@triangulo
-selected_index: 9
+selected: ed@vetbuild
+selected_index: 19

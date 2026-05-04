@@ -22,18 +22,18 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@list
-- ed@basic
-- ed@linear
-- ed@rec
-- ed@sandbox
 - ed@tree
-- ed@vector
+- ed@rec
 - ed@dfs
-- ed@bfs
-- ed@map_set
+- ed@basic
 - eval1@eval1
+- ed@sandbox
+- ed@bfs
+- ed@linear
 - ed@backtrack
+- ed@vector
+- ed@list
+- ed@map_set
 flags:
   inbox: inbox
   panel: graph

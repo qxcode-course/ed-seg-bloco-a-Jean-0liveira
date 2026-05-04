@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 )
 
@@ -18,6 +19,18 @@ func NewVector(capacity int) *Vector {
 		data:     make([]int, capacity), // nunca use len(data) ou cap(data) ou qq método do go de manipulação de array
 		size:     0,
 		capacity: capacity,
+	}
+}
+
+func (v *Vector) Status() string {
+	return fmt.Sprintf("size:%d capacity:%d", v.size, v.capacity)
+}
+
+func (v *Vector) Show() string {
+	if v.size == 0 {
+		return "[]"
+	} else {
+		return "[" + Join(v.data[:v.size], " ") + "]"
 	}
 }
 
@@ -37,7 +50,7 @@ func main() {
 	var line, cmd string
 	scanner := bufio.NewScanner(os.Stdin)
 
-	// v := NewVector(0)
+	v := NewVector(0)
 	for {
 		fmt.Print("$")
 		if !scanner.Scan() {
@@ -55,17 +68,17 @@ func main() {
 		case "end":
 			return
 		case "init":
-			// value, _ := strconv.Atoi(parts[1])
-			// v = NewVector(value)
+			value, _ := strconv.Atoi(parts[1])
+			v = NewVector(value)
 		case "push":
 			// for _, part := range parts[1:] {
 			// 	value, _ := strconv.Atoi(part)
 			// 	v.PushBack(value)
 			// }
 		case "show":
-			// fmt.Println(v)
+			fmt.Println(v.Show())
 		case "status":
-			// fmt.Println(v.Status())
+			fmt.Println(v.Status())
 		case "pop":
 			// err := v.PopBack()
 			// if err != nil {

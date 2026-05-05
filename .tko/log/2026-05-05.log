@@ -1,0 +1,7 @@
+2026-05-05 12:23:40, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-05-05 12:23:41, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
+2026-05-05 12:23:42, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-05-05 12:23:59, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-05 12:24:02, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0, size:272
+2026-05-05 12:24:04, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-05 17:16:31, SELF, v:1, k:ed@editorint, self:1, rate:100, study:300, concept:1

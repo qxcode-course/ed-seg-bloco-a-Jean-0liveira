@@ -1,0 +1,37 @@
+2026-05-04 15:54:23, MOVE, v:1, k:ed@editorint, mode:DOWN
+2026-05-04 15:54:23, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:54:23, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:54:23, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:54:23, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:54:23, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:55:36, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 15:55:50, EXEC, v:1, k:ed@editorint, mode:FULL, size:259, fail:COMP
+2026-05-04 15:56:21, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-05-04 15:57:15, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-05-04 15:59:24, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-05-04 15:59:26, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 15:59:29, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 15:59:30, EXEC, v:1, k:ed@editorint, mode:FULL, fail:COMP
+2026-05-04 15:59:11, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:59:17, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 15:59:20, MOVE, v:1, k:ed@editorint, mode:EDIT
+2026-05-04 16:08:14, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 16:17:20, EXEC, v:1, k:src@go, mode:FREE, size:259
+2026-05-04 16:17:34, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:17:37, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-04 16:17:38, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 16:18:43, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:18:51, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-04 16:18:52, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-04 16:19:05, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-04 16:19:12, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-04 16:19:12, EXEC, v:1, k:ed@editorint, mode:FREE
+2026-05-04 16:19:50, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 16:19:50, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:19:53, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-04 16:20:00, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 16:21:46, MOVE, v:1, k:ed@editorint, mode:PICK
+2026-05-04 16:21:49, EXEC, v:1, k:ed@editorint, mode:LOCK, rate:0
+2026-05-04 16:21:50, MOVE, v:1, k:ed@editorint, mode:BACK
+2026-05-04 17:18:08, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-05-04 17:18:10, MOVE, v:1, k:ed@queimada, mode:PICK

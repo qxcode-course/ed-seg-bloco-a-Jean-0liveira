@@ -34,6 +34,10 @@ func (v *Vector) Show() string {
 	}
 }
 
+func (v *Vector) PushBack() void {
+
+}
+
 func Join(slice []int, sep string) string {
 	if len(slice) == 0 {
 		return ""
@@ -71,10 +75,10 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			v = NewVector(value)
 		case "push":
-			// for _, part := range parts[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// 	v.PushBack(value)
-			// }
+			for _, part := range parts[1:] {
+				value, _ := strconv.Atoi(part)
+				v.PushBack(value)
+			}
 		case "show":
 			fmt.Println(v.Show())
 		case "status":

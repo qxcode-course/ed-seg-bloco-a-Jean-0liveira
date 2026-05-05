@@ -32,6 +32,17 @@ func (e *Editor) KeyLeft() {
 }
 
 func (e *Editor) KeyEnter() {
+	newline := NewList[rune]()
+
+	for texto := e.cursor; texto != e.line.Value.End(); {
+		nextTexto := texto.Next()
+		newline.PushBack(texto.Value)
+		e.line.Value.Erase(texto)
+		texto = nextTexto
+	}
+	newquebra := e.lines.Insert(e.line.Next(), newline)
+	e.line = newquebra
+	e.cursor = e.line.Value.Front()
 }
 
 func (e *Editor) KeyRight() {
@@ -46,9 +57,39 @@ func (e *Editor) KeyRight() {
 }
 
 func (e *Editor) KeyUp() {
+	if e.line != e.lines.Front() {
+		col := 0
+		for n := e.line.Value.Front(); n != e.cursor && n != e.line.Value.End(); n = n.Next() {
+			col++
+		}
+		e.line = e.line.Prev()
+		curr := e.line.Value.Front()
+		for i := 0; i < col; i++ {
+			if curr == e.line.Value.End() {
+				break
+			}
+			curr = curr.Next()
+		}
+		e.cursor = curr
+	}
 }
 
 func (e *Editor) KeyDown() {
+	if e.line.Next() != e.lines.End() {
+		col := 0
+		for n := e.line.Value.Front(); n != e.cursor && n != e.line.Value.End(); n = n.Next() {
+			col++
+		}
+		e.line = e.line.Next()
+		curr := e.line.Value.Front()
+		for i := 0; i < col; i++ {
+			if curr == e.line.Value.End() {
+				break
+			}
+			curr = curr.Next()
+		}
+		e.cursor = curr
+	}
 }
 
 func (e *Editor) KeyBackspace() {
@@ -57,9 +98,37 @@ func (e *Editor) KeyBackspace() {
 		e.line.Value.Erase(deveserapagado)
 		return
 	}
+	if e.line != e.lines.Front() {
+		prevLineNode := e.line.Prev()
+		targetCursorPos := prevLineNode.Value.End()
+		for char := e.line.Value.Front(); char != e.line.Value.End(); {
+			nextChar := char.Next()
+			prevLineNode.Value.Insert(targetCursorPos, char.Value)
+			char = nextChar
+		}
+		lineToErase := e.line
+		e.line = prevLineNode
+		e.cursor = targetCursorPos
+		e.lines.Erase(lineToErase)
+	}
 }
 
 func (e *Editor) KeyDelete() {
+	if e.cursor != e.line.Value.End() {
+		nodeToDelete := e.cursor
+		e.cursor = e.cursor.Next()
+		e.line.Value.Erase(nodeToDelete)
+		return
+	}
+	if e.line.Next() != e.lines.End() {
+		nextLineNode := e.line.Next()
+		for char := nextLineNode.Value.Front(); char != nextLineNode.Value.End(); {
+			nextChar := char.Next()
+			e.line.Value.Insert(e.cursor, char.Value)
+			char = nextChar
+		}
+		e.lines.Erase(nextLineNode)
+	}
 }
 
 func main() {

@@ -50,3 +50,7 @@
 2026-05-16 20:16:22, EXEC, v:1, k:ed@treinando, mode:FULL, rate:100, size:151
 2026-05-16 20:16:33, MOVE, v:1, k:ed@treinando, mode:BACK
 2026-05-16 20:16:59, SELF, v:1, k:ed@treinando, self:1, rate:100, study:90
+2026-05-16 20:23:10, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-16 20:23:12, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-16 20:26:48, EXEC, v:1, k:ed@vetbuild, mode:FULL, fail:COMP
+2026-05-16 20:38:22, MOVE, v:1, k:ed@vetbuild, mode:BACK

@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-27_16-17-33",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,158 +37,39 @@\n ) %7B%0A\n-%09var num_entrada int%0A%09var num_consulta int%0A%0A%09entrada := make(%5B%5Dint, 0, num_entrada)%0A%09// consulta := make(%5B%5Dint, 0, num_consulta)%0A%0A%09fmt.Println(entrada\n+    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-27_16-31-59",
+            "content": "@@ -57,19 +57,16 @@\n da int%0A%09\n-// \n var num_\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-27_16-32-07",
+            "content": "@@ -7,16 +7,30 @@\n e main%0A%0A\n+import %22fmt%22%0A%0A\n func mai\n@@ -57,16 +57,19 @@\n da int%0A%09\n+// \n var num_\n@@ -93,38 +93,35 @@\n trada := make(%5B%5D\n-str\n in\n-g\n+t\n , 0, num_entrada\n@@ -123,16 +123,19 @@\n trada)%0A%09\n+// \n consulta\n@@ -145,22 +145,19 @@\n  make(%5B%5D\n-str\n in\n-g\n+t\n , 0, num\n@@ -171,98 +171,29 @@\n ta)%0A\n+%0A\n %09f\n-requencia := make(map%5Bstring%5Dint)%0A%0A%09for _, str := range entrada %7B%0A%09%09frequencia%5Bstr%5D++%0A%09%7D%0A\n+mt.Println(entrada)\n %0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-05-27_16-47-17",
+            "content": "@@ -11,22 +11,8 @@\n in%0A%0A\n-import %22fmt%22%0A%0A\n func\n@@ -34,204 +34,131 @@\n num_\n-consulta int%0A%09fmt.Scan(&num_consulta)%0A%0A%09consulta := make(%5B%5Dstring, 0, num_consulta)%0A%09for i := 0; i %3C num_consulta; i++ %7B%0A%09%09fmt.Scan(&consulta%5Bi%5D)%0A%09%7D%0A%0A%09var num_entrada int%0A%09fmt.Scan(&num_entrad\n+entrada int%0A%09var num_consulta int%0A%0A%09entrada := make(%5B%5Dstring, 0, num_entrada)%0A%09consulta := make(%5B%5Dstring, 0, num_consult\n a)%0A\n-%0A\n %09fre\n@@ -193,77 +193,39 @@\n nt)%0A\n+%0A\n %09for \n-i := 0; i %3C num_entrada; i++ %7B%0A%09%09var str string%0A%09%09fmt.Scan(&str)\n+_, str := range entrada %7B\n %0A%09%09f\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-05-27_17-00-06",
+            "content": "@@ -373,29 +373,7 @@\n %0A%09%7D%0A\n-%09fmt.Println(consulta)\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-27_17-03-20",
+            "content": "@@ -375,71 +375,27 @@\n %7D%0A%09f\n-or _, c := range consulta %7B%0A%09%09fmt.Printf(%22%25d%22, frequencia%5Bc%5D)%0A%09%7D\n+mt.Println(consulta)\n %0A%7D%0A\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-05-27_17-05-03",
+            "content": "@@ -110,16 +110,19 @@\n %5Dstring,\n+ 0,\n  num_con\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-05-27_17-07-01",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar num_consulta int\n\tfmt.Scan(&num_consulta)\n\n\tconsulta := make([]string, num_consulta)\n\tfor i := 0; i < num_consulta; i++ {\n\t\tfmt.Scan(&consulta[i])\n\t}\n\n\tvar num_entrada int\n\tfmt.Scan(&num_entrada)\n\n\tfrequencia := make(map[string]int)\n\tfor i := 0; i < num_entrada; i++ {\n\t\tvar str string\n\t\tfmt.Scan(&str)\n\t\tfrequencia[str]++\n\t}\n\tfor _, c := range consulta {\n\t\tfmt.Printf(\"%d\", frequencia[c])\n\t}\n}\n",
+            "lines": "26"
+        }
+    ]
+}

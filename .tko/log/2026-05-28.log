@@ -1,0 +1,17 @@
+2026-05-28 16:00:16, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-05-28 16:00:17, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-05-28 16:09:32, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:27
+2026-05-28 16:10:05, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:27
+2026-05-28 16:10:02, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-05-28 16:11:37, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:26
+2026-05-28 16:12:44, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:27
+2026-05-28 16:12:53, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-05-28 16:12:56, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0, size:27
+2026-05-28 16:13:16, EXEC, v:1, k:ed@buscas, mode:LOCK, rate:0, size:28
+2026-05-28 16:13:33, EXEC, v:1, k:ed@buscas, mode:LOCK, rate:0, size:28
+2026-05-28 16:13:59, EXEC, v:1, k:ed@buscas, mode:FULL, rate:0
+2026-05-28 16:13:31, MOVE, v:1, k:ed@buscas, mode:EDIT
+2026-05-28 16:15:26, EXEC, v:1, k:ed@buscas, mode:FULL, size:31, fail:COMP
+2026-05-28 16:15:42, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:31
+2026-05-28 16:15:57, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-05-28 16:17:21, SELF, v:1, k:ed@buscas, self:1, rate:100, study:60

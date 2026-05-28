@@ -22,11 +22,11 @@ expanded:
 - ed@map_set
 - ed@vector
 flags:
-  inbox: all
-  panel: graph
+  inbox: inbox
+  panel: skills
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@buscas
-selected_index: 7
+selected: ed@bettersearch
+selected_index: 9

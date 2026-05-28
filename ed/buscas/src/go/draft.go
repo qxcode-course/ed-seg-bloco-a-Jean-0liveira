@@ -3,14 +3,6 @@ package main
 import "fmt"
 
 func main() {
-	var num_consulta int
-	fmt.Scan(&num_consulta)
-
-	consulta := make([]string, num_consulta)
-	for i := 0; i < num_consulta; i++ {
-		fmt.Scan(&consulta[i])
-	}
-
 	var num_entrada int
 	fmt.Scan(&num_entrada)
 
@@ -20,7 +12,20 @@ func main() {
 		fmt.Scan(&str)
 		frequencia[str]++
 	}
-	for _, c := range consulta {
-		fmt.Printf("%d", frequencia[c])
+
+	var num_consulta int
+	fmt.Scan(&num_consulta)
+
+	consulta := make([]string, num_consulta)
+	for i := 0; i < num_consulta; i++ {
+		fmt.Scan(&consulta[i])
 	}
+
+	for i, c := range consulta {
+		fmt.Printf("%d", frequencia[c])
+		if i < num_consulta-1 {
+			fmt.Print(" ")
+		}
+	}
+	fmt.Println()
 }

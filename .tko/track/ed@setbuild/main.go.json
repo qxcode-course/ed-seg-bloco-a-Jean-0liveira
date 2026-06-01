@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-01_00-50-29",
+            "content": "@@ -47,202 +47,15 @@\n %22str\n-conv%22%0A%09%22strings%22%0A)%0A%0Atype Set struct%7B%0A%09data %5B%5Dint%0A%09size int%0A%09capacity int%0A%7D%0A%0Afunc NewSet(capacity int) *Set %7B%0A%09return &Set %7B%0A%09%09data: make(%5B%5Dint, capacity),%0A%09%09size: 0,%0A%09%09capacity: capacity,%0A%09%7D%0A%7D%0A%0A\n+ings%22%0A)\n %0A%0Afu\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-01_01-11-59",
+            "content": "@@ -38,16 +38,27 @@\n %22%0A%09%22os%22%0A\n+%09%22strconv%22%0A\n %09%22string\n@@ -82,17 +82,16 @@\n ruct\n- \n %7B%0A%09data \n     \n@@ -86,20 +86,16 @@\n %7B%0A%09data \n-    \n %5B%5Dint%0A%09s\n@@ -98,20 +98,16 @@\n t%0A%09size \n-    \n int%0A%09cap\n@@ -164,16 +164,17 @@\n urn &Set\n+ \n %7B%0A%09%09data\n@@ -174,20 +174,16 @@\n %0A%09%09data:\n-    \n  make(%5B%5D\n@@ -205,20 +205,16 @@\n %0A%09%09size:\n-    \n  0,%0A%09%09ca\n@@ -241,74 +241,8 @@\n %0A%7D%0A%0A\n-func (s *Set) Show() string %7B%0A%09if s.size == 0 %7B%0A%09%09return %22%5B%5D%22%0A%09%7D%0A%7D\n %0A%0Afu\n@@ -316,16 +316,19 @@\n tdin)%0A%0A%09\n+// \n v := New\n@@ -746,33 +746,8 @@\n w%22:%0A\n-%09%09%09fmt.Println(v.Show())%0A\n %09%09ca\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-06-01_01-15-01",
+            "content": "@@ -311,100 +311,8 @@\n %0A%09%7D%0A\n-%09var result strings.Builder%0A%09fmt.Fprintf(&result, %22%5B%25d%22, s.data%5B0%5D)%0A%09return result.String()%0A\n %7D%0A%0Af\n",
+            "lines": "66"
+        },
+        {
+            "label": "2026-06-01_01-19-22",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\ntype Set struct {\n\tdata     []int\n\tsize     int\n\tcapacity int\n}\n\nfunc NewSet(capacity int) *Set {\n\treturn &Set{\n\t\tdata:     make([]int, capacity),\n\t\tsize:     0,\n\t\tcapacity: capacity,\n\t}\n}\n\nfunc (s *Set) Show() string {\n\tif s.size == 0 {\n\t\treturn \"[]\"\n\t}\n\tvar result strings.Builder\n\tfmt.Fprintf(&result, \"[%d\", s.data[0])\n\treturn result.String()\n}\n\nfunc main() {\n\tvar line, cmd string\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tv := NewSet(0)\n\tfor scanner.Scan() {\n\t\tfmt.Print(\"$\")\n\t\tline = scanner.Text()\n\t\tfmt.Println(line)\n\t\tparts := strings.Fields(line)\n\t\tif len(parts) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tcmd = parts[0]\n\n\t\tswitch cmd {\n\t\tcase \"end\":\n\t\t\treturn\n\t\tcase \"init\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\t\t// v = NewSet(value)\n\t\tcase \"insert\":\n\t\t\t// for _, part := range parts[1:] {\n\t\t\t// \tvalue, _ := strconv.Atoi(part)\n\t\t\t// }\n\t\tcase \"show\":\n\t\t\tfmt.Println(v.Show())\n\t\tcase \"erase\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"contains\":\n\t\t\t// value, _ := strconv.Atoi(parts[1])\n\t\tcase \"clear\":\n\t\tdefault:\n\t\t\tfmt.Println(\"fail: comando invalido\")\n\t\t}\n\t}\n}\n",
+            "lines": "69"
+        }
+    ]
+}

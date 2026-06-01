@@ -27,7 +27,25 @@ func (s *Set) Show() string {
 	}
 	var result strings.Builder
 	fmt.Fprintf(&result, "[%d", s.data[0])
+	for i := 1; i < s.size; i++ {
+		fmt.Fprintf(&result, " %d", s.data[i])
+	}
+	result.WriteString("]")
 	return result.String()
+}
+
+func (s *Set) AcharPosicao(value int) (int, bool) {
+	low := 0
+	high := s.size - 1
+
+	for low <= high {
+		mid := low + (high-low)/2
+		if s.data
+	}
+}
+
+func (s *Set) insert(value int) {
+
 }
 
 func main() {

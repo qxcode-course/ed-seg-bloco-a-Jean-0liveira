@@ -19,15 +19,23 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@bfs
 - ed@map_set
+- ed@basic
+- ed@dfs
+- eval1@eval1
+- ed@tree
 - ed@rec
 - ed@vector
+- ed@linear
+- ed@list
+- ed@backtrack
 flags:
-  inbox: all
+  inbox: inbox
   panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@setbuild
-selected_index: 14
+selected: ed@rotacoes
+selected_index: 4

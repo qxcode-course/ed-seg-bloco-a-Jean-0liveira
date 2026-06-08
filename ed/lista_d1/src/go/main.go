@@ -65,12 +65,44 @@ func (ll *LList) PushFront(value int) {
 	ll.root.next = newNode
 
 	ll.size++
-
 }
 
 func (ll *LList) Clear() {
 	ll.root.next = ll.root
 	ll.size = 0
+}
+
+func (ll *LList) PushBack(value int) {
+	newNode := &Node{Value: value}
+	oldLast := ll.root.prev
+
+	oldLast.next = newNode
+	newNode.prev = oldLast
+
+	newNode.next = ll.root
+	ll.root.prev = newNode
+
+	ll.size++
+}
+
+func (ll *LList) PopFront() {
+	removeNode := ll.root.next
+	nextNode := removeNode.next
+
+	ll.root.next = nextNode
+	nextNode.prev = ll.root
+
+	ll.size--
+}
+
+func (ll *LList) PopBack() {
+	removeNode := ll.root.prev
+	lastNode := removeNode.prev
+
+	lastNode.next = ll.root
+	ll.root.prev = lastNode
+
+	ll.size--
 }
 
 func main() {
@@ -98,19 +130,19 @@ func main() {
 		case "size":
 			fmt.Println(ll.Size())
 		case "push_back":
-			// for _, v := range args[1:] {
-			// 	num, _ := strconv.Atoi(v)
-			// 	ll.PushBack(num)
-			// }
+			for _, v := range args[1:] {
+				num, _ := strconv.Atoi(v)
+				ll.PushBack(num)
+			}
 		case "push_front":
 			for _, v := range args[1:] {
 				num, _ := strconv.Atoi(v)
 				ll.PushFront(num)
 			}
 		case "pop_back":
-			// ll.PopBack()
+			ll.PopBack()
 		case "pop_front":
-			// ll.PopFront()
+			ll.PopFront()
 		case "clear":
 			ll.Clear()
 		case "end":

@@ -19,9 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@map_set
-- ed@vector
 - ed@rec
+- ed@backtrack
+- eval1@eval1
+- ed@linear
+- ed@tree
+- ed@list
+- ed@vector
 flags:
   inbox: inbox
   panel: graph
@@ -29,5 +33,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@setbuild
-selected_index: 12
+selected: ed@labirinto
+selected_index: 2

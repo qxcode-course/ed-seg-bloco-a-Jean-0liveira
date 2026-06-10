@@ -15,3 +15,11 @@
 2026-05-28 16:15:42, EXEC, v:1, k:ed@buscas, mode:FULL, rate:100, size:31
 2026-05-28 16:15:57, MOVE, v:1, k:ed@buscas, mode:BACK
 2026-05-28 16:17:21, SELF, v:1, k:ed@buscas, self:1, rate:100, study:60
+2026-05-28 16:20:20, MOVE, v:1, k:ed@setbuild, mode:DOWN
+2026-05-28 16:20:21, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-28 16:20:23, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:45
+2026-05-28 16:20:20, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-28 16:20:20, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-28 16:20:20, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-28 16:20:20, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-28 16:51:08, MOVE, v:1, k:ed@setbuild, mode:BACK

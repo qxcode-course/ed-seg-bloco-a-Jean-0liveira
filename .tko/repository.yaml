@@ -19,16 +19,13 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@backtrack
-- ed@tree
-- ed@list
-- eval1@eval1
+- ed@rec
 flags:
-  inbox: inbox
-  panel: skills
+  inbox: all
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@editor
-selected_index: 8
+selected: ed@fractais_png
+selected_index: 10

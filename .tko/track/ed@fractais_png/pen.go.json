@@ -222,8 +222,393 @@
         },
         {
             "label": "2026-04-14_14-04-47",
-            "content": "package main\n\nimport (\n\t\"math\"\n\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(0, 0, 0)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(1)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n\nfunc ramo (pen *Pen, size float64){\n\tif size < 2 {\n\t\treturn\n\t}\n\n\tpen.Walk(size)\n\n\tsubDiv := 5.0\n\ttamSubDiv := size / subDiv\n\n\tx := pen.x\n\ty := pen.y\n\tangulo := pen.angle\n\n\tpen.SetPosition(x, y)\n\tpen.SetHeading(angulo)\n\n\tfor i := 0; i < int(subDiv); i++{\n\t\tpen.Walk(tamSubDiv)\n\n\t\trx := x\n\t\try := y\n\t\trang := angulo\n\n\t\tpen.Left(25)\n\t\tramo(pen, size * 0.4)\n\n\t\tpen.SetPosition(rx, ry)\n\t\tpen.SetHeading(rang)\n\n\t\tpen.Right(25)\n\t\tramo(pen, size * 0.4)\n\n\t\tpen.SetPosition(rx, ry)\n\t\tpen.SetHeading(rang)\n\t}\n\n\t\n}\n",
+            "content": "@@ -1712,24 +1712,25 @@\n %7D%0A%0Afunc ramo\n+ \n (pen *Pen, s\n@@ -1737,25 +1737,24 @@\n ize float64)\n- \n %7B%0A%09if size %3C\n@@ -1959,17 +1959,16 @@\n iv); i++\n- \n %7B%0A%09%09pen.\n@@ -1992,20 +1992,16 @@\n %09%09rx := \n-pen.\n x%0A%09%09ry :\n@@ -2002,20 +2002,16 @@\n %09%09ry := \n-pen.\n y%0A%09%09rang\n@@ -2014,25 +2014,22 @@\n rang := \n-pen.angle\n+angulo\n %0A%0A%09%09pen.\n@@ -2045,33 +2045,35 @@\n %09%09ramo(pen, size\n-*\n+ * \n 0.4)%0A%0A%09%09pen.SetP\n@@ -2144,17 +2144,19 @@\n en, size\n-*\n+ * \n 0.4)%0A%0A%09%09\n@@ -2206,10 +2206,12 @@\n ng)%0A%09%7D%0A%0A\n+%09%0A\n %7D%0A\n",
             "lines": "137"
+        },
+        {
+            "label": "2026-06-10_15-21-45",
+            "content": "@@ -2060,33 +2060,33 @@\n amo(pen, size*0.\n-5\n+4\n )%0A%0A%09%09pen.SetPosi\n@@ -2157,17 +2157,17 @@\n  size*0.\n-5\n+4\n )%0A%0A%09%09pen\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-10_15-24-31",
+            "content": "@@ -2070,17 +2070,16 @@\n ize*0.5)\n-6\n %0A%0A%09%09pen.\n@@ -2157,17 +2157,16 @@\n  size*0.\n-6\n 5)%0A%0A%09%09pe\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-10_15-24-44",
+            "content": "@@ -2060,35 +2060,35 @@\n amo(pen, size*0.\n-6\n 5)\n+6\n %0A%0A%09%09pen.SetPosit\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-10_15-24-56",
+            "content": "@@ -2216,32 +2216,10 @@\n ng)%0A\n-%0A%09%09ramo(pen, size*0.5)%0A\n %09%7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "136"
+        },
+        {
+            "label": "2026-06-10_15-27-21",
+            "content": "@@ -2232,16 +2232,16 @@\n  size*0.\n-8\n+5\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-06-10_15-27-37",
+            "content": "@@ -2232,16 +2232,16 @@\n  size*0.\n-5\n+8\n )%0A%09%7D%0A%7D%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-06-10_15-38-45",
+            "content": "@@ -2236,9 +2236,9 @@\n e*0.\n-3\n+5\n )%0A%09%7D\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-06-10_15-38-56",
+            "content": "@@ -1758,9 +1758,9 @@\n e %3C \n-3\n+2\n  %7B%0A%09\n@@ -2211,14 +2211,37 @@\n ng(rang)\n+%0A%0A%09%09ramo(pen, size*0.3)\n %0A%09%7D%0A%7D%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-06-10_15-40-23",
+            "content": "@@ -1793,95 +1793,95 @@\n )%0A%0A%09\n-x := pen.x%0A%09y := pen.y%0A%09angulo := pen.angle%0A%0A%09subDiv := 5.0%0A%09tamSubDiv := size / subDiv\n+subDiv := 5.0%0A%09tamSubDiv := size / subDiv%0A%0A%09x := pen.x%0A%09y := pen.y%0A%09angulo := pen.angle\n %0A%0A%09p\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-06-10_15-41-55",
+            "content": "@@ -2091,16 +2091,17 @@\n osition(\n+r\n x, ry)%0A%09\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-06-10_15-47-37",
+            "content": "@@ -2083,33 +2083,32 @@\n pen.SetPosition(\n-r\n x, ry)%0A%09%09pen.Set\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-06-10_15-53-38",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+3\n  %7B%0A%09%09ret\n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-06-10_15-57-00",
+            "content": "@@ -1771,16 +1771,79 @@\n urn%0A%09%7D%0A%0A\n+%09pen.Walk(size)%0A%0A%09x := pen.x%0A%09y := pen.y%0A%09angulo := pen.angle%0A%0A\n %09subDiv \n",
+            "lines": "135"
+        },
+        {
+            "label": "2026-06-10_15-59-50",
+            "content": "@@ -1815,16 +1815,64 @@\n subDiv%0A%0A\n+%09pen.SetPosition(x, y)%0A%09pen.SetHeading(angulo)%0A%0A\n %09for i :\n",
+            "lines": "129"
+        },
+        {
+            "label": "2026-06-10_16-00-01",
+            "content": "@@ -1938,9 +1938,9 @@\n eft(\n-3\n+2\n 5)%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-02-16",
+            "content": "@@ -1957,17 +1957,17 @@\n  size*0.\n-4\n+6\n 5)%0A%0A%09%09pe\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-02-37",
+            "content": "@@ -2024,17 +2024,17 @@\n n.Right(\n-3\n+2\n 5)%0A%09%09ram\n@@ -2039,33 +2039,33 @@\n amo(pen, size*0.\n-4\n+6\n 5)%0A%0A%09%09pen.SetPos\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-02-59",
+            "content": "@@ -2047,17 +2047,17 @@\n  size*0.\n-6\n+4\n 5)%0A%0A%09%09pe\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-03-18",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-5\n+4\n 5)%0A%0A%09%09pen.SetPos\n@@ -2047,17 +2047,17 @@\n  size*0.\n-5\n+6\n 5)%0A%0A%09%09pe\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-03-52",
+            "content": "@@ -1949,33 +1949,34 @@\n amo(pen, size*0.\n-3\n+55\n )%0A%0A%09%09pen.SetPosi\n@@ -2047,17 +2047,18 @@\n  size*0.\n-3\n+55\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-05-18",
+            "content": "@@ -1957,17 +1957,17 @@\n  size*0.\n-5\n+3\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-05-32",
+            "content": "@@ -1949,33 +1949,32 @@\n amo(pen, size*0.\n-2\n 5)%0A%0A%09%09pen.SetPos\n@@ -2046,18 +2046,17 @@\n  size*0.\n-25\n+3\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-05-50",
+            "content": "@@ -1934,18 +1934,18 @@\n en.Left(\n-40\n+35\n )%0A%09%09ramo\n@@ -2028,10 +2028,10 @@\n ght(\n-40\n+35\n )%0A%09%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-06-07",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-5\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-06-23",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-6\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-06-57",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-1\n+6\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-07-06",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-2\n+1\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-07-17",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-8\n+2\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-07-25",
+            "content": "@@ -1949,33 +1949,34 @@\n amo(pen, size*0.\n-3\n+25\n )%0A%0A%09%09pen.SetPosi\n@@ -2051,9 +2051,10 @@\n e*0.\n-3\n+25\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-08-28",
+            "content": "@@ -1758,9 +1758,9 @@\n e %3C \n-7\n+8\n  %7B%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-10-00",
+            "content": "@@ -1934,17 +1934,17 @@\n en.Left(\n-3\n+4\n 0)%0A%09%09ram\n@@ -2023,17 +2023,17 @@\n n.Right(\n-3\n+4\n 0)%0A%09%09ram\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-10-29",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-8\n+7\n  %7B%0A%09%09ret\n@@ -1934,17 +1934,17 @@\n en.Left(\n-4\n+3\n 0)%0A%09%09ram\n@@ -2023,17 +2023,17 @@\n n.Right(\n-4\n+3\n 0)%0A%09%09ram\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-10-44",
+            "content": "@@ -1758,9 +1758,9 @@\n e %3C \n-9\n+8\n  %7B%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-14-57",
+            "content": "@@ -1758,10 +1758,9 @@\n e %3C \n-15\n+9\n  %7B%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-15-35",
+            "content": "@@ -1754,17 +1754,18 @@\n  size %3C \n-6\n+15\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-15-50",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-3\n+6\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-16-04",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-6\n+3\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-16-15",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-5\n+6\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-16-23",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-16-43",
+            "content": "@@ -1949,34 +1949,33 @@\n amo(pen, size*0.\n-25\n+3\n )%0A%0A%09%09pen.SetPosi\n@@ -2046,18 +2046,17 @@\n  size*0.\n-25\n+3\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-17-02",
+            "content": "@@ -1950,33 +1950,33 @@\n mo(pen, size*0.2\n-7\n+5\n )%0A%0A%09%09pen.SetPosi\n@@ -2052,9 +2052,9 @@\n *0.2\n-7\n+5\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-17-14",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-8\n+4\n  %7B%0A%09%09ret\n@@ -1958,16 +1958,17 @@\n size*0.2\n+7\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-17-28",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-3\n+2\n )%0A%0A%09%09pen.SetPosi\n@@ -2050,9 +2050,10 @@\n e*0.\n-3\n+27\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-17-41",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+8\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-17-52",
+            "content": "@@ -1949,34 +1949,33 @@\n amo(pen, size*0.\n-29\n+3\n )%0A%0A%09%09pen.SetPosi\n@@ -2050,10 +2050,9 @@\n e*0.\n-29\n+3\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-18-10",
+            "content": "@@ -1949,33 +1949,34 @@\n amo(pen, size*0.\n-3\n+29\n )%0A%0A%09%09pen.SetPosi\n@@ -2051,9 +2051,10 @@\n e*0.\n-3\n+29\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-18-26",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-3\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-18-46",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-5\n+3\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-18-52",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-19-00",
+            "content": "@@ -1934,18 +1934,18 @@\n en.Left(\n-35\n+40\n )%0A%09%09ramo\n@@ -2027,10 +2027,10 @@\n ght(\n-35\n+40\n )%0A%09%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-20-33",
+            "content": "@@ -1934,18 +1934,18 @@\n en.Left(\n-40\n+35\n )%0A%09%09ramo\n@@ -2027,10 +2027,10 @@\n ght(\n-40\n+35\n )%0A%09%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-20-50",
+            "content": "@@ -1957,17 +1957,17 @@\n  size*0.\n-5\n+3\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-21-24",
+            "content": "@@ -2038,33 +2038,33 @@\n amo(pen, size*0.\n-5\n+3\n )%0A%0A%09%09pen.SetPosi\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-21-33",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-2\n+5\n )%0A%0A%09%09pen.SetPosi\n@@ -2046,17 +2046,17 @@\n  size*0.\n-2\n+5\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-21-50",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-3\n+2\n )%0A%0A%09%09pen.SetPosi\n@@ -2050,9 +2050,9 @@\n e*0.\n-3\n+2\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-22-00",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-8\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-22-08",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-5\n+3\n )%0A%0A%09%09pen.SetPosi\n@@ -2046,17 +2046,17 @@\n  size*0.\n-5\n+3\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-22-19",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-7\n+5\n )%0A%0A%09%09pen.SetPosi\n@@ -2050,9 +2050,9 @@\n e*0.\n-7\n+5\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-22-33",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-6\n+8\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-22-45",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-5\n+6\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-22-56",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-23-06",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-8\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-23-21",
+            "content": "@@ -1949,33 +1949,33 @@\n amo(pen, size*0.\n-3\n+7\n )%0A%0A%09%09pen.SetPosi\n@@ -2050,9 +2050,9 @@\n e*0.\n-3\n+7\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-23-48",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-5\n+8\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-23-57",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-24-04",
+            "content": "@@ -1961,18 +1961,9 @@\n e*0.\n-2999999999\n+3\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-24-30",
+            "content": "@@ -1958,16 +1958,25 @@\n size*0.2\n+999999999\n )%0A%0A%09%09pen\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-24-38",
+            "content": "@@ -1962,9 +1962,8 @@\n *0.2\n-9\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-24-51",
+            "content": "@@ -2039,34 +2039,33 @@\n amo(pen, size*0.\n-29\n+3\n )%0A%0A%09%09pen.SetPosi\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-24-58",
+            "content": "@@ -1949,33 +1949,34 @@\n amo(pen, size*0.\n-3\n+29\n )%0A%0A%09%09pen.SetPosi\n@@ -2051,9 +2051,10 @@\n e*0.\n-3\n+29\n )%0A%0A%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-25-45",
+            "content": "@@ -1935,17 +1935,17 @@\n n.Left(4\n-5\n+0\n )%0A%09%09ramo\n@@ -2024,17 +2024,17 @@\n .Right(4\n-5\n+0\n )%0A%09%09ramo\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-26-00",
+            "content": "@@ -1934,18 +1934,18 @@\n en.Left(\n+4\n 5\n-0\n )%0A%09%09ramo\n@@ -2027,10 +2027,10 @@\n ght(\n+4\n 5\n-0\n )%0A%09%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-26-11",
+            "content": "@@ -1934,18 +1934,18 @@\n en.Left(\n-4\n 5\n+0\n )%0A%09%09ramo\n@@ -2027,10 +2027,10 @@\n ght(\n-4\n 5\n+0\n )%0A%09%09\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-26-20",
+            "content": "@@ -1934,17 +1934,17 @@\n en.Left(\n-3\n+4\n 5)%0A%09%09ram\n@@ -2023,17 +2023,17 @@\n n.Right(\n-3\n+4\n 5)%0A%09%09ram\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-26-41",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-5\n+4\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-28-27",
+            "content": "@@ -1754,17 +1754,17 @@\n  size %3C \n-4\n+5\n  %7B%0A%09%09ret\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-06-10_16-28-46",
+            "content": "package main\n\nimport (\n\t\"math\"\n\n\t\"github.com/fogleman/gg\"\n)\n\ntype Pen struct {\n\tx, y    float64\n\tangle   float64\n\tpenDown bool\n\tdc      *gg.Context\n}\n\nfunc NewPen(width, height int) *Pen {\n\tdc := gg.NewContext(width, height)\n\tdc.SetRGB(0, 0, 0)\n\tdc.Clear()\n\tdc.SetRGB(0, 0, 0)\n\tdc.SetLineWidth(1)\n\treturn &Pen{\n\t\tx: float64(width) / 2, y: float64(height) / 2,\n\t\tangle: 0, penDown: true, dc: dc,\n\t}\n}\n\nfunc (t *Pen) Walk(dist float64) {\n\tnewX := t.x + dist*math.Cos(t.angle*math.Pi/180)\n\tnewY := t.y - dist*math.Sin(t.angle*math.Pi/180)\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, newX, newY)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = newX, newY\n}\n\nfunc (t *Pen) Left(deg float64)  { t.angle += deg }\nfunc (t *Pen) Right(deg float64) { t.angle -= deg }\n\nfunc (t *Pen) Up()   { t.penDown = false }\nfunc (t *Pen) Down() { t.penDown = true }\n\nfunc (t *Pen) Goto(x, y float64) {\n\tif t.penDown {\n\t\tt.dc.DrawLine(t.x, t.y, x, y)\n\t\tt.dc.Stroke()\n\t}\n\tt.x, t.y = x, y\n}\n\nfunc (t *Pen) SetPosition(x, y float64) {\n\tt.x = x\n\tt.y = y\n}\n\nfunc (t *Pen) SetHeading(angle float64) {\n\tt.angle = angle\n}\n\nfunc (t *Pen) DrawCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) DrawRect(w, h float64) {\n\tif t.penDown {\n\t\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\t\tt.dc.Stroke()\n\t}\n}\n\nfunc (t *Pen) FillCircle(radius float64) {\n\tif t.penDown {\n\t\tt.dc.DrawCircle(t.x, t.y, radius)\n\t\tt.dc.Fill()\n\t}\n}\n\nfunc (t *Pen) FillSquare(w, h float64) {\n\tt.dc.DrawRectangle(t.x, t.y, w, h)\n\tt.dc.Fill()\n}\n\nfunc (t *Pen) SetRGB(r, g, b float64) {\n\tt.dc.SetRGB(r/255, g/255, b/255)\n}\n\nfunc (t *Pen) SetLineWidth(w float64) {\n\tt.dc.SetLineWidth(w)\n}\n\nfunc (t *Pen) SavePNG(path string) {\n\tt.dc.SavePNG(path)\n}\n\nfunc ramo(pen *Pen, size float64) {\n\tif size < 4 {\n\t\treturn\n\t}\n\n\tsubDiv := 5.0\n\ttamSubDiv := size / subDiv\n\n\tfor i := 0; i < int(subDiv); i++ {\n\t\tpen.Walk(tamSubDiv)\n\n\t\trx := pen.x\n\t\try := pen.y\n\t\trang := pen.angle\n\n\t\tpen.Left(35)\n\t\tramo(pen, size*0.3)\n\n\t\tpen.SetPosition(rx, ry)\n\t\tpen.SetHeading(rang)\n\n\t\tpen.Right(35)\n\t\tramo(pen, size*0.3)\n\n\t\tpen.SetPosition(rx, ry)\n\t\tpen.SetHeading(rang)\n\t}\n}\n",
+            "lines": "126"
         }
     ]
 }

@@ -172,7 +172,67 @@
         },
         {
             "label": "2026-04-14_14-05-03",
-            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 800)   // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 255, 255)     // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 800) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\n\tramo(pen, 290)\n\n\tpen.SavePNG(\"ramo.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
+            "content": "@@ -151,16 +151,17 @@\n , 800)  \n+ \n // cria \n@@ -232,16 +232,20 @@\n 55, 255)\n+    \n  // muda\n@@ -416,17 +416,17 @@\n o(pen, 2\n-0\n+9\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_15-53-38",
+            "content": "@@ -414,10 +414,10 @@\n en, \n-15\n+20\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_15-53-54",
+            "content": "@@ -414,10 +414,10 @@\n en, \n-20\n+15\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-03-33",
+            "content": "@@ -411,17 +411,17 @@\n o(pen, 2\n-5\n+0\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-05-02",
+            "content": "@@ -296,10 +296,10 @@\n 00, \n-7\n 8\n+0\n 0) /\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-06-46",
+            "content": "@@ -414,10 +414,10 @@\n en, \n-30\n+25\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-07-35",
+            "content": "@@ -411,17 +411,17 @@\n o(pen, 3\n-5\n+0\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-07-48",
+            "content": "@@ -410,18 +410,18 @@\n mo(pen, \n+3\n 5\n-0\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-08-02",
+            "content": "@@ -410,18 +410,17 @@\n mo(pen, \n-10\n+5\n 00)%0A%0A%09pe\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-08-52",
+            "content": "@@ -414,10 +414,11 @@\n en, \n-75\n+100\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-09-06",
+            "content": "@@ -414,10 +414,10 @@\n en, \n-60\n+75\n 0)%0A%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-09-21",
+            "content": "@@ -410,18 +410,18 @@\n mo(pen, \n-55\n+60\n 0)%0A%0A%09pen\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-10_16-09-35",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math/rand\"\n)\n\nfunc randInt(min, max int) int {\n\treturn min + rand.Intn(max-min+1)\n}\n\nfunc main() {\n\tpen := NewPen(1000, 800)  // cria um canvas de 500 de largura por 500 de altura\n\tpen.SetRGB(255, 255, 255) // muda a cor do pincel para vermelho\n\tpen.SetPosition(500, 780) // move o pincel para x 250, y 500\n\tpen.SetHeading(90)        // coloca o pincel apontando para cima\n\n\tramo(pen, 550)\n\n\tpen.SavePNG(\"ramo.png\")\n\tfmt.Println(\"PNG file created successfully.\")\n}\n",
             "lines": "22"
         }
     ]

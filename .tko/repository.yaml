@@ -18,13 +18,20 @@ sources:
   type: git
   writeable: false
   quests: null
-expanded: []
+expanded:
+- ed@rec
+- ed@backtrack
+- eval1@eval1
+- ed@linear
+- ed@tree
+- ed@list
+- ed@vector
 flags:
   inbox: inbox
-  panel: logs
+  panel: graph
   show_panel: 'true'
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@rec
-selected_index: 0
+selected: ed@labirinto
+selected_index: 2

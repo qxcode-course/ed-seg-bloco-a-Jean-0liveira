@@ -31,6 +31,10 @@ func search(grid [][]rune, startPos, endPos Pos) bool {
 
 	grid[startPos.l][startPos.c] = '.'
 
+	for n := range getNeig(startPos){
+		
+	}
+
 	return false
 }
 

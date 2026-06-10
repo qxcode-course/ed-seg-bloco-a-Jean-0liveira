@@ -9,3 +9,40 @@
 2026-06-10 14:39:22, MOVE, v:1, k:ed@labirinto, mode:EDIT
 2026-06-10 14:38:27, MOVE, v:1, k:ed@labirinto, mode:EDIT
 2026-06-10 14:40:49, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-06-10 14:01:42, SELF, v:1, k:ed@editorint, self:1, rate:100, study:300, concept:1
+2026-06-10 14:01:42, MOVE, v:1, k:ed@lista_d4, mode:DOWN
+2026-06-10 14:01:42, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-06-10 14:01:42, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0, size:124
+2026-06-10 14:01:45, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-06-10 14:01:58, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-06-10 14:01:59, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-06-10 14:02:06, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-06-10 14:02:07, EXEC, v:1, k:ed@labirinto, mode:FULL, size:76, fail:COMP
+2026-06-10 14:01:42, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-06-10 14:01:42, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-06-10 14:01:42, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-06-10 14:01:42, MOVE, v:1, k:ed@lista_d4, mode:EDIT
+2026-06-10 14:10:29, EXEC, v:1, k:ed@labirinto, mode:FULL, size:78, fail:COMP
+2026-06-10 14:10:30, EXEC, v:1, k:ed@labirinto, mode:FULL, fail:COMP
+2026-06-10 14:10:40, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:78
+2026-06-10 14:10:38, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-06-10 14:11:42, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:78
+2026-06-10 14:11:57, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:78
+2026-06-10 14:12:55, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:78
+2026-06-10 14:13:09, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-06-10 14:14:09, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-06-10 14:14:10, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0
+2026-06-10 14:14:16, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:80
+2026-06-10 14:15:08, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:80
+2026-06-10 14:17:34, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:80
+2026-06-10 14:17:52, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:80
+2026-06-10 14:17:51, MOVE, v:1, k:ed@labirinto, mode:EDIT
+2026-06-10 14:19:15, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:82
+2026-06-10 14:21:30, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:0, size:82
+2026-06-10 14:21:53, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100, size:82
+2026-06-10 14:22:11, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-06-10 14:22:42, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-06-10 14:22:43, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-06-10 14:22:52, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-06-10 14:23:06, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:75
+2026-06-10 14:23:27, SELF, v:1, k:ed@editorint, self:1, rate:100, study:300, concept:1

@@ -20,6 +20,8 @@ sources:
   quests: null
 expanded:
 - ed@rec
+- ed@list
+- ed@vector
 flags:
   inbox: all
   panel: graph
@@ -27,5 +29,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@fractais_png
-selected_index: 10
+selected: ed@lista_d2
+selected_index: 36

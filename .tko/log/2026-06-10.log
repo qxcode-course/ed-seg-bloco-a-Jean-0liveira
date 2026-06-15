@@ -180,3 +180,9 @@
 2026-06-10 16:28:44, MOVE, v:1, k:ed@fractais_png, mode:EDIT
 2026-06-10 16:30:58, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
 2026-06-10 16:31:09, MOVE, v:1, k:ed@fractais_png, mode:BACK
+2026-06-10 16:43:35, SELF, v:1, k:ed@labirinto, self:1, study:75
+2026-06-10 16:43:37, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-06-10 16:43:38, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-06-10 16:43:38, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-06-10 16:44:08, SELF, v:1, k:ed@fractais_png, self:1, rate:20, study:240
+2026-06-10 16:44:23, SELF, v:1, k:ed@editorint, self:1, rate:100, study:300, concept:1

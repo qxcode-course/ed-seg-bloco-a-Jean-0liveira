@@ -16,10 +16,16 @@ type Node struct {
 }
 
 func (n *Node) Next() *Node {
+	if n.next == n.root {
+		return nil
+	}
 	return n.next
 }
 
 func (n *Node) Prev() *Node {
+	if n.prev == n.root {
+		return nil
+	}
 	return n.prev
 }
 
@@ -74,7 +80,7 @@ func (ll *LList) String() string {
 }
 
 func (ll *LList) PushBack(value int) {
-	newNode := &Node{Value: value}
+	newNode := &Node{Value: value, root: ll.root}
 	oldLast := ll.root.prev
 
 	oldLast.next = newNode
@@ -87,7 +93,7 @@ func (ll *LList) PushBack(value int) {
 }
 
 func (ll *LList) PushFront(value int) {
-	newNode := &Node{Value: value}
+	newNode := &Node{Value: value, root: ll.root}
 	oldfirist := ll.root.next
 
 	newNode.next = oldfirist
@@ -105,6 +111,49 @@ func (ll *LList) Size() int {
 
 func (ll *LList) Clear() {
 	ll.size = 0
+}
+
+func (ll *LList) Search(value int) *Node {
+	for node := ll.Front(); node != nil; node = node.Next() {
+		if node.Value == value {
+			return node
+		}
+	}
+	return nil
+}
+
+func (ll *LList) Insert(node *Node, value int) {
+	if node == nil {
+		return
+	}
+
+	newNode := &Node{Value: value, root: ll.root}
+
+	newNode.prev = node.prev
+	newNode.next = node
+
+	node.prev.next = newNode
+	node.prev = newNode
+
+	ll.size++
+}
+
+func (ll *LList) Remove(node *Node) *Node {
+	if node == nil || node == ll.root {
+		return nil
+	}
+
+	nextElement := node.next
+
+	node.next.prev = node.prev
+	node.prev.next = node.next
+
+	ll.size--
+
+	if nextElement == ll.root {
+		return nil
+	}
+	return nextElement
 }
 
 func main() {
@@ -158,31 +207,31 @@ func main() {
 			}
 			fmt.Println("]")
 		case "replace":
-			// oldvalue, _ := strconv.Atoi(args[1])
-			// newvalue, _ := strconv.Atoi(args[2])
-			// node := ll.Search(oldvalue)
-			// if node != nil {
-			// 	node.Value = newvalue
-			// } else {
-			// 	fmt.Println("fail: not found")
-			// }
+			oldvalue, _ := strconv.Atoi(args[1])
+			newvalue, _ := strconv.Atoi(args[2])
+			node := ll.Search(oldvalue)
+			if node != nil {
+				node.Value = newvalue
+			} else {
+				fmt.Println("fail: not found")
+			}
 		case "insert":
-			// oldvalue, _ := strconv.Atoi(args[1])
-			// newvalue, _ := strconv.Atoi(args[2])
-			// node := ll.Search(oldvalue)
-			// if node != nil {
-			// 	ll.Insert(node, newvalue)
-			// } else {
-			// 	fmt.Println("fail: not found")
-			// }
+			oldvalue, _ := strconv.Atoi(args[1])
+			newvalue, _ := strconv.Atoi(args[2])
+			node := ll.Search(oldvalue)
+			if node != nil {
+				ll.Insert(node, newvalue)
+			} else {
+				fmt.Println("fail: not found")
+			}
 		case "remove":
-			// oldvalue, _ := strconv.Atoi(args[1])
-			// node := ll.Search(oldvalue)
-			// if node != nil {
-			// 	ll.Remove(node)
-			// } else {
-			// 	fmt.Println("fail: not found")
-			// }
+			oldvalue, _ := strconv.Atoi(args[1])
+			node := ll.Search(oldvalue)
+			if node != nil {
+				ll.Remove(node)
+			} else {
+				fmt.Println("fail: not found")
+			}
 		case "end":
 			return
 		default:

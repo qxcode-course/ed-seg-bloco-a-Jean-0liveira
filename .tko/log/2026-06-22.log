@@ -84,3 +84,16 @@
 2026-06-22 20:45:31, MOVE, v:1, k:ed@lista_d2, mode:BACK
 2026-06-22 20:46:21, SELF, v:1, k:ed@lista_d2, self:1, rate:100, study:130, concept:1
 2026-06-22 20:46:51, SELF, v:1, k:ed@editorint, self:1, rate:100, study:300, concept:1
+2026-06-22 20:49:35, MOVE, v:1, k:ed@subset_sum, mode:DOWN
+2026-06-22 20:49:41, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-22 20:49:46, EXEC, v:1, k:ed@subset_sum, mode:FULL, rate:0, size:5
+2026-06-22 20:49:35, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-22 20:49:35, MOVE, v:1, k:ed@subset_sum, mode:EDIT
+2026-06-22 21:03:40, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-22 21:05:07, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-06-22 21:05:09, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0
+2026-06-22 21:07:54, MOVE, v:1, k:ed@lista_d4, mode:BACK
+2026-06-22 21:08:06, MOVE, v:1, k:ed@lista_d4, mode:PICK
+2026-06-22 21:08:07, EXEC, v:1, k:ed@lista_d4, mode:FULL, rate:0
+2026-06-22 21:09:27, EXEC, v:1, k:ed@lista_d4, mode:FULL, size:124, fail:COMP
+2026-06-22 21:09:25, MOVE, v:1, k:ed@lista_d4, mode:EDIT

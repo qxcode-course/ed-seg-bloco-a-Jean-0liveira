@@ -1,0 +1,149 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-24_15-56-38",
+            "content": "@@ -115,19 +115,27 @@\n  %7B%0A%09\n-inicio := 0\n+_, _ = slice, value\n %0A%09re\n@@ -143,14 +143,9 @@\n urn \n-inicio\n+0\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-24_16-06-13",
+            "content": "@@ -128,60 +128,21 @@\n  0%0A%09\n-final := len(slice) - 1%0A%09return inicio%0A%09return final\n+return inicio\n %0A%7D%0A%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-24_16-07-08",
+            "content": "@@ -156,21 +156,22 @@\n %09return \n-f\n in\n-al\n+icio\n %0A%09return\n@@ -171,22 +171,21 @@\n %09return \n+f\n in\n-icio\n+al\n %0A%7D%0A%0Afunc\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-06-24_16-07-25",
+            "content": "@@ -152,71 +152,16 @@\n - 1%0A\n-%0A%09for inicio %3C= final %7B%0A%09%09mid := (inicio + final) / 2%0A%09\n %09return \n mid%0A\n@@ -160,14 +160,13 @@\n urn \n-mid%0A%09%7D\n+final\n %0A%09re\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-06-24_16-12-13",
+            "content": "@@ -181,16 +181,17 @@\n %09mid := \n+(\n inicio +\n@@ -195,23 +195,17 @@\n o + \n-(inicio-\n final)\n-/\n+ / \n 2%0A%09%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-24_16-16-02",
+            "content": "@@ -181,17 +181,16 @@\n %09mid := \n-(\n inicio +\n@@ -194,17 +194,23 @@\n o + \n+(inicio-\n final)\n- / \n+/\n 2%0A%09%09\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-24_16-17-27",
+            "content": "@@ -206,48 +206,8 @@\n / 2%0A\n-%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09mid++%0A%09%09%7D%0A\n %09%09re\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-24_16-18-53",
+            "content": "@@ -181,16 +181,17 @@\n %09mid := \n+(\n inicio +\n@@ -195,23 +195,17 @@\n o + \n-(inicio-\n final)\n-/\n+ / \n 2%0A%09%09\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-24_16-21-50",
+            "content": "@@ -241,68 +241,13 @@\n %0A%09%09%09\n-for mid %3C len(slice) && slice%5Bmid%5D == value %7B%0A%09%09%09%09mid++%0A%09%09%09%7D\n+mid++\n %0A%09%09%7D\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-24_16-24-52",
+            "content": "@@ -299,16 +299,19 @@\n +%0A%09%09%09%7D%0A%09\n+%09%7D%0A\n %09%09return\n@@ -315,20 +315,16 @@\n urn mid%0A\n-%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-26-09",
+            "content": "@@ -316,61 +316,8 @@\n mid%0A\n-%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09inicio = mid + 1%0A\n %09%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-30-21",
+            "content": "@@ -248,10 +248,8 @@\n  mid\n-+1\n  %3C l\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-31-45",
+            "content": "@@ -272,18 +272,16 @@\n lice%5Bmid\n-+1\n %5D == val\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-31-56",
+            "content": "@@ -244,16 +244,18 @@\n %09for mid\n++1\n  %3C len(s\n@@ -264,32 +264,34 @@\n ce) && slice%5Bmid\n++1\n %5D == value %7B%0A%09%09%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-32-29",
+            "content": "@@ -312,16 +312,69 @@\n urn mid%0A\n+%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09inicio = mid + 1%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-32-52",
+            "content": "@@ -299,19 +299,16 @@\n +%0A%09%09%09%7D%0A%09\n-%09%7D%0A\n %09%09return\n@@ -312,16 +312,20 @@\n urn mid%0A\n+%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-33-14",
+            "content": "@@ -299,16 +299,19 @@\n +%0A%09%09%09%7D%0A%09\n+%09%7D%0A\n %09%09return\n@@ -315,20 +315,16 @@\n urn mid%0A\n-%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-33-21",
+            "content": "@@ -195,20 +195,20 @@\n  + (\n-final-\n inicio\n+-final\n )/2%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-34-20",
+            "content": "@@ -248,10 +248,8 @@\n  mid\n-+1\n  %3C l\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-34-48",
+            "content": "@@ -272,18 +272,16 @@\n lice%5Bmid\n-+1\n %5D == val\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-34-56",
+            "content": "@@ -303,19 +303,16 @@\n +%0A%09%09%09%7D%0A%09\n-%09%7D%0A\n %09%09return\n@@ -316,16 +316,20 @@\n urn mid%0A\n+%09%09%7D%0A\n %09%7D%0A%09retu\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-35-11",
+            "content": "@@ -306,22 +306,8 @@\n %09%09%7D%0A\n-%09%09%09return mid%0A\n %09%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-35-21",
+            "content": "@@ -304,17 +304,44 @@\n %0A%09%09%09%7D%0A%09%09\n-%7D\n+%09return mid%0A%09%09%7D%0A%09%09return mid\n %0A%09%7D%0A%09ret\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-24_16-35-46",
+            "content": "@@ -306,22 +306,8 @@\n %09%09%7D%0A\n-%09%09%09return mid%0A\n %09%09%7D%0A\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-06-24_16-35-57",
+            "content": "@@ -320,57 +320,8 @@\n mid%0A\n-%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09inicio = mid%0A\n %09%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-24_16-37-29",
+            "content": "@@ -368,12 +368,8 @@\n  mid\n- + 1\n %0A%09%09%7D\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-37-41",
+            "content": "@@ -302,16 +302,30 @@\n ++%0A%09%09%09%7D%0A\n+%09%09%09return mid%0A\n %09%09%7D else\n@@ -373,29 +373,16 @@\n + 1%0A%09%09%7D%0A\n-%09%09return mid%0A\n %09%7D%0A%09retu\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-37-51",
+            "content": "@@ -306,22 +306,8 @@\n %09%09%7D%0A\n-%09%09%09return mid%0A\n %09%09%7D \n@@ -362,38 +362,21 @@\n %0A%09%09%7D\n- else %7B%0A%09%09%09final = mid - 1%0A%09%09%7D\n+%0A%09%09return mid\n %0A%09%7D%0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-24_16-38-27",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tinicio := 0\n\tfinal := len(slice) - 1\n\n\tfor inicio <= final {\n\t\tmid := inicio + (final-inicio)/2\n\t\tif slice[mid] == value {\n\t\t\tfor mid+1 < len(slice) && slice[mid+1] == value {\n\t\t\t\tmid++\n\t\t\t}\n\t\t\treturn mid\n\t\t} else if slice[mid] < value {\n\t\t\tinicio = mid + 1\n\t\t} else {\n\t\t\tfinal = mid - 1\n\t\t}\n\t}\n\treturn inicio\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "45"
+        }
+    ]
+}

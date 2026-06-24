@@ -85,6 +85,55 @@ func addsorted(l *LList, value int) {
 	l.insertBefore(e, value)
 }
 
+func (l *LList) String() string {
+	var values []string
+	for n := l.root.next; n != l.root; n = n.next {
+		values = append(values, fmt.Sprint(n.Value))
+	}
+	return "[" + strings.Join(values, ", ") + "]"
+}
+
+func reverse(l *LList) {
+	if l.size <= 1 {
+		return
+	}
+	e := l.root
+	for {
+		e.next, e.prev = e.prev, e.next
+		e = e.prev
+		if e == l.root {
+			break
+		}
+	}
+}
+
+func merge(l1 *LList, l2 *LList) *LList {
+	lf := NewLList()
+	nl1 := l1.root.next
+	nl2 := l2.root.next
+
+	for nl1 != l1.root && nl2 != l2.root {
+		if nl1.Value <= nl2.Value {
+			lf.PushBack(nl1.Value)
+			nl1 = nl1.next
+		} else {
+			lf.PushBack(nl2.Value)
+			nl2 = nl2.next
+		}
+	}
+
+	for nl1 != l1.root {
+		lf.PushBack(nl1.Value)
+		nl1 = nl1.next
+	}
+
+	for nl2 != l2.root {
+		lf.PushBack(nl2.Value)
+		nl2 = nl2.next
+	}
+	return lf
+}
+
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 
@@ -120,14 +169,14 @@ func main() {
 			}
 			fmt.Println(lla)
 		case "reverse":
-			// lla := str2list(args[1])
-			// reverse(lla)
-			// fmt.Println(lla)
+			lla := str2list(args[1])
+			reverse(lla)
+			fmt.Println(lla)
 		case "merge":
-			// lla := str2list(args[1])
-			// llb := str2list(args[2])
-			// merged := merge(lla, llb)
-			// fmt.Println(merged)
+			lla := str2list(args[1])
+			llb := str2list(args[2])
+			merged := merge(lla, llb)
+			fmt.Println(merged)
 		case "end":
 			return
 		default:

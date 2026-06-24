@@ -23,12 +23,12 @@ expanded:
 - ed@list
 flags:
   inbox: all
-  panel: graph
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@lista_d3
-selected_index: 16
+selected: ed@editor
+selected_index: 18

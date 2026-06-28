@@ -28,5 +28,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@list
-selected_index: 4
+selected: ed@vector
+selected_index: 3

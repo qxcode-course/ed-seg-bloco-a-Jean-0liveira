@@ -1,0 +1,16 @@
+2026-06-28 15:33:10, MOVE, v:1, k:ed@editor, mode:PICK
+2026-06-28 15:33:11, EXEC, v:1, k:ed@editor, mode:FULL, rate:50
+2026-06-28 15:35:04, EXEC, v:1, k:ed@editor, mode:FULL, rate:50, size:35
+2026-06-28 15:35:56, EXEC, v:1, k:ed@editor, mode:FULL, rate:66, size:37
+2026-06-28 15:35:54, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-28 15:37:49, EXEC, v:1, k:ed@editor, mode:FULL, rate:66, size:38
+2026-06-28 15:38:08, EXEC, v:1, k:ed@editor, mode:FULL, rate:66
+2026-06-28 15:39:25, EXEC, v:1, k:ed@editor, mode:FULL, rate:66, size:42
+2026-06-28 15:39:53, EXEC, v:1, k:ed@editor, mode:FULL, rate:66, size:43
+2026-06-28 15:40:02, EXEC, v:1, k:ed@editor, mode:FULL, rate:66, size:43
+2026-06-28 15:41:19, EXEC, v:1, k:ed@editor, mode:FULL, rate:66, size:45
+2026-06-28 15:41:18, MOVE, v:1, k:ed@editor, mode:EDIT
+2026-06-28 15:42:47, EXEC, v:1, k:ed@editor, mode:FULL, rate:83, size:45
+2026-06-28 15:43:44, EXEC, v:1, k:ed@editor, mode:FULL, rate:100, size:47
+2026-06-28 15:43:55, MOVE, v:1, k:ed@editor, mode:BACK
+2026-06-28 15:44:27, SELF, v:1, k:ed@editor, self:1, rate:100, study:55

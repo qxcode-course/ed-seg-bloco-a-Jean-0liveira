@@ -2,8 +2,148 @@
     "patches": [
         {
             "label": "2026-06-24_15-54-34",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -10,244 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09if !scanner.Scan() %7B%0A%09%09return%0A%09%7D%0A%09input := scanner.Text()%0A%0A%09var antes %5B%5Drune%0A%09var depois %5B%5Drune%0A%0A%09for _, c := range input %7B%0A%09%09switch c %7B%0A%09%09default:%0A%0A%09%09%7D%0A%09%7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-06-25_10-48-41",
+            "content": "@@ -240,65 +240,8 @@\n lt:%0A\n-%09%09%09antes = append(antes, c)%0A%09%09%09depois = append(depois, c)\n %0A%09%09%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-06-25_10-51-56",
+            "content": "@@ -29,15 +29,8 @@\n io%22%0A\n-%09%22fmt%22%0A\n %09%22os\n@@ -305,43 +305,6 @@\n %0A%09%7D%0A\n-%09fmt.Print(antes)%0A%09fmt.Print(depois)%0A\n %7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-25_10-52-38",
+            "content": "@@ -323,22 +323,14 @@\n int(\n-string(\n antes)\n-)\n %0A%09fm\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-25_10-53-36",
+            "content": "@@ -334,10 +334,29 @@\n antes))%0A\n+%09fmt.Print(depois)%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-25_10-53-52",
+            "content": "@@ -338,24 +338,6 @@\n s))%0A\n-%09fmt.Println(%22%7C%22)%0A\n %7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-06-25_10-54-31",
+            "content": "@@ -271,16 +271,46 @@\n tes, c)%0A\n+%09%09%09depois = append(depois, c)%0A\n %09%09%7D%0A%09%7D%0A%09\n@@ -356,25 +356,6 @@\n %7C%22)%0A\n-%09fmt.Print(depois)%0A\n %7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-25_10-55-23",
+            "content": "@@ -337,22 +337,14 @@\n int(\n-string(\n depois)\n-)\n %0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-25_10-55-39",
+            "content": "@@ -236,51 +236,8 @@\n c %7B%0A\n-%09%09case 'R':%0A%09%09%09antes = append(antes, '%5Cn')%0A\n %09%09de\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-06-25_10-59-44",
+            "content": "@@ -236,72 +236,8 @@\n c %7B%0A\n-%09%09case '%3C':%0A%09%09%09index := len(antes) - 1%0A%09%09%09antes = antes%5B:index%5D%0A\n %09%09ca\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-06-25_11-02-35",
+            "content": "@@ -271,17 +271,16 @@\n es) - 1%0A\n-%0A\n %09%09%09antes\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-25_11-05-00",
+            "content": "@@ -275,44 +275,8 @@\n - 1%0A\n-%09%09%09depois = append(depois, antes...)\n %0A%09%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-05-47",
+            "content": "@@ -307,15 +307,11 @@\n ntes\n-%5Bindex%5D\n+...\n )%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-06-08",
+            "content": "@@ -294,37 +294,28 @@\n end(\n-%5B%5Drune%7Bleft%5Bindex%5D%7D, antes...\n+depois, antes%5Bindex%5D\n )%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-07-46",
+            "content": "@@ -297,21 +297,20 @@\n (%5B%5Drune%7B\n-antes\n+left\n %5Bindex%5D%7D\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-08-01",
+            "content": "@@ -312,21 +312,20 @@\n ndex%5D%7D, \n-depoi\n+ante\n s...)%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-08-18",
+            "content": "@@ -473,16 +473,18 @@\n mt.Print\n+ln\n (%22%7C%22)%0A%09f\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-09-42",
+            "content": "@@ -493,10 +493,8 @@\n rint\n-ln\n (str\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-09-53",
+            "content": "@@ -236,21 +236,8 @@\n c %7B%0A\n-%09%09case '-':%0A%0A\n %09%09ca\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-06-25_11-10-48",
+            "content": "@@ -231,16 +231,28 @@\n itch c %7B\n+%0A%09%09case '-':\n %0A%0A%09%09case\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-06-28_15-35-04",
+            "content": "@@ -249,32 +249,8 @@\n %3C':%0A\n-%09%09%09if len(antes) %3E 0 %7B%0A%09\n %09%09%09i\n@@ -275,17 +275,16 @@\n  - 1%0A%09%09%09\n-%09\n depois =\n@@ -327,17 +327,16 @@\n ...)%0A%09%09%09\n-%09\n antes = \n@@ -353,13 +353,8 @@\n ex%5D%0A\n-%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-28_15-35-56",
+            "content": "@@ -236,51 +236,8 @@\n c %7B%0A\n-%09%09case 'B':%0A%09%09%09antes = antes%5B:len(antes)-1%5D\n %0A%09%09c\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-28_15-37-49",
+            "content": "@@ -236,85 +236,8 @@\n c %7B%0A\n-%09%09case '%3E':%0A%09%09%09if len(antes) %3E 0 %7B%0A%09%09%09%09antes = append(antes, depois%5B0%5D)%0A%09%09%09%7D%0A\n %09%09ca\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-28_15-39-25",
+            "content": "@@ -308,28 +308,8 @@\n 0%5D)%0A\n-%09%09%09%09depois = depois%0A\n %09%09%09%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-06-28_15-39-52",
+            "content": "@@ -327,12 +327,8 @@\n pois\n-%5B1:%5D\n %0A%09%09%09\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-28_15-40-02",
+            "content": "@@ -349,32 +349,8 @@\n B':%0A\n-%09%09%09if len(antes) %3E 0 %7B%0A%09\n %09%09%09a\n@@ -377,21 +377,16 @@\n tes)-1%5D%0A\n-%09%09%09%7D%0A\n %09%09case '\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-28_15-41-19",
+            "content": "@@ -254,21 +254,20 @@\n %09if len(\n-depoi\n+ante\n s) %3E 0 %7B\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-28_15-42-47",
+            "content": "@@ -236,43 +236,8 @@\n c %7B%0A\n-%09%09case 'D':%0A%09%09%09depois = depois%5B1:%5D%0A\n %09%09ca\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-28_15-43-44",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tinput := scanner.Text()\n\n\tvar antes []rune\n\tvar depois []rune\n\n\tfor _, c := range input {\n\t\tswitch c {\n\t\tcase 'D':\n\t\t\tdepois = depois[1:]\n\t\tcase '>':\n\t\t\tif len(depois) > 0 {\n\t\t\t\tantes = append(antes, depois[0])\n\t\t\t\tdepois = depois[1:]\n\t\t\t}\n\t\tcase 'B':\n\t\t\tif len(antes) > 0 {\n\t\t\t\tantes = antes[:len(antes)-1]\n\t\t\t}\n\t\tcase '<':\n\t\t\tif len(antes) > 0 {\n\t\t\t\tindex := len(antes) - 1\n\t\t\t\tdepois = append([]rune{antes[index]}, depois...)\n\t\t\t\tantes = antes[:index]\n\t\t\t}\n\t\tcase 'R':\n\t\t\tantes = append(antes, '\\n')\n\t\tdefault:\n\t\t\tantes = append(antes, c)\n\t\t}\n\t}\n\tfmt.Print(string(antes))\n\tfmt.Print(\"|\")\n\tfmt.Println(string(depois))\n}\n",
+            "lines": "47"
         }
     ]
 }

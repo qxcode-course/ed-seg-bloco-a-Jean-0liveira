@@ -42,8 +42,123 @@
         },
         {
             "label": "2026-06-28_18-17-36",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc Soma() bool {\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tline := strings.Fields(scanner.Text())\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tsecondLine := strings.Fields(scanner.Text())\n\n\tn, _ := strconv.Atoi(line[0])\n\tv := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tv[i], _ = strconv.Atoi(secondLine[i])\n\t}\n\n\tfmt.Println(Soma())\n}\n",
+            "content": "@@ -77,82 +77,16 @@\n oma(\n-alvo int, somaAtual int) bool %7B%0A%0A%09if somaAtual == alvo %7B%0A%09%09return true%0A%09%7D%0A\n+) bool %7B\n %0A%09re\n@@ -455,12 +455,8 @@\n oma(\n-0, 0\n ))%0A%7D\n",
             "lines": "37"
+        },
+        {
+            "label": "2026-07-05_08-18-23",
+            "content": "@@ -521,9 +521,9 @@\n oma(\n-1\n+0\n , 0)\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-05_08-18-37",
+            "content": "@@ -520,14 +520,14 @@\n Soma(1, \n-1\n+0\n ))%0A%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-05_08-18-56",
+            "content": "@@ -521,12 +521,12 @@\n oma(\n-0, 0\n+1, 1\n ))%0A%7D\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-05_08-19-23",
+            "content": "@@ -77,19 +77,8 @@\n oma(\n-index int, \n alvo\n@@ -523,11 +523,8 @@\n a(0,\n- 0,\n  0))\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-05_08-22-10",
+            "content": "@@ -163,50 +163,8 @@\n %09%7D%0A%0A\n-%09if somaAtual %3E alvo %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-05_08-23-58",
+            "content": "@@ -88,27 +88,27 @@\n nt, \n-somaAtual int, alvo\n+alvo int, somaAtual\n  int\n@@ -465,43 +465,8 @@\n 0%5D)%0A\n-%09alvo, _ := strconv.Atoi(line%5B1%5D)%0A%0A\n %09v :\n@@ -482,16 +482,16 @@\n int, n)%0A\n+\n %09for i :\n@@ -557,86 +557,33 @@\n %7D%0A%0A%09\n-if Soma(0, 0, alvo) %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D\n+fmt.Println(Soma(0, 0, 0))\n %0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-07-05_08-30-16",
+            "content": "@@ -108,21 +108,8 @@\n lvo \n-int, vSoma %5B%5D\n int)\n@@ -610,11 +610,8 @@\n alvo\n-, v\n ) %7B%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-05_08-48-50",
+            "content": "@@ -218,68 +218,8 @@\n %09%7D%0A%0A\n-%09if Soma(index, somaAtual, alvo, vSoma) %7B%0A%09%09return true%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-05_08-58-49",
+            "content": "@@ -232,10 +232,8 @@\n ndex\n-+1\n , so\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_09-00-31",
+            "content": "@@ -263,28 +263,27 @@\n  %7B%0A%09%09return \n-fals\n+tru\n e%0A%09%7D%0A%0A%09retur\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_09-00-49",
+            "content": "@@ -263,27 +263,28 @@\n  %7B%0A%09%09return \n-tru\n+fals\n e%0A%09%7D%0A%0A%09retur\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_09-01-37",
+            "content": "@@ -280,69 +280,8 @@\n %09%7D%0A%0A\n-%09if Soma(index, somaAtual, alvo, vSoma) %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_09-03-06",
+            "content": "@@ -282,34 +282,32 @@\n %0A%0A%09if Soma(index\n-+1\n , somaAtual, alv\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-05-15",
+            "content": "@@ -307,21 +307,8 @@\n tual\n-+vSoma%5Bindex%5D\n , al\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-06-37",
+            "content": "@@ -338,27 +338,28 @@\n  %7B%0A%09%09return \n-tru\n+fals\n e%0A%09%7D%0A%0A%09retur\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-06-52",
+            "content": "@@ -245,21 +245,8 @@\n tual\n-+vSoma%5Bindex%5D\n , al\n@@ -295,32 +295,45 @@\n dex+1, somaAtual\n++vSoma%5Bindex%5D\n , alvo, vSoma) %7B\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-07-07",
+            "content": "@@ -210,24 +210,99 @@\n n false%0A%09%7D%0A%0A\n+%09if Soma(index+1, somaAtual+vSoma%5Bindex%5D, alvo, vSoma) %7B%0A%09%09return true%0A%09%7D%0A%0A\n %09if Soma(ind\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-09-17",
+            "content": "@@ -196,31 +196,8 @@\n alvo\n- %7C%7C index %3E= len(vSoma)\n  %7B%0A%09\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_09-09-46",
+            "content": "@@ -303,69 +303,8 @@\n %09%7D%0A%0A\n-%09if Soma(index, somaAtual, alvo, vSoma) %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-05_09-10-56",
+            "content": "@@ -346,27 +346,28 @@\n  %7B%0A%09%09return \n-tru\n+fals\n e%0A%09%7D%0A%0A%09retur\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-11-02",
+            "content": "@@ -305,34 +305,32 @@\n %0A%0A%09if Soma(index\n-+1\n , somaAtual, alv\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-11-07",
+            "content": "@@ -330,21 +330,8 @@\n tual\n-+vSoma%5Bindex%5D\n , al\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-05_09-11-16",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc Soma(index int, somaAtual int, alvo int, vSoma []int) bool {\n\n\tif somaAtual == alvo {\n\t\treturn true\n\t}\n\n\tif somaAtual > alvo || index >= len(vSoma) {\n\t\treturn false\n\t}\n\n\tif Soma(index+1, somaAtual, alvo, vSoma) {\n\t\treturn true\n\t}\n\n\tif Soma(index+1, somaAtual+vSoma[index], alvo, vSoma) {\n\t\treturn true\n\t}\n\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tline := strings.Fields(scanner.Text())\n\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\n\tsecondLine := strings.Fields(scanner.Text())\n\n\tn, _ := strconv.Atoi(line[0])\n\talvo, _ := strconv.Atoi(line[1])\n\n\tv := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tv[i], _ = strconv.Atoi(secondLine[i])\n\t}\n\n\tif Soma(0, 0, alvo, v) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "60"
         }
     ]
 }

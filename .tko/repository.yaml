@@ -20,9 +20,9 @@ sources:
   quests: null
 expanded:
 - ed@tree
-- ed@linear
 - ed@backtrack
 - ed@list
+- ed@linear
 flags:
   inbox: inbox
   panel: skills
@@ -32,5 +32,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@bufferring
-selected_index: 2
+selected: ed@distancia
+selected_index: 12

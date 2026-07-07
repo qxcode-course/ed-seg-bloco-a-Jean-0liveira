@@ -80,3 +80,59 @@
 2026-07-07 17:10:48, MOVE, v:1, k:ed@wordsearch, mode:BACK
 2026-07-07 17:10:37, MOVE, v:1, k:ed@wordsearch, mode:EDIT
 2026-07-07 17:11:40, SELF, v:1, k:ed@wordsearch, self:1, rate:100, study:75
+2026-07-07 17:17:11, MOVE, v:1, k:ed@bufferring, mode:DOWN
+2026-07-07 17:17:12, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 17:17:13, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:110
+2026-07-07 17:17:11, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 17:17:11, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 17:25:11, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 17:25:56, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 17:25:57, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0
+2026-07-07 17:30:19, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:114
+2026-07-07 17:30:17, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 17:42:21, EXEC, v:1, k:ed@bufferring, mode:FULL, size:127, fail:COMP
+2026-07-07 17:42:23, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 20:11:38, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 20:11:39, EXEC, v:1, k:ed@bufferring, mode:FULL, fail:COMP
+2026-07-07 20:12:20, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 20:12:22, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 20:12:23, EXEC, v:1, k:ed@bufferring, mode:FULL, fail:COMP
+2026-07-07 20:16:01, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:131
+2026-07-07 20:15:58, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 20:16:29, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:131
+2026-07-07 20:18:15, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:133
+2026-07-07 20:19:03, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 20:19:09, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 20:19:11, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0
+2026-07-07 20:19:38, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:0, size:134
+2026-07-07 20:20:46, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:135
+2026-07-07 20:20:42, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 20:23:17, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 20:26:17, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:141
+2026-07-07 20:26:30, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:141
+2026-07-07 20:26:28, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 20:42:16, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:142
+2026-07-07 20:42:34, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:143
+2026-07-07 20:42:50, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:144
+2026-07-07 20:43:16, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:16, size:144
+2026-07-07 20:43:49, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:144
+2026-07-07 20:43:58, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 20:44:16, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 20:44:17, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33
+2026-07-07 20:46:56, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:151
+2026-07-07 20:47:14, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:152
+2026-07-07 20:47:25, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:33, size:153
+2026-07-07 20:48:29, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:50, size:158
+2026-07-07 20:48:26, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 20:49:40, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:66, size:162
+2026-07-07 20:51:13, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:66, size:167
+2026-07-07 20:52:04, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:66, size:170
+2026-07-07 20:52:12, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:170
+2026-07-07 20:52:25, MOVE, v:1, k:ed@bufferring, mode:EDIT
+2026-07-07 20:54:11, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83, size:175
+2026-07-07 20:54:20, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 20:54:26, MOVE, v:1, k:ed@bufferring, mode:PICK
+2026-07-07 20:54:26, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:83
+2026-07-07 20:54:44, EXEC, v:1, k:ed@bufferring, mode:FULL, rate:100, size:175
+2026-07-07 20:54:49, MOVE, v:1, k:ed@bufferring, mode:BACK
+2026-07-07 20:55:05, SELF, v:1, k:ed@bufferring, self:1, rate:100, study:70

@@ -19,15 +19,18 @@ sources:
   writeable: false
   quests: null
 expanded:
+- ed@tree
+- ed@linear
 - ed@backtrack
+- ed@list
 flags:
-  inbox: all
-  panel: graph
+  inbox: inbox
+  panel: skills
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@subset_sum
-selected_index: 7
+selected: ed@bufferring
+selected_index: 2

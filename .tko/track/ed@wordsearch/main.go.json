@@ -1,0 +1,149 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_09-24-26",
+            "content": "@@ -190,19 +190,20 @@\n %09return \n-tru\n+fals\n e%0A%7D%0A%0Afun\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-07_09-31-59",
+            "content": "@@ -190,20 +190,19 @@\n %09return \n-fals\n+tru\n e%0A%7D%0A%0Afun\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-07_09-32-13",
+            "content": "@@ -163,16 +163,35 @@\n  bool %7B%0A\n+%09_, _ = grid, word%0A\n %09return \n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-07-07_09-35-04",
+            "content": "@@ -167,29 +167,8 @@\n l %7B%0A\n-%09if condition %7B%0A%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-07_09-35-23",
+            "content": "@@ -171,39 +171,20 @@\n %09if \n-len(grid) == 0 %7B%0A%09%09return false\n+condition %7B%0A\n %0A%09%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-07_09-37-01",
+            "content": "@@ -183,29 +183,8 @@\n ) ==\n- 0 %7C%7C len(grid%5B0%5D) ==\n  0 %7B\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-07_09-38-20",
+            "content": "@@ -245,143 +245,8 @@\n %0A%7D%0A%0A\n-func backtrack(grid %5B%5D%5B%5Dbyte, r int, c int, index int, word string) bool %7B%0A%09if index == len(word) %7B%0A%09%09return false%0A%09%7D%0A%09return false%0A%7D%0A%0A\n func\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-07_09-45-42",
+            "content": "@@ -350,19 +350,20 @@\n %09return \n-tru\n+fals\n e%0A%09%7D%0A%09re\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-07_09-45-56",
+            "content": "@@ -228,44 +228,8 @@\n %09%7D%0A%0A\n-%09m := len(grid)%0A%09n := len(grid%5B0%5D)%0A%0A\n %09ret\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-07-07_09-47-30",
+            "content": "@@ -264,70 +264,8 @@\n %5D)%0A%0A\n-%09for r := 0; r %3C m; r++ %7B%0A%09%09for c := 0; c %3C n; c++ %7B%0A%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-07_16-33-37",
+            "content": "@@ -317,105 +317,8 @@\n + %7B%0A\n-%09%09%09if grid%5Br%5D%5Bc%5D == word%5B0%5D %7B%0A%09%09%09%09if backtrack(grid, r, c, 0, word) %7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D%0A%09%09%09%7D\n %0A%09%09%7D\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-07-07_16-36-15",
+            "content": "@@ -511,17 +511,16 @@\n  bool %7B%0A\n-%0A\n %09if inde\n@@ -549,25 +549,24 @@\n urn true%0A%09%7D%0A\n-%0A\n %09return fals\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-07_16-39-16",
+            "content": "@@ -559,39 +559,8 @@\n %09%7D%0A%0A\n-%09if r %3C 0 %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-07_16-42-38",
+            "content": "@@ -566,17 +566,8 @@\n  r %3C\n- 0 %7C%7C c %3C\n  0 %7B\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-07_16-42-50",
+            "content": "@@ -1,967 +1,98 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0A// N%C3%A3o mude a assinatura desta fun%C3%A7%C3%A3o, ela %C3%A9 a fun%C3%A7%C3%A3o chamada pelo LeetCode%0Afunc exist(grid %5B%5D%5B%5Dbyte, word string) bool %7B%0A%09if len(grid) == 0 %7C%7C len(grid%5B0%5D) == 0 %7B%0A%09%09return false%0A%09%7D%0A%0A%09m := len(grid)%0A%09n := len(grid%5B0%5D)%0A%0A%09for r := 0; r %3C m; r++ %7B%0A%09%09for c := 0; c %3C n; c++ %7B%0A%09%09%09if grid%5Br%5D%5Bc%5D == word%5B0%5D %7B%0A%09%09%09%09if backtrack(grid, r, c, 0, word) %7B%0A%09%09%09%09%09return true%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc backtrack(grid %5B%5D%5B%5Dbyte, r int, c int, index int, word string) bool %7B%0A%0A%09if index == len(word) %7B%0A%09%09return true%0A%09%7D%0A%0A%09if r %3C 0 %7C%7C c %3C 0 %7C%7C r %3E= len(grid) %7C%7C c %3E= len(grid%5B0%5D) %7B%0A%09%09return false%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%09scanner.Scan()%0A%09var word string%0A%09fmt.Sscanf(scanner.Text(), %22%25s%22, &word)%0A%09grid := make(%5B%5D%5B%5Dbyte, 0)%0A%09for scanner.Scan() %7B%0A%09%09grid = append(grid, %5B%5Dbyte(scanner.Text()))%0A%09%7D%0A%09if exist(grid, word) %7B%0A%09%09fmt.Println(%22true%22)%0A%09%7D else %7B%0A%09%09fmt.Println(%22false%22)%0A%09%7D%0A%7D\n+@@ -577,47 +577,8 @@%0A  %253C 0%0A- %257C%257C r %253E= len(grid) %257C%257C c %253E= len(grid%255B0%255D)%0A  %257B%250A%2509\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-07-07_16-48-49",
+            "content": "@@ -638,66 +638,16 @@\n %09%7D%0A%0A\n-%09busca := backtrack(grid, r+1, c, index+1, word)%0A%0A\n %09return \n busc\n@@ -646,13 +646,13 @@\n urn \n-busca\n+false\n %0A%7D%0A%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-07-07_16-51-26",
+            "content": "@@ -686,52 +686,8 @@\n ord)\n- %7C%7C%0A%09%09backtrack(grid, r+1, c, index+1, word)\n %0A%0A%09r\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-07_16-53-05",
+            "content": "@@ -730,52 +730,8 @@\n ord)\n- %7C%7C%0A%09%09backtrack(grid, r, c+1, index+1, word)\n %0A%0A%09r\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-07-07_16-54-54",
+            "content": "@@ -774,52 +774,8 @@\n ord)\n- %7C%7C%0A%09%09backtrack(grid, r, c+1, index+1, word)\n %0A%0A%09r\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-07-07_16-56-04",
+            "content": "@@ -638,32 +638,8 @@\n %09%7D%0A%0A\n-%09palavra := grid%5Br%5D%5Bc%5D%0A%0A\n %09bus\n@@ -820,31 +820,8 @@\n d)%0A%0A\n-%09grid%5Br%5D%5Bc%5D = palavra%0A%0A\n %09ret\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-07-07_17-00-31",
+            "content": "@@ -844,27 +844,8 @@\n d)%0A%0A\n-%09grid%5Br%5D%5Bc%5D = '#'%0A%0A\n %09gri\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-07-07_17-02-57",
+            "content": "@@ -634,16 +634,40 @@\n lse%0A%09%7D%0A%0A\n+%09palavra := grid%5Br%5D%5Bc%5D%0A%0A\n %09busca :\n@@ -844,32 +844,8 @@\n d)%0A%0A\n-%09palavra := grid%5Br%5D%5Bc%5D%0A%0A\n %09gri\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-03-46",
+            "content": "@@ -638,32 +638,8 @@\n %09%7D%0A%0A\n-%09palavra := grid%5Br%5D%5Bc%5D%0A%0A\n %09bus\n@@ -816,16 +816,40 @@\n  word)%0A%0A\n+%09palavra := grid%5Br%5D%5Bc%5D%0A%0A\n %09grid%5Br%5D\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-05-16",
+            "content": "@@ -662,50 +662,8 @@\n c%5D%0A%0A\n-%09grid%5Br%5D%5Bc%5D = '#'%0A%0A%09grid%5Br%5D%5Bc%5D = palavra%0A%0A\n %09bus\n@@ -840,16 +840,58 @@\n  word)%0A%0A\n+%09grid%5Br%5D%5Bc%5D = '#'%0A%0A%09grid%5Br%5D%5Bc%5D = palavra%0A%0A\n %09return \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-05-49",
+            "content": "@@ -677,16 +677,39 @@\n  = '#'%0A%0A\n+%09grid%5Br%5D%5Bc%5D = palavra%0A%0A\n %09busca :\n@@ -882,39 +882,16 @@\n  word)%0A%0A\n-%09grid%5Br%5D%5Bc%5D = palavra%0A%0A\n %09return \n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-06-49",
+            "content": "@@ -752,9 +752,9 @@\n d, r\n--\n++\n 1, c\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-07-22",
+            "content": "@@ -839,17 +839,17 @@\n id, r, c\n--\n++\n 1, index\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-07-40",
+            "content": "@@ -616,37 +616,8 @@\n %5B0%5D)\n- %7C%7C grid%5Br%5D%5Bc%5D != word%5Bindex%5D\n  %7B%0A%09\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-07_17-10-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00e3o mude a assinatura desta fun\u00e7\u00e3o, ela \u00e9 a fun\u00e7\u00e3o chamada pelo LeetCode\nfunc exist(grid [][]byte, word string) bool {\n\tif len(grid) == 0 || len(grid[0]) == 0 {\n\t\treturn false\n\t}\n\n\tm := len(grid)\n\tn := len(grid[0])\n\n\tfor r := 0; r < m; r++ {\n\t\tfor c := 0; c < n; c++ {\n\t\t\tif grid[r][c] == word[0] {\n\t\t\t\tif backtrack(grid, r, c, 0, word) {\n\t\t\t\t\treturn true\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc backtrack(grid [][]byte, r int, c int, index int, word string) bool {\n\n\tif index == len(word) {\n\t\treturn true\n\t}\n\n\tif r < 0 || c < 0 || r >= len(grid) || c >= len(grid[0]) || grid[r][c] != word[index] {\n\t\treturn false\n\t}\n\n\tpalavra := grid[r][c]\n\n\tgrid[r][c] = '#'\n\n\tbusca := backtrack(grid, r+1, c, index+1, word) ||\n\t\tbacktrack(grid, r-1, c, index+1, word) ||\n\t\tbacktrack(grid, r, c+1, index+1, word) ||\n\t\tbacktrack(grid, r, c-1, index+1, word)\n\n\tgrid[r][c] = palavra\n\n\treturn busca\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar word string\n\tfmt.Sscanf(scanner.Text(), \"%s\", &word)\n\tgrid := make([][]byte, 0)\n\tfor scanner.Scan() {\n\t\tgrid = append(grid, []byte(scanner.Text()))\n\t}\n\tif exist(grid, word) {\n\t\tfmt.Println(\"true\")\n\t} else {\n\t\tfmt.Println(\"false\")\n\t}\n}\n",
+            "lines": "69"
+        }
+    ]
+}

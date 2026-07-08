@@ -14,16 +14,57 @@ type Node struct {
 	Right *Node
 }
 
+func insertNode(root *Node, v int) *Node {
+	if root == nil {
+		return &Node{Value: v}
+	}
+	if v < root.Value {
+		root.Left = insertNode(root.Left, v)
+	} else if v > root.Value {
+		root.Right = insertNode(root.Right, v)
+	}
+	return root
+}
+
 func BstInsert(values []int) *Node {
 	// TODO
-	_ = values
-	return nil
+	var root *Node
+	for _, v := range values {
+		root = insertNode(root, v)
+	}
+	return root
+}
+
+func maior(Node *Node) *Node {
+	arvore := Node
+	for arvore.Right != nil {
+		arvore = arvore.Right
+	}
+	return arvore
 }
 
 func BstRemove(node *Node, value int) *Node {
 	// TODO
-	_, _ = node, value
-	return nil
+	if node == nil {
+		return nil
+	}
+
+	if value < node.Value {
+		node.Left = BstRemove(node.Left, value)
+	} else if value > node.Value {
+		node.Right = BstRemove(node.Right, value)
+	} else {
+		if node.Left == nil {
+			return node.Right
+		} else if node.Right == nil {
+			return node.Left
+		}
+		prox := maior(node.Left)
+		node.Value = prox.Value
+		node.Left = BstRemove(node.Left, prox.Value)
+	}
+
+	return node
 }
 
 // -----------------------------------------------------------------------------------

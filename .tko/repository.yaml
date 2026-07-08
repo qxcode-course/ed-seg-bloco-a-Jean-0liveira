@@ -20,17 +20,19 @@ sources:
   quests: null
 expanded:
 - ed@tree
-- ed@linear
+- ed@bfs
+- ed@dfs
 - ed@list
+- ed@linear
 - ed@backtrack
 flags:
-  inbox: inbox
-  panel: skills
+  inbox: all
+  panel: graph
   task_graph_mode: executions
   show_time: 'true'
 audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@distancia
-selected_index: 11
+selected: ed@hex
+selected_index: 24

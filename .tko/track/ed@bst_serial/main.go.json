@@ -1,0 +1,84 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-07_22-17-32",
+            "content": "@@ -131,171 +131,60 @@\n unc \n-insertNode(root *Node, v int) *Node %7B%0A%0A%7D%0A%0Afunc BstInsert(values %5B%5Dint) *Node %7B%0A%09// TODO%0A%09var root *Node%0A%09for _, v := range values %7B%0A%09%09root = insertNode(root, v)%0A%09%7D\n+BstInsert(values %5B%5Dint) *Node %7B%0A%09// TODO%0A%09_ = values\n %0A%09re\n@@ -188,20 +188,19 @@\n %09return \n-root\n+nil\n %0A%7D%0A%0A// D\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-07-07_22-24-06",
+            "content": "@@ -165,28 +165,16 @@\n *Node %7B%0A\n-%09return root\n %0A%7D%0A%0Afunc\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-07_22-24-15",
+            "content": "@@ -169,54 +169,8 @@\n e %7B%0A\n-%09if root == nil %7B%0A%09%09return &Node%7BValue: v%7D%0A%09%7D%0A\n %09ret\n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-07_22-25-01",
+            "content": "@@ -214,72 +214,8 @@\n %7D%0A%09%7D\n-%0A%0A%09if v %3C root.Value %7B%0A%09%09root.Left = insertNode(root.Left, v)%0A%09%7D\n %0A%09re\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-07_22-25-54",
+            "content": "@@ -276,77 +276,8 @@\n  v)%0A\n-%09%7D else if v %3E root.Value %7B%0A%09%09root.Right = insertNode(root.Right, v)%0A\n %09%7D%0A%09\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-07_22-26-39",
+            "content": "@@ -578,17 +578,16 @@\n ecurs%C3%A3o%0A\n-%0A\n // Depoi\n@@ -677,66 +677,27 @@\n DO%0A%09\n-var resultado %5B%5Dstring%0A%09return strings.Join(resultado,\n+_ = root%0A%09return\n  %22%22\n-)\n %0A%7D%0A%0A\n",
+            "lines": "90"
+        },
+        {
+            "label": "2026-07-07_22-31-51",
+            "content": "@@ -581,53 +581,8 @@\n rs%C3%A3o\n-%0Afunc ordem(node *Node, saida *%5B%5Dstring) %7B%0A%0A%7D\n %0A%0A//\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-07_22-32-57",
+            "content": "@@ -624,29 +624,8 @@\n ) %7B%0A\n-%09if node == nil %7B%0A%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-07-07_22-35-09",
+            "content": "@@ -642,47 +642,8 @@\n l %7B%0A\n-%09%09*saida = append(*saida, %22#%22)%0A%09%09return\n %0A%09%7D%0A\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-07_22-39-13",
+            "content": "@@ -806,33 +806,8 @@\n ing%0A\n-%09ordem(root, &resultado)%0A\n %09ret\n",
+            "lines": "97"
+        },
+        {
+            "label": "2026-07-07_22-39-36",
+            "content": "@@ -684,60 +684,8 @@\n n%0A%09%7D\n-%0A%0A%09*saida = append(*saida, strconv.Itoa(node.Value))\n %0A%7D%0A%0A\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-07_22-40-31",
+            "content": "@@ -912,17 +912,16 @@\n ltado, %22\n- \n %22)%0A%7D%0A%0A//\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_22-40-51",
+            "content": "@@ -737,33 +737,8 @@\n e))%0A\n-%09ordem(node.Left, saida)%0A\n %7D%0A%0A/\n@@ -912,16 +912,17 @@\n ltado, %22\n+ \n %22)%0A%7D%0A%0A//\n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-07-07_22-41-45",
+            "content": "@@ -762,34 +762,8 @@\n da)%0A\n-%09ordem(node.Right, saida)%0A\n %7D%0A%0A/\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-07_22-42-00",
+            "content": "@@ -963,17 +963,16 @@\n ltado, %22\n- \n %22)%0A%7D%0A%0A//\n",
+            "lines": "102"
+        },
+        {
+            "label": "2026-07-07_22-42-14",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc insertNode(root *Node, v int) *Node {\n\tif root == nil {\n\t\treturn &Node{Value: v}\n\t}\n\n\tif v < root.Value {\n\t\troot.Left = insertNode(root.Left, v)\n\t} else if v > root.Value {\n\t\troot.Right = insertNode(root.Right, v)\n\t}\n\treturn root\n}\n\nfunc BstInsert(values []int) *Node {\n\t// TODO\n\tvar root *Node\n\tfor _, v := range values {\n\t\troot = insertNode(root, v)\n\t}\n\treturn root\n}\n\n// Dica: crie um vetor compartilhado e v\u00e1 preenchendo conforme anda na recurs\u00e3o\nfunc ordem(node *Node, saida *[]string) {\n\tif node == nil {\n\t\t*saida = append(*saida, \"#\")\n\t\treturn\n\t}\n\n\t*saida = append(*saida, strconv.Itoa(node.Value))\n\tordem(node.Left, saida)\n\tordem(node.Right, saida)\n}\n\n// Depois use o strings.Join para gerar o serial\nfunc Serialize(root *Node) string {\n\t// TODO\n\tvar resultado []string\n\tordem(root, &resultado)\n\treturn strings.Join(resultado, \" \")\n}\n\n// -----------------------------------------------------------------------------------\nfunc BShow(node *Node, history string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, history+\"l\")\n\t}\n\tfor i := 0; i < len(history)-1; i++ {\n\t\tif history[i] != history[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif history != \"\" {\n\t\tif history[len(history)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, history+\"r\")\n\t}\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tvalues := make([]int, 0, len(parts))\n\tfor _, elem := range parts {\n\t\tv, err := strconv.Atoi(elem)\n\t\tif err == nil {\n\t\t\tvalues = append(values, v)\n\t\t}\n\t}\n\troot := BstInsert(values)\n\tBShow(root, \"\") // Chama a fun\u00e7\u00e3o de impress\u00e3o formatada\n\tfmt.Println(Serialize((root)))\n}\n",
+            "lines": "102"
+        }
+    ]
+}

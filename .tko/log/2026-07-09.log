@@ -50,3 +50,23 @@
 2026-07-09 17:52:33, MOVE, v:1, k:ed@cercado, mode:PICK
 2026-07-09 17:52:34, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:29
 2026-07-09 17:52:56, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-09 17:53:57, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-09 17:53:58, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-09 17:57:37, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-09 17:57:46, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-09 17:57:47, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-09 17:58:01, EXEC, v:1, k:ed@cercado, mode:FREE
+2026-07-09 18:00:50, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:35
+2026-07-09 18:02:40, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:35
+2026-07-09 18:02:38, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-07-09 18:04:54, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:42
+2026-07-09 18:05:43, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-07-09 18:05:45, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-07-09 18:05:46, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-09 18:06:23, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-09 18:04:52, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-07-09 18:08:28, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:44
+2026-07-09 18:08:29, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-09 18:11:25, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-07-09 18:11:29, EXEC, v:1, k:ed@cercado, mode:FULL, size:48, fail:COMP
+2026-07-09 18:11:31, MOVE, v:1, k:ed@cercado, mode:BACK

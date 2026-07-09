@@ -2,8 +2,33 @@
     "patches": [
         {
             "label": "2026-07-09_17-52-34",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\t_ = board\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "content": "@@ -45,86 +45,8 @@\n %0A)%0A%0A\n-func busca(grid %5B%5D%5B%5Dbyte, l int, c int) %7B%0A%09if l %3C 0 %7C%7C c %3C 0 %7B%0A%09%09return%0A%09%7D%0A%7D%0A%0A\n // N\n",
             "lines": "29"
+        },
+        {
+            "label": "2026-07-09_18-00-50",
+            "content": "@@ -52,20 +52,19 @@\n c busca(\n-boar\n+gri\n d %5B%5D%5B%5Dby\n@@ -105,71 +105,8 @@\n  %3C 0\n- %7C%7C l %3E= len(board) %7C%7C c %3E= len(board%5B0%5D) %7C%7C board%5Bl%5D%5Bc%5D != 'O'\n  %7B%0A%09\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-09_18-02-40",
+            "content": "@@ -183,117 +183,8 @@\n n%0A%09%7D\n-%0A%0A%09board%5Bl%5D%5Bc%5D = '#'%0A%0A%09busca(board, l+1, c)%0A%09busca(board, l-1, c)%0A%09busca(board, l, c+1)%0A%09busca(board, l, c-1)\n %0A%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-07-09_18-04-54",
+            "content": "@@ -369,62 +369,17 @@\n  %7B%0A%09\n-if len(board) == 0 %7C%7C len(board%5B0%5D) == 0 %7B%0A%09%09return%0A%09%7D\n+_ = board\n %0A%7D%0A%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-09_18-08-28",
+            "content": "@@ -424,49 +424,8 @@\n %0A%09%7D%0A\n-%0A%09nl := len(board)%0A%09nc := len(board%5B0%5D)%0A%0A\n %7D%0A%0A/\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-09_18-11-29",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc busca(board [][]byte, l int, c int) {\n\tif l < 0 || c < 0 || l >= len(board) || c >= len(board[0]) || board[l][c] != 'O' {\n\t\treturn\n\t}\n\n\tboard[l][c] = '#'\n\n\tbusca(board, l+1, c)\n\tbusca(board, l-1, c)\n\tbusca(board, l, c+1)\n\tbusca(board, l, c-1)\n}\n\n// N\u00c3O ALTERE A ASSINATURA DA FUN\u00c7\u00c3O solve\nfunc solve(board [][]byte) {\n\tif len(board) == 0 || len(board[0]) == 0 {\n\t\treturn\n\t}\n\n\tnl := len(board)\n\tnc := len(board[0])\n\n}\n\n// N\u00c3O ALTERE A MAIN\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tvar nrows, ncols int\n\tfmt.Sscanf(scanner.Text(), \"%d %d\", &nrows, &ncols)\n\tboard := make([][]byte, nrows)\n\tfor i := 0; i < nrows; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\tsolve(board)\n\tfor _, row := range board {\n\t\tfmt.Println(string(row))\n\t}\n}\n",
+            "lines": "48"
         }
     ]
 }

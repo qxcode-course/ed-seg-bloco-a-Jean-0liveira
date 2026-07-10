@@ -19,17 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@bfs
-- ed@basic
-- ed@backtrack
-- ed@linear
-- ed@vector
 - ed@dfs
-- ed@map_set
-- ed@tree
-- eval1@eval1
-- ed@rec
-- ed@list
 flags:
   inbox: all
   panel: graph
@@ -39,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@cercado
-selected_index: 92
+selected: ed@pintura
+selected_index: 12

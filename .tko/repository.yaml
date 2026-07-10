@@ -19,17 +19,17 @@ sources:
   writeable: false
   quests: null
 expanded:
-- eval1@eval1
-- ed@vector
-- ed@linear
-- ed@dfs
-- ed@list
-- ed@backtrack
-- ed@map_set
-- ed@rec
-- ed@tree
 - ed@bfs
 - ed@basic
+- ed@backtrack
+- ed@linear
+- ed@vector
+- ed@dfs
+- ed@map_set
+- ed@tree
+- eval1@eval1
+- ed@rec
+- ed@list
 flags:
   inbox: all
   panel: graph

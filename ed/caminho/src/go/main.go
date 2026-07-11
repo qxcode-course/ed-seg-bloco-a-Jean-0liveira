@@ -11,7 +11,12 @@ type Pos struct {
 }
 
 func (p Pos) getNeig() []Pos {
-	return nil
+	return []Pos{
+		{l: p.l - 1, c: p.c},
+		{l: p.l + 1, c: p.c},
+		{l: p.l, c: p.c - 1},
+		{l: p.l, c: p.c + 1},
+	}
 }
 
 func inside(grid [][]rune, pos Pos) bool {
@@ -25,10 +30,48 @@ func match(grid [][]rune, pos Pos, char rune) bool {
 }
 
 func search(grid [][]rune, startPos Pos, endPos Pos) {
-	_, _, _ = grid, startPos, endPos
-}
+	queue := NewQueue[Pos]()
+	queue.Enqueue(startPos)
 
-func voltar()
+	visitou := make([][]bool, len(grid))
+
+	for i := range visitou {
+		visitou[i] = make([]bool, len(grid[0]))
+	}
+
+	visitou[startPos.l][startPos.c] = true
+
+	anterior := make(map[Pos]Pos)
+
+	encontrou := false
+
+	for !queue.IsEmpty() {
+		curr, _ := queue.Dequeue()
+
+		if curr == endPos {
+			encontrou = true
+			break
+		}
+
+		for _, n := range curr.getNeig() {
+			if inside(grid, n) && grid[n.l][n.c] != '#' && !visitou[n.l][n.c] {
+				visitou[n.l][n.c] = true
+				anterior[n] = curr
+				queue.Enqueue(n)
+			}
+		}
+	}
+	if encontrou {
+		curr := anterior[endPos]
+		for curr != startPos {
+			grid[curr.l][curr.c] = '.'
+			curr = anterior[curr]
+		}
+	}
+
+	grid[startPos.l][startPos.c] = '.'
+	grid[endPos.l][endPos.c] = '.'
+}
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)

@@ -19,7 +19,7 @@ sources:
   writeable: false
   quests: null
 expanded:
-- ed@dfs
+- ed@bfs
 flags:
   inbox: all
   panel: graph
@@ -29,5 +29,5 @@ audit:
   enabled: false
   interval_seconds: null
 lang: go
-selected: ed@pintura
-selected_index: 12
+selected: ed@rotten
+selected_index: 11
